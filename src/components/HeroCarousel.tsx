@@ -1,0 +1,136 @@
+import { useState, useCallback, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+import heroSlide1 from "@/assets/hero-slide-1.jpg";
+import heroSlide2 from "@/assets/hero-slide-2.jpg";
+import heroSlide3 from "@/assets/hero-slide-3.jpg";
+
+const slides = [
+  {
+    id: 1,
+    title: "O Último Suspiro",
+    subtitle: "Um thriller que vai prender sua respiração",
+    cta: "SAIBA MAIS",
+    image: heroSlide1,
+  },
+  {
+    id: 2,
+    title: "Crônicas do Silêncio",
+    subtitle: "A nova saga épica que está conquistando leitores",
+    cta: "PRÉ-VENDA",
+    image: heroSlide2,
+  },
+  {
+    id: 3,
+    title: "Entre Sombras",
+    subtitle: "Best-seller internacional agora em português",
+    cta: "COMPRAR AGORA",
+    image: heroSlide3,
+  },
+];
+
+const HeroCarousel = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  ]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
+  return (
+    <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+      <div className="overflow-hidden h-full" ref={emblaRef}>
+        <div className="flex h-full">
+          {slides.map((slide) => (
+            <div
+              key={slide.id}
+              className="flex-[0_0_100%] min-w-0 h-full relative"
+            >
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
+              </div>
+
+              {/* Content */}
+              <div className="relative h-full flex items-center justify-center">
+                <div className="text-center text-primary-foreground px-8 max-w-3xl animate-fade-in">
+                  <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">
+                    {slide.title}
+                  </h1>
+                  <p className="font-body text-lg md:text-xl mb-8 opacity-90 drop-shadow-md">
+                    {slide.subtitle}
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-body tracking-wider"
+                  >
+                    {slide.cta}
+                  </Button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={scrollPrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-background/20 hover:bg-background/40 backdrop-blur-sm rounded-full transition-all duration-200 text-primary-foreground"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </button>
+      <button
+        onClick={scrollNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-background/20 hover:bg-background/40 backdrop-blur-sm rounded-full transition-all duration-200 text-primary-foreground"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
+
+      {/* Dots Indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollTo(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === selectedIndex
+                ? "bg-primary-foreground scale-110"
+                : "bg-primary-foreground/40 hover:bg-primary-foreground/60"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default HeroCarousel;

@@ -1,0 +1,49 @@
+const footerLinks = [
+  { label: "O AUTOR", href: "#autor" },
+  { label: "NOTÍCIAS", href: "#noticias" },
+  { label: "FAQ", href: "#faq" },
+  { label: "CONTATO", href: "#contato" },
+  { label: "POLÍTICA DE PRIVACIDADE", href: "#privacidade" },
+];
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-foreground text-background py-12">
+      <div className="container mx-auto px-4">
+        {/* Logo */}
+        <div className="text-center mb-8">
+          <a
+            href="#"
+            className="font-heading text-2xl font-semibold tracking-wide inline-block"
+          >
+            LUCAS MARTINS
+          </a>
+        </div>
+
+        {/* Links */}
+        <nav className="flex flex-wrap justify-center gap-6 mb-8">
+          {footerLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="font-body text-sm text-background/70 hover:text-background transition-colors duration-200"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Divider */}
+        <div className="border-t border-background/20 pt-8">
+          <p className="font-body text-sm text-center text-background/60">
+            © {currentYear} Lucas Martins. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

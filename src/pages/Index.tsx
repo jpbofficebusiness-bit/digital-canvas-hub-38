@@ -1,12 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import HeroCarousel from "@/components/HeroCarousel";
+import RecentReleases from "@/components/RecentReleases";
+import UpcomingReleases from "@/components/UpcomingReleases";
+import NewsSection from "@/components/NewsSection";
+import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Spacer for fixed header */}
+      <div className="h-16 md:h-20" />
+      
+      <main>
+        <HeroCarousel />
+        <RecentReleases />
+        <UpcomingReleases />
+        <NewsSection />
+        <Newsletter />
+      </main>
+      
+      <Footer />
     </div>
   );
 };
