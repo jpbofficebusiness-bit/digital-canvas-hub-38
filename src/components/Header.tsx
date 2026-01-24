@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="font-heading text-xl md:text-2xl font-semibold text-forest tracking-wide">
-            LUCAS MARTINS
+            FRANKLIN RAFAEL
           </a>
 
           {/* Desktop Navigation */}

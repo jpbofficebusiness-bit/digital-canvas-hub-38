@@ -18,7 +18,7 @@ const Footer = () => {
             href="#"
             className="font-heading text-2xl font-semibold tracking-wide inline-block"
           >
-            LUCAS MARTINS
+            FRANKLIN RAFAEL
           </a>
         </div>
 
@@ -38,7 +38,7 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-background/20 pt-8">
           <p className="font-body text-sm text-center text-background/60">
-            © {currentYear} Lucas Martins. Todos os direitos reservados.
+            © {currentYear} Franklin Rafael. Todos os direitos reservados.
           </p>
         </div>
       </div>
