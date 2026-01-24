@@ -20,8 +20,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="font-heading font-semibold text-forest tracking-wide flex flex-col leading-tight">
-            <span className="text-2xl md:text-3xl">FRANKLIN</span>
-            <span className="text-sm md:text-base tracking-[0.3em]">RAFAEL</span>
+            <span className="text-sm md:text-base tracking-[0.3em]">FRANKLIN</span>
+            <span className="text-2xl md:text-3xl">RAFAEL</span>
           </a>
 
           {/* Desktop Navigation */}
