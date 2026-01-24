@@ -7,24 +7,47 @@ import { Button } from "@/components/ui/button";
 import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-2.jpg";
 import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import donzelaCristaCover from "@/assets/donzela-crista-cover.jpg";
+import donzelaCristaBg from "@/assets/donzela-crista-bg.jpg";
 
-const slides = [
+type SlideType = {
+  id: number;
+  title: string;
+  subtitle: string;
+  cta: string;
+  image: string;
+  isBookFeature?: boolean;
+  bookCover?: string;
+  bookDescription?: string;
+};
+
+const slides: SlideType[] = [
   {
     id: 1,
+    title: "Donzela Cristã",
+    subtitle: "Toda A Feminilidade Devotada À Deus",
+    cta: "SAIBA MAIS",
+    image: donzelaCristaBg,
+    isBookFeature: true,
+    bookCover: donzelaCristaCover,
+    bookDescription: "Em meio à um mundo confuso e maligno, a jovem cristã se vê como uma mulher que precisa firmar-se em Deus a cada dia. Além disso, nunca foi tão necessário estar em guarda contra os diversos males, bem como preservar-se pura em uma era tão promíscua e subjetivista como a que vivemos.",
+  },
+  {
+    id: 2,
     title: "O Último Suspiro",
     subtitle: "Um thriller que vai prender sua respiração",
     cta: "SAIBA MAIS",
     image: heroSlide1,
   },
   {
-    id: 2,
+    id: 3,
     title: "Crônicas do Silêncio",
     subtitle: "A nova saga épica que está conquistando leitores",
     cta: "PRÉ-VENDA",
     image: heroSlide2,
   },
   {
-    id: 3,
+    id: 4,
     title: "Entre Sombras",
     subtitle: "Best-seller internacional agora em português",
     cta: "COMPRAR AGORA",
@@ -77,21 +100,54 @@ const HeroCarousel = () => {
 
               {/* Content */}
               <div className="relative h-full flex items-center justify-center">
-                <div className="text-center text-primary-foreground px-8 max-w-3xl animate-fade-in">
-                  <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">
-                    {slide.title}
-                  </h1>
-                  <p className="font-body text-lg md:text-xl mb-8 opacity-90 drop-shadow-md">
-                    {slide.subtitle}
-                  </p>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-body tracking-wider"
-                  >
-                    {slide.cta}
-                  </Button>
-                </div>
+                {slide.isBookFeature ? (
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-16 max-w-6xl animate-fade-in">
+                    {/* Book Cover */}
+                    <div className="flex-shrink-0">
+                      <img
+                        src={slide.bookCover}
+                        alt={slide.title}
+                        className="w-48 md:w-64 lg:w-80 h-auto drop-shadow-2xl rounded-sm"
+                        style={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)" }}
+                      />
+                    </div>
+                    {/* Book Info */}
+                    <div className="text-center md:text-left text-primary-foreground max-w-xl">
+                      <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg">
+                        {slide.title}
+                      </h1>
+                      <p className="font-heading text-lg md:text-xl mb-6 italic opacity-90 drop-shadow-md">
+                        {slide.subtitle}
+                      </p>
+                      <p className="font-body text-sm md:text-base lg:text-lg mb-8 opacity-95 leading-relaxed drop-shadow-md">
+                        {slide.bookDescription}
+                      </p>
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-body tracking-wider"
+                      >
+                        {slide.cta}
+                      </Button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-center text-primary-foreground px-8 max-w-3xl animate-fade-in">
+                    <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">
+                      {slide.title}
+                    </h1>
+                    <p className="font-body text-lg md:text-xl mb-8 opacity-90 drop-shadow-md">
+                      {slide.subtitle}
+                    </p>
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-body tracking-wider"
+                    >
+                      {slide.cta}
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           ))}
