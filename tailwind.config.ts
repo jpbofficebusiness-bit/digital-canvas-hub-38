@@ -28,6 +28,8 @@ export default {
           light: "hsl(var(--burgundy-light))",
         },
         forest: "hsl(var(--forest))",
+        teal: "hsl(var(--teal))",
+        gold: "hsl(var(--gold))",
         cream: "hsl(var(--cream))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
