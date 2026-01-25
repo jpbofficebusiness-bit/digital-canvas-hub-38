@@ -3,11 +3,14 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 
-import heroSlide1 from "@/assets/hero-slide-1.jpg";
-import heroSlide2 from "@/assets/hero-slide-2.jpg";
-import heroSlide3 from "@/assets/hero-slide-3.jpg";
 import donzelaCristaCover from "@/assets/donzela-crista-cover.jpg";
 import donzelaCristaBg from "@/assets/donzela-crista-bg.jpg";
+import alcateiaInfernalCover from "@/assets/alcateia-infernal-cover.png";
+import alcateiaInfernalBg from "@/assets/alcateia-infernal-bg.jpg";
+import sequestroCruzCover from "@/assets/sequestro-cruz-cover.png";
+import sequestroCruzBg from "@/assets/sequestro-cruz-bg.jpg";
+import homemAcesoCover from "@/assets/homem-aceso-cover.png";
+import homemAcesoBg from "@/assets/homem-aceso-bg.jpg";
 
 type SlideType = {
   id: number;
@@ -15,9 +18,8 @@ type SlideType = {
   subtitle: string;
   cta: string;
   image: string;
-  isBookFeature?: boolean;
-  bookCover?: string;
-  bookDescription?: string;
+  bookCover: string;
+  bookDescription: string;
 };
 
 const slides: SlideType[] = [
@@ -27,30 +29,35 @@ const slides: SlideType[] = [
     subtitle: "Toda A Feminilidade Devotada À Deus",
     cta: "SAIBA MAIS",
     image: donzelaCristaBg,
-    isBookFeature: true,
     bookCover: donzelaCristaCover,
     bookDescription: "Em meio à um mundo confuso e maligno, a jovem cristã se vê como uma mulher que precisa firmar-se em Deus a cada dia. Além disso, nunca foi tão necessário estar em guarda contra os diversos males, bem como preservar-se pura em uma era tão promíscua e subjetivista como a que vivemos.",
   },
   {
     id: 2,
-    title: "O Último Suspiro",
-    subtitle: "Um thriller que vai prender sua respiração",
+    title: "Alcateia Infernal",
+    subtitle: "Quando lobos atacam o aprisco",
     cta: "SAIBA MAIS",
-    image: heroSlide1,
+    image: alcateiaInfernalBg,
+    bookCover: alcateiaInfernalCover,
+    bookDescription: "Um surto de lobos vorazes invade um Vilarejo. Quando se dão por conta, um grupo de pastores decide fazer algo inédito por toda a Luméria, situada no grande país da Torvia.",
   },
   {
     id: 3,
-    title: "Crônicas do Silêncio",
-    subtitle: "A nova saga épica que está conquistando leitores",
-    cta: "PRÉ-VENDA",
-    image: heroSlide2,
+    title: "O Sequestro da Cruz",
+    subtitle: "Projeto Coração Piedoso",
+    cta: "SAIBA MAIS",
+    image: sequestroCruzBg,
+    bookCover: sequestroCruzCover,
+    bookDescription: "Assombroso, robusto e firme – este livro irrompe sobre a consciência como trovões e relâmpagos. Com o seu jeito teológico e filosófico, destemido e biblista, Franklin Rafael não escreve como os apáticos e entediantes, mas como um pregoeiro em chamas.",
   },
   {
     id: 4,
-    title: "Entre Sombras",
-    subtitle: "Best-seller internacional agora em português",
-    cta: "COMPRAR AGORA",
-    image: heroSlide3,
+    title: "O Homem Aceso",
+    subtitle: "Projeto Coração Piedoso",
+    cta: "SAIBA MAIS",
+    image: homemAcesoBg,
+    bookCover: homemAcesoCover,
+    bookDescription: "Mais do que uma obra colossal, isso é uma teologia da devoção. Um monumento literário, biblista, histórico, filosófico e prático, combinado ao estilo metódico e minucioso de um professor, e à performance de um pregoeiro em chamas.",
   },
 ];
 
@@ -97,44 +104,26 @@ const HeroCarousel = () => {
 
               {/* Content */}
               <div className="relative h-full flex items-center justify-center">
-                {slide.isBookFeature ? (
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-16 max-w-6xl animate-fade-in">
-                    {/* Book Cover */}
-                    <div className="flex-shrink-0">
-                      <img
-                        src={slide.bookCover}
-                        alt={slide.title}
-                        className="w-48 md:w-64 lg:w-80 h-auto drop-shadow-2xl rounded-sm"
-                        style={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)" }}
-                      />
-                    </div>
-                    {/* Book Info */}
-                    <div className="text-center md:text-left text-primary-foreground max-w-xl">
-                      <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg">
-                        {slide.title}
-                      </h1>
-                      <p className="font-heading text-lg md:text-xl mb-6 italic opacity-90 drop-shadow-md">
-                        {slide.subtitle}
-                      </p>
-                      <p className="font-body text-sm md:text-base lg:text-lg mb-8 opacity-95 leading-relaxed drop-shadow-md">
-                        {slide.bookDescription}
-                      </p>
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-body tracking-wider"
-                      >
-                        {slide.cta}
-                      </Button>
-                    </div>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-16 max-w-6xl animate-fade-in">
+                  {/* Book Cover */}
+                  <div className="flex-shrink-0">
+                    <img
+                      src={slide.bookCover}
+                      alt={slide.title}
+                      className="w-48 md:w-64 lg:w-80 h-auto drop-shadow-2xl rounded-sm"
+                      style={{ boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)" }}
+                    />
                   </div>
-                ) : (
-                  <div className="text-center text-primary-foreground px-8 max-w-3xl animate-fade-in">
-                    <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight drop-shadow-lg">
+                  {/* Book Info */}
+                  <div className="text-center md:text-left text-primary-foreground max-w-xl">
+                    <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold mb-2 tracking-tight drop-shadow-lg">
                       {slide.title}
                     </h1>
-                    <p className="font-body text-lg md:text-xl mb-8 opacity-90 drop-shadow-md">
+                    <p className="font-heading text-lg md:text-xl mb-6 italic opacity-90 drop-shadow-md">
                       {slide.subtitle}
+                    </p>
+                    <p className="font-body text-sm md:text-base lg:text-lg mb-8 opacity-95 leading-relaxed drop-shadow-md">
+                      {slide.bookDescription}
                     </p>
                     <Button
                       variant="outline"
@@ -144,7 +133,7 @@ const HeroCarousel = () => {
                       {slide.cta}
                     </Button>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           ))}

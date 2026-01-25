@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Info, ShoppingCart, ChevronDown, ChevronUp } from "lucide-react";
+import { Info, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 
@@ -146,10 +146,6 @@ const RecentReleases = () => {
                   <Button variant="default" className="gap-2 bg-gold hover:bg-gold/90 text-foreground">
                     <Info className="h-4 w-4" />
                     SAIBA MAIS
-                  </Button>
-                  <Button variant="outline" className="gap-2 border-gold text-gold hover:bg-gold/10">
-                    <ShoppingCart className="h-4 w-4" />
-                    PRÉ-COMPRAR
                   </Button>
                 </div>
               </div>
