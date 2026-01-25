@@ -149,7 +149,7 @@ const InformacoesAcademicas = () => {
                   className="gap-2 bg-gold hover:bg-gold/90 text-foreground"
                   asChild
                 >
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.youtube.com/@espadicaoficial" target="_blank" rel="noopener noreferrer">
                     <Youtube className="h-5 w-5" />
                     CANAL NO YOUTUBE
                   </a>
