@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import HeroCarousel from "@/components/HeroCarousel";
 import RecentReleases from "@/components/RecentReleases";
-import UpcomingReleases from "@/components/UpcomingReleases";
+import AboutAuthor from "@/components/AboutAuthor";
 import NewsSection from "@/components/NewsSection";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
@@ -17,7 +17,7 @@ const Index = () => {
       <main>
         <HeroCarousel />
         <RecentReleases />
-        <UpcomingReleases />
+        <AboutAuthor />
         <NewsSection />
         <Newsletter />
       </main>

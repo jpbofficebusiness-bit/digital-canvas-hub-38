@@ -73,16 +73,16 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+    <section className="py-16 md:py-24 bg-teal text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center">
           <Mail className="h-12 w-12 mx-auto mb-6 opacity-80" />
           <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
-            INSCREVA-SE NA NEWSLETTER
+            INSCREVA-SE NA FRANKLIN BOOKS
           </h2>
           <p className="font-body text-primary-foreground/80 mb-8">
-            Receba novidades, lançamentos exclusivos e conteúdos especiais
-            diretamente no seu email.
+            Receba atualizações exclusivas, lançamentos e conteúdo especial
+            diretamente na sua caixa de entrada.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4 text-left">
@@ -163,7 +163,7 @@ const Newsletter = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-body tracking-wider mt-6"
+              className="w-full bg-gold text-foreground hover:bg-gold/90 font-body tracking-wider mt-6"
             >
               {isSubmitting ? "ENVIANDO..." : "CADASTRAR"}
             </Button>
