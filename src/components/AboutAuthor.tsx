@@ -38,21 +38,24 @@ const AboutAuthor = () => {
                 className="gap-2 bg-gold hover:bg-gold/90 text-foreground font-body tracking-wider"
                 asChild
               >
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/@espadicaoficial" target="_blank" rel="noopener noreferrer">
                   <Youtube className="h-5 w-5" />
                   VISITE NOSSO CANAL NO YOUTUBE
                 </a>
               </Button>
             </div>
 
-            {/* Video Placeholder */}
-            <div className="aspect-video bg-primary-foreground/10 rounded-sm border border-primary-foreground/20 flex items-center justify-center">
-              <div className="text-center">
-                <Youtube className="w-12 h-12 mx-auto mb-2 text-primary-foreground/40" />
-                <p className="font-body text-sm text-primary-foreground/50">
-                  Vídeo em destaque será adicionado aqui
-                </p>
-              </div>
+            {/* Featured Video */}
+            <div className="aspect-video rounded-sm overflow-hidden border border-primary-foreground/20">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/fOu3hMf6SY0"
+                title="Vídeo em Destaque - Franklin Rafael"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>
