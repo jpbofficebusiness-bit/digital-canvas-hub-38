@@ -1,9 +1,19 @@
 import { useState } from "react";
-import { Menu, X, Search } from "lucide-react";
+import { MoreVertical, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
-const navLinks = [
+const mobileMenuLinks = [
+  { label: "O Autor", href: "/sobre-franklin-rafael", isAnchor: false, icon: User },
+  { label: "Todos os Seus Livros", href: "#trabalhos", isAnchor: true, icon: BookOpen },
+  { label: "Por Vir", href: "#por-vir", isAnchor: true, icon: Clock },
+  { label: "Perguntas Frequentes (FAQ)", href: "#faq", isAnchor: true, icon: HelpCircle },
+  { label: "Obra-Prima", href: "#obra-prima", isAnchor: true, icon: Star },
+  { label: "Franklin Rafael Oficial", href: "https://www.youtube.com/@espadicaoficial", isExternal: true, icon: Youtube },
+  { label: "The Franklin Village", href: "https://www.youtube.com/@espadicaoficial", isExternal: true, icon: Home },
+];
+
+const desktopNavLinks = [
   { label: "OBRAS", href: "#trabalhos", isAnchor: true },
   { label: "O AUTOR", href: "/sobre-franklin-rafael", isAnchor: false },
   { label: "FAQ", href: "#faq", isAnchor: true },
@@ -13,15 +23,6 @@ const navLinks = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
-  const handleNavClick = (link: typeof navLinks[0]) => {
-    setIsMenuOpen(false);
-    
-    // If it's an anchor link and we're not on home page, navigate to home first
-    if (link.isAnchor && location.pathname !== "/") {
-      window.location.href = "/" + link.href;
-    }
-  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -35,7 +36,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {desktopNavLinks.map((link) => (
               link.isAnchor ? (
                 <a
                   key={link.label}
@@ -58,11 +59,7 @@ const Header = () => {
 
           {/* Mobile Menu Buttons */}
           <div className="flex items-center gap-1 lg:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label="Pesquisar"
-            >
+            <Button variant="ghost" size="icon" aria-label="Pesquisar">
               <Search className="h-5 w-5" />
             </Button>
             <Button
@@ -71,7 +68,7 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <MoreVertical className="h-6 w-6" />}
             </Button>
           </div>
         </div>
@@ -79,28 +76,49 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="lg:hidden py-4 border-t border-border animate-fade-in">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                link.isAnchor ? (
-                  <a
-                    key={link.label}
-                    href={location.pathname === "/" ? link.href : "/" + link.href}
-                    className="font-body text-sm tracking-wider text-muted-foreground hover:text-primary transition-colors duration-200 py-2"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                ) : (
+            <div className="flex flex-col gap-1">
+              {mobileMenuLinks.map((link) => {
+                const Icon = link.icon;
+                if (link.isExternal) {
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 font-body text-sm tracking-wider text-muted-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-200 py-3 px-3 rounded-md"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Icon className="h-4 w-4" />
+                      {link.label}
+                    </a>
+                  );
+                }
+                if (link.isAnchor) {
+                  return (
+                    <a
+                      key={link.label}
+                      href={location.pathname === "/" ? link.href : "/" + link.href}
+                      className="flex items-center gap-3 font-body text-sm tracking-wider text-muted-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-200 py-3 px-3 rounded-md"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Icon className="h-4 w-4" />
+                      {link.label}
+                    </a>
+                  );
+                }
+                return (
                   <Link
                     key={link.label}
                     to={link.href}
-                    className="font-body text-sm tracking-wider text-muted-foreground hover:text-primary transition-colors duration-200 py-2"
+                    className="flex items-center gap-3 font-body text-sm tracking-wider text-muted-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-200 py-3 px-3 rounded-md"
                     onClick={() => setIsMenuOpen(false)}
                   >
+                    <Icon className="h-4 w-4" />
                     {link.label}
                   </Link>
-                )
-              ))}
+                );
+              })}
             </div>
           </nav>
         )}
