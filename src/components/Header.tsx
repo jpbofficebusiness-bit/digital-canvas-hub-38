@@ -9,7 +9,7 @@ const mobileMenuLinks = [
   { label: "Por Vir", href: "#por-vir", isAnchor: true, icon: Clock },
   { label: "Perguntas Frequentes (FAQ)", href: "#faq", isAnchor: true, icon: HelpCircle },
   { label: "Obra-Prima", href: "#obra-prima", isAnchor: true, icon: Star },
-  { label: "Franklin Rafael Oficial", href: "https://www.youtube.com/@espadicaoficial", isExternal: true, icon: Youtube },
+  { label: "Franklin Rafael Oficial", href: "https://www.youtube.com/@franklinrafaeloficial", isExternal: true, icon: Youtube },
   { label: "The Franklin Village", href: "https://www.youtube.com/@espadicaoficial", isExternal: true, icon: Home },
 ];
 
