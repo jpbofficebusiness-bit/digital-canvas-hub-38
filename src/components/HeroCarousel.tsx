@@ -84,7 +84,7 @@ const HeroCarousel = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+    <section className="relative w-full h-[80vh] md:h-[70vh] overflow-hidden">
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
           {slides.map((slide) => (

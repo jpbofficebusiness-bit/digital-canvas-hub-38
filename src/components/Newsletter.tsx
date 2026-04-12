@@ -78,7 +78,7 @@ const Newsletter = () => {
         <div className="max-w-xl mx-auto text-center">
           <Mail className="h-12 w-12 mx-auto mb-6 opacity-80" />
           <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
-            INSCREVA-SE NA FRANKLIN BOOKS
+            INSCREVA-SE NO SITE FRANKLIN RAFAEL
           </h2>
           <p className="font-body text-primary-foreground/80 mb-8">
             Receba atualizações exclusivas, lançamentos e conteúdo especial
