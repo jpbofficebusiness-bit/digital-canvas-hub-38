@@ -1,12 +1,18 @@
 import { useState } from "react";
-import { MoreVertical, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube, Home } from "lucide-react";
+import { MoreVertical, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube, Home, ChevronDown, Pen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+
+const porVirSubItems = [
+  { title: "Hereges e Heresias", series: "Série: Sermões Franklin" },
+  { title: "Piratas", series: "Série: Sermões Franklin" },
+  { title: "A Igreja", series: "Série: Sermões Franklin" },
+];
 
 const mobileMenuLinks = [
   { label: "O Autor", href: "/sobre-franklin-rafael", isAnchor: false, icon: User },
   { label: "Todos os Seus Livros", href: "#trabalhos", isAnchor: true, icon: BookOpen },
-  { label: "Por Vir", href: "#por-vir", isAnchor: true, icon: Clock },
+  { label: "Por Vir", href: "#por-vir", isAnchor: true, icon: Clock, hasSubItems: true },
   { label: "Perguntas Frequentes (FAQ)", href: "#faq", isAnchor: true, icon: HelpCircle },
   { label: "Obra-Prima", href: "#obra-prima", isAnchor: true, icon: Star },
   { label: "Franklin Rafael Oficial", href: "https://www.youtube.com/@franklinrafaeloficial", isExternal: true, icon: Youtube },
