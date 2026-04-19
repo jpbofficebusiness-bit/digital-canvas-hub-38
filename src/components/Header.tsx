@@ -11,7 +11,7 @@ const porVirSubItems = [
 
 const mobileMenuLinks = [
   { label: "O Autor", href: "/sobre-franklin-rafael", isAnchor: false, icon: User },
-  { label: "Todos os Seus Livros", href: "#trabalhos", isAnchor: true, icon: BookOpen },
+  { label: "Todos os Seus Livros", href: "/obras", isAnchor: false, icon: BookOpen },
   { label: "Por Vir", href: "#por-vir", isAnchor: true, icon: Clock, hasSubItems: true },
   { label: "Perguntas Frequentes (FAQ)", href: "#faq", isAnchor: true, icon: HelpCircle },
   { label: "Obra-Prima", href: "#obra-prima", isAnchor: true, icon: Star },
