@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BiographicalTimeline from "@/components/BiographicalTimeline";
 import {
   Accordion,
   AccordionContent,
@@ -215,12 +216,7 @@ const SobreFranklinRafael = () => {
                         Linha do Tempo Biográfica — Franklin Rafael
                       </AccordionTrigger>
                       <AccordionContent>
-                        <div className="py-4">
-                          <p className="font-body text-muted-foreground leading-relaxed text-center italic">
-                            Conteúdo da linha do tempo em construção. Em breve, marcos importantes
-                            da vida e obra de Franklin Rafael serão adicionados aqui.
-                          </p>
-                        </div>
+                        <BiographicalTimeline />
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
