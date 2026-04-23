@@ -10,6 +10,8 @@ import Citacoes from "./pages/Citacoes";
 import LinhaDoTempo from "./pages/LinhaDoTempo";
 import InformacoesAcademicas from "./pages/InformacoesAcademicas";
 import Obras from "./pages/Obras";
+import ObrasCategoria from "./pages/ObrasCategoria";
+import LivroDetalhe from "./pages/LivroDetalhe";
 import PorVir from "./pages/PorVir";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/o-autor/linha-do-tempo" element={<LinhaDoTempo />} />
           <Route path="/informacoes-academicas" element={<InformacoesAcademicas />} />
           <Route path="/obras" element={<Obras />} />
+          <Route path="/obras/:categoria" element={<ObrasCategoria />} />
+          <Route path="/obras/:categoria/:livro" element={<LivroDetalhe />} />
           <Route path="/por-vir" element={<PorVir />} />
           <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
