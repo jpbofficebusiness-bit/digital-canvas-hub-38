@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Newsletter from "@/components/Newsletter";
 import { GraduationCap, Building, Youtube, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -149,9 +150,9 @@ const InformacoesAcademicas = () => {
                   className="gap-2 bg-gold hover:bg-gold/90 text-foreground"
                   asChild
                 >
-                  <a href="https://www.youtube.com/@espadicaoficial" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.youtube.com/@franklinrafaeloficial" target="_blank" rel="noopener noreferrer">
                     <Youtube className="h-5 w-5" />
-                    CANAL NO YOUTUBE
+                    CANAL NO YOUTUBE - FRANKLIN RAFAEL OFICIAL
                   </a>
                 </Button>
                 <Button 
@@ -171,6 +172,7 @@ const InformacoesAcademicas = () => {
         </div>
       </main>
       
+      <Newsletter />
       <Footer />
     </div>
   );

@@ -73,21 +73,21 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-teal text-primary-foreground">
+    <section className="py-16 md:py-24 bg-foreground text-background">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center">
-          <Mail className="h-12 w-12 mx-auto mb-6 opacity-80" />
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4">
-            INSCREVA-SE NO SITE FRANKLIN RAFAEL
+          <Mail className="h-12 w-12 mx-auto mb-6 text-gold" />
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-4 text-gold">
+            INSCREVA-SE NO SITE FRANKLIN RAFAEL OFICIAL
           </h2>
-          <p className="font-body text-primary-foreground/80 mb-8">
+          <p className="font-body text-background/80 mb-8">
             Receba atualizações exclusivas, lançamentos e conteúdo especial
             diretamente na sua caixa de entrada.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4 text-left">
             <div>
-              <Label htmlFor="name" className="font-body text-sm text-primary-foreground/80">
+              <Label htmlFor="name" className="font-body text-sm text-background/80">
                 Nome
               </Label>
               <Input
@@ -98,12 +98,12 @@ const Newsletter = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-primary-foreground"
+                className="bg-background/10 border-gold/40 text-background placeholder:text-background/50 focus:border-gold"
               />
             </div>
 
             <div>
-              <Label htmlFor="email" className="font-body text-sm text-primary-foreground/80">
+              <Label htmlFor="email" className="font-body text-sm text-background/80">
                 Email *
               </Label>
               <Input
@@ -115,12 +115,12 @@ const Newsletter = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:border-primary-foreground"
+                className="bg-background/10 border-gold/40 text-background placeholder:text-background/50 focus:border-gold"
               />
             </div>
 
             <div>
-              <Label htmlFor="country" className="font-body text-sm text-primary-foreground/80">
+              <Label htmlFor="country" className="font-body text-sm text-background/80">
                 País
               </Label>
               <Select
@@ -129,7 +129,7 @@ const Newsletter = () => {
                   setFormData({ ...formData, country: value })
                 }
               >
-                <SelectTrigger className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+                <SelectTrigger className="bg-background/10 border-gold/40 text-background">
                   <SelectValue placeholder="Selecione um país..." />
                 </SelectTrigger>
                 <SelectContent className="bg-card border-border">
@@ -149,11 +149,11 @@ const Newsletter = () => {
                 onCheckedChange={(checked) =>
                   setFormData({ ...formData, consent: checked as boolean })
                 }
-                className="border-primary-foreground/40 data-[state=checked]:bg-primary-foreground data-[state=checked]:text-primary"
+                className="border-gold/60 data-[state=checked]:bg-gold data-[state=checked]:text-foreground"
               />
               <Label
                 htmlFor="consent"
-                className="font-body text-sm text-primary-foreground/80 leading-relaxed cursor-pointer"
+                className="font-body text-sm text-background/80 leading-relaxed cursor-pointer"
               >
                 Concordo em receber emails de marketing e novidades. Posso
                 cancelar a inscrição a qualquer momento.
