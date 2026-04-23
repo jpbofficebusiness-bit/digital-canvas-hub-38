@@ -122,9 +122,7 @@ const HeroCarousel = () => {
                     <p className="font-heading text-lg md:text-xl mb-6 italic opacity-90 drop-shadow-md">
                       {slide.subtitle}
                     </p>
-                    <p className="font-body text-sm md:text-base lg:text-lg mb-8 opacity-95 leading-relaxed drop-shadow-md">
-                      {slide.bookDescription}
-                    </p>
+                    <div className="mb-8" />
                     <Button
                       variant="outline"
                       size="lg"
