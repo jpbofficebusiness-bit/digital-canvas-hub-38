@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
@@ -91,9 +92,16 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Fullscreen Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-16 bottom-0 bg-background z-40 overflow-y-auto">
+      {/* Fullscreen Mobile Navigation - rendered via portal so it escapes header's stacking context */}
+      {isMenuOpen && typeof document !== "undefined" && createPortal(
+        <div className="lg:hidden fixed inset-0 bg-background z-[100] overflow-y-auto pt-20">
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Fechar menu"
+            className="absolute top-4 right-4 p-2 rounded-md text-foreground hover:bg-accent/50"
+          >
+            <X className="h-6 w-6" />
+          </button>
           <nav className="container mx-auto px-4 py-6">
             <div className="flex flex-col gap-1">
               {mobileMenuLinks.map((link) => {
@@ -140,7 +148,8 @@ const Header = () => {
               })}
             </div>
           </nav>
-        </div>
+        </div>,
+        document.body
       )}
     </header>
   );
