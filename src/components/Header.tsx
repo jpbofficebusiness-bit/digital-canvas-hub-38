@@ -93,7 +93,7 @@ const Header = () => {
 
       {/* Fullscreen Mobile Navigation */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-16 bg-background z-40 overflow-y-auto animate-fade-in">
+        <div className="lg:hidden fixed inset-x-0 top-16 bottom-0 bg-background z-40 overflow-y-auto">
           <nav className="container mx-auto px-4 py-6">
             <div className="flex flex-col gap-1">
               {mobileMenuLinks.map((link) => {
