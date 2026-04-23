@@ -152,7 +152,7 @@ const InformacoesAcademicas = () => {
                 >
                   <a href="https://www.youtube.com/@franklinrafaeloficial" target="_blank" rel="noopener noreferrer">
                     <Youtube className="h-5 w-5" />
-                    CANAL NO YOUTUBE - FRANKLIN RAFAEL OFICIAL
+                    Canal No Youtube - Franklin Rafael
                   </a>
                 </Button>
                 <Button 
