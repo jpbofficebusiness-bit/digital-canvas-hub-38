@@ -1,4 +1,3 @@
-import { PenLine } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
@@ -33,7 +32,7 @@ const PorVir = () => {
                 className="border border-border bg-card rounded-sm p-6 border-l-4 border-l-gold"
               >
                 <div className="flex items-center gap-2 text-gold mb-3">
-                  <PenLine className="h-4 w-4" />
+                  <span className="text-base leading-none" aria-hidden="true">✍️</span>
                   <span className="font-body text-xs uppercase tracking-widest">
                     Escrevendo...
                   </span>
