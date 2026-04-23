@@ -38,9 +38,9 @@ const AboutAuthor = () => {
                 className="gap-2 bg-gold hover:bg-gold/90 text-foreground font-body tracking-wider"
                 asChild
               >
-                <a href="https://www.youtube.com/@espadicaoficial" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/@franklinrafaeloficial" target="_blank" rel="noopener noreferrer">
                   <Youtube className="h-5 w-5" />
-                  VISITE NOSSO CANAL NO YOUTUBE
+                  CANAL NO YOUTUBE - FRANKLIN RAFAEL OFICIAL
                 </a>
               </Button>
             </div>

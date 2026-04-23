@@ -2,6 +2,7 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Newsletter from "@/components/Newsletter";
 
 type Book = {
   title: string;
@@ -267,6 +268,7 @@ const Obras = () => {
       {selected && (
         <BookModal book={selected} onClose={() => setSelected(null)} />
       )}
+      <Newsletter />
       <Footer />
     </div>
   );
