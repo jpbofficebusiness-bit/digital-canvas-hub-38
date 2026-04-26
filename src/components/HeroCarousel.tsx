@@ -21,6 +21,7 @@ type SlideType = {
   image: string;
   bookCover: string;
   bookDescription: string;
+  to: string;
 };
 
 const slides: SlideType[] = [
@@ -31,7 +32,8 @@ const slides: SlideType[] = [
     cta: "SAIBA MAIS",
     image: donzelaCristaBg,
     bookCover: donzelaCristaCover,
-    bookDescription: "Em meio à um mundo confuso e maligno, a jovem cristã se vê como uma mulher que precisa firmar-se em Deus a cada dia. Além disso, nunca foi tão necessário estar em guarda contra os diversos males, bem como preservar-se pura em uma era tão promíscua e subjetivista como a que vivemos.",
+    bookDescription: "",
+    to: "/obras/teologia/donzela-crista",
   },
   {
     id: 2,
@@ -40,7 +42,8 @@ const slides: SlideType[] = [
     cta: "SAIBA MAIS",
     image: alcateiaInfernalBg,
     bookCover: alcateiaInfernalCover,
-    bookDescription: "Um surto de lobos vorazes invade um Vilarejo. Quando se dão por conta, um grupo de pastores decide fazer algo inédito por toda a Luméria, situada no grande país da Torvia.",
+    bookDescription: "",
+    to: "/obras/alta-fantasia/alcateia-infernal",
   },
   {
     id: 3,
@@ -49,7 +52,8 @@ const slides: SlideType[] = [
     cta: "SAIBA MAIS",
     image: sequestroCruzBg,
     bookCover: sequestroCruzCover,
-    bookDescription: "Assombroso, robusto e firme – este livro irrompe sobre a consciência como trovões e relâmpagos. Com o seu jeito teológico e filosófico, destemido e biblista, Franklin Rafael não escreve como os apáticos e entediantes, mas como um pregoeiro em chamas.",
+    bookDescription: "",
+    to: "/obras/teologia/o-sequestro-da-cruz",
   },
   {
     id: 4,
@@ -58,7 +62,8 @@ const slides: SlideType[] = [
     cta: "SAIBA MAIS",
     image: homemAcesoBg,
     bookCover: homemAcesoCover,
-    bookDescription: "Mais do que uma obra colossal, isso é uma teologia da devoção. Um monumento literário, biblista, histórico, filosófico e prático, combinado ao estilo metódico e minucioso de um professor, e à performance de um pregoeiro em chamas.",
+    bookDescription: "",
+    to: "/obras/teologia/o-homem-aceso",
   },
 ];
 
