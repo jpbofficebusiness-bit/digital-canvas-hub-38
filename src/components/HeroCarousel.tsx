@@ -1,9 +1,10 @@
 import { useState, useCallback, useEffect } from "react";
+import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 
-import donzelaCristaCover from "@/assets/donzela-crista-cover.jpg";
+import donzelaCristaCover from "@/assets/donzela-crista-cover.png";
 import donzelaCristaBg from "@/assets/donzela-crista-bg.jpg";
 import alcateiaInfernalCover from "@/assets/alcateia-infernal-cover.png";
 import alcateiaInfernalBg from "@/assets/alcateia-infernal-bg.jpg";
