@@ -33,60 +33,44 @@ const ObrasCategoria = () => {
             </p>
           </header>
 
-          <div className="space-y-6">
+          <ul className="divide-y divide-border">
             {section.books.map((book) => {
-              const content = (
-                <div className="flex gap-5 md:gap-6 items-start border border-border bg-card rounded-sm p-4 md:p-5 hover:bg-accent/30 transition-colors group">
-                  <div className="w-24 md:w-32 aspect-[2/3] flex-shrink-0 bg-muted overflow-hidden shadow-sm">
-                    {book.soon ? (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="font-heading text-xs text-muted-foreground">
-                          Em breve
-                        </span>
-                      </div>
-                    ) : (
-                      <img
-                        src={book.img}
-                        alt={book.title}
-                        loading="lazy"
-                        className="w-full h-full object-cover"
-                      />
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0 py-1">
-                    <h2 className="font-heading text-lg md:text-xl text-foreground leading-snug mb-2 group-hover:text-primary transition-colors">
+              const inner = (
+                <div className="flex items-center justify-between gap-4">
+                  <div className="min-w-0">
+                    <h2 className="font-heading text-xl md:text-2xl text-foreground leading-snug group-hover:text-gold transition-colors">
                       {book.title}
                     </h2>
-                    <p className="font-body text-sm text-muted-foreground line-clamp-3">
-                      {book.sinopse}
-                    </p>
-                    {!book.soon && (
-                      <span className="inline-block mt-3 font-body text-xs uppercase tracking-widest text-gold">
-                        Ver detalhes →
-                      </span>
-                    )}
-                    {book.soon && (
-                      <span className="inline-block mt-3 font-body text-xs uppercase tracking-widest text-muted-foreground">
-                        Em breve
-                      </span>
+                    {book.subtitle && (
+                      <p className="font-body italic text-sm md:text-base text-muted-foreground mt-1">
+                        {book.subtitle}
+                      </p>
                     )}
                   </div>
+                  {book.soon && (
+                    <span className="font-body text-xs uppercase tracking-widest text-muted-foreground flex-shrink-0">
+                      Em breve
+                    </span>
+                  )}
                 </div>
               );
 
-              return book.soon ? (
-                <div key={book.slug}>{content}</div>
-              ) : (
-                <Link
-                  key={book.slug}
-                  to={`/obras/${section.slug}/${book.slug}`}
-                  className="block"
-                >
-                  {content}
-                </Link>
+              return (
+                <li key={book.slug}>
+                  {book.soon ? (
+                    <div className="block py-5 md:py-6 group">{inner}</div>
+                  ) : (
+                    <Link
+                      to={`/obras/${section.slug}/${book.slug}`}
+                      className="block py-5 md:py-6 group"
+                    >
+                      {inner}
+                    </Link>
+                  )}
+                </li>
               );
             })}
-          </div>
+          </ul>
         </div>
       </main>
       <Newsletter />
