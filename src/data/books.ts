@@ -1,6 +1,7 @@
 export type Book = {
   slug: string;
   title: string;
+  subtitle?: string;
   img: string;
   link?: string;
   sinopse: string;
