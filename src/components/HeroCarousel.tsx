@@ -130,11 +130,12 @@ const HeroCarousel = () => {
                     </p>
                     <div className="mb-8" />
                     <Button
+                      asChild
                       variant="outline"
                       size="lg"
                       className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-body tracking-wider"
                     >
-                      {slide.cta}
+                      <Link to={slide.to}>{slide.cta}</Link>
                     </Button>
                   </div>
                 </div>
