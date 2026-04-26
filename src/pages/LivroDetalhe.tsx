@@ -29,23 +29,59 @@ const LivroDetalhe = () => {
             Voltar para {section.category}
           </Link>
 
-          <article className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12">
-            <div className="aspect-[2/3] bg-muted overflow-hidden shadow-md">
-              <img
-                src={book.img}
-                alt={book.title}
-                className="w-full h-full object-cover"
-              />
+          <article className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-10">
+            {/* Coluna capa + botões prev/next ao lado */}
+            <div className="flex flex-col items-center">
+              <div className="flex items-start gap-2 w-full justify-center">
+                {prev ? (
+                  <Link
+                    to={`/obras/${section.slug}/${prev.slug}`}
+                    aria-label={`Anterior: ${prev.title}`}
+                    title={`Anterior: ${prev.title}`}
+                    className="flex-shrink-0 mt-12 w-9 h-9 rounded-full border border-border bg-card text-muted-foreground hover:text-foreground hover:border-foreground flex items-center justify-center transition-colors"
+                  >
+                    <ChevronLeft className="h-5 w-5" />
+                  </Link>
+                ) : (
+                  <div className="w-9 flex-shrink-0" />
+                )}
+
+                <div className="w-[140px] md:w-[180px] aspect-[2/3] bg-muted overflow-hidden shadow-md">
+                  <img
+                    src={book.img}
+                    alt={book.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {next ? (
+                  <Link
+                    to={`/obras/${section.slug}/${next.slug}`}
+                    aria-label={`Próximo: ${next.title}`}
+                    title={`Próximo: ${next.title}`}
+                    className="flex-shrink-0 mt-12 w-9 h-9 rounded-full border border-border bg-card text-muted-foreground hover:text-foreground hover:border-foreground flex items-center justify-center transition-colors"
+                  >
+                    <ChevronRight className="h-5 w-5" />
+                  </Link>
+                ) : (
+                  <div className="w-9 flex-shrink-0" />
+                )}
+              </div>
             </div>
 
             <div className="flex flex-col">
               <span className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground mb-2">
                 {section.category}
               </span>
-              <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-4 leading-tight">
+              <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-1 leading-tight">
                 {book.title}
               </h1>
-              <h2 className="font-heading text-lg text-foreground mb-2">
+              {book.subtitle && (
+                <p className="font-heading italic text-base md:text-lg text-muted-foreground mb-4">
+                  {book.subtitle}
+                </p>
+              )}
+              <h2 className="font-heading text-lg text-foreground mt-4 mb-2">
                 Sinopse
               </h2>
               <p className="font-body text-foreground/80 leading-relaxed mb-8">
@@ -69,7 +105,7 @@ const LivroDetalhe = () => {
             </div>
           </article>
 
-          {/* Navegação prev/next */}
+          {/* Navegação prev/next textual no rodapé */}
           <nav className="mt-16 pt-8 border-t border-border grid grid-cols-2 gap-4">
             {prev ? (
               <Link

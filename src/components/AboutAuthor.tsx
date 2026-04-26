@@ -40,7 +40,7 @@ const AboutAuthor = () => {
               >
                 <a href="https://www.youtube.com/@franklinrafaeloficial" target="_blank" rel="noopener noreferrer">
                   <Youtube className="h-5 w-5" />
-                  Canal No Youtube - Franklin Rafael
+                  Canal No Youtube - Franklin Rafael Oficial
                 </a>
               </Button>
             </div>

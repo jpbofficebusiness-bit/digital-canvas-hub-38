@@ -1,6 +1,7 @@
 export type Book = {
   slug: string;
   title: string;
+  subtitle?: string;
   img: string;
   link?: string;
   sinopse: string;
@@ -24,6 +25,7 @@ export const sections: Section[] = [
       {
         slug: "donzela-crista",
         title: "Donzela Cristã",
+        subtitle: "Toda a feminilidade devotada a Deus",
         img: "https://storage.googleapis.com/images.uiclap.com/capa/ua60526.jpg",
         link: "https://loja.uiclap.com/titulo/ua60526/",
         sinopse:
@@ -32,6 +34,7 @@ export const sections: Section[] = [
       {
         slug: "o-sequestro-da-cruz",
         title: "O Sequestro da Cruz",
+        subtitle: "Projeto Coração Piedoso",
         img: "https://storage.googleapis.com/images.uiclap.com/capa/ua95894.jpg",
         link: "https://loja.uiclap.com/titulo/ua95894/",
         sinopse:
@@ -40,6 +43,7 @@ export const sections: Section[] = [
       {
         slug: "o-homem-aceso",
         title: "O Homem Aceso",
+        subtitle: "Projeto Coração Piedoso",
         img: "https://storage.googleapis.com/images.uiclap.com/capa/ua126109.jpg",
         link: "https://loja.uiclap.com/titulo/ua126109/",
         sinopse:

@@ -3,6 +3,12 @@ import { ChevronRight, Quote, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const otherSections = [
   {
@@ -36,74 +42,97 @@ const SobreFranklinRafael = () => {
             </p>
           </header>
 
-          {/* Biografia completa - visível direto */}
+          {/* Biografia em accordion único — abre tudo de uma vez */}
           <section className="mb-12">
             <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-6 border-b border-border pb-3">
               Biografia
             </h2>
 
-            <div className="space-y-8">
-              <div>
-                <h3 className="font-heading text-lg md:text-xl text-foreground mb-3">
-                  Franklin Rafael
-                </h3>
-                <p className="font-body text-muted-foreground leading-relaxed">
-                  🏹 Franklin Rafael é um teólogo reformado e um exímio escritor de obras
-                  cristãs e alta fantasia, um gênero definido pela criação de mundos
-                  imaginários e histórias épicas, permeadas de personagens, filosofias
-                  próprias e heróis notáveis. Também é conhecido como um pregoeiro batista
-                  descendente da Reforma Protestante, de estilo veemente e ancestral, além
-                  de um professor relevante em sua época.
-                </p>
-              </div>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem
+                value="biografia-completa"
+                className="border border-border rounded-sm bg-card px-4 md:px-6"
+              >
+                <AccordionTrigger className="font-heading text-base md:text-lg text-foreground hover:no-underline">
+                  Ver biografia completa
+                </AccordionTrigger>
+                <AccordionContent>
+                  <div className="space-y-8 pt-2">
+                    <div>
+                      <h3 className="font-heading text-lg md:text-xl text-foreground mb-3">
+                        Franklin Rafael
+                      </h3>
+                      <p className="font-body text-muted-foreground leading-relaxed">
+                        🏹 Franklin Rafael é um teólogo reformado e um exímio
+                        escritor de obras cristãs e alta fantasia, um gênero
+                        definido pela criação de mundos imaginários e histórias
+                        épicas, permeadas de personagens, filosofias próprias e
+                        heróis notáveis. Também é conhecido como um pregoeiro
+                        batista descendente da Reforma Protestante, de estilo
+                        veemente e ancestral, além de um professor relevante em
+                        sua época.
+                      </p>
+                    </div>
 
-              <div>
-                <h3 className="font-heading text-lg md:text-xl text-foreground mb-3">
-                  ⛪ Religião e Influências
-                </h3>
-                <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
-                  <p>
-                    ◾ Franklin Rafael é um cristão batista de tradição protestante,
-                    influenciado pelos grandes reformadores, os piedosos puritanos e os
-                    grandes avivalistas, tanto em seu estilo bélico quanto em seu jeito
-                    pregacional.
-                  </p>
-                  <p>
-                    ◾ Como Teólogo, se identifica como um arminiano-wesleyano, lapidado
-                    pela cosmovisão de Jacob Armínio e a teologia de John Wesley. De um
-                    modo peculiar, ele elaborou o seu próprio acróstico{" "}
-                    <strong className="text-gold">SWORD</strong>, que significa espada,
-                    para descrever sua própria posição teológica.
-                  </p>
-                </div>
-              </div>
+                    <div>
+                      <h3 className="font-heading text-lg md:text-xl text-foreground mb-3">
+                        ⛪ Religião e Influências
+                      </h3>
+                      <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
+                        <p>
+                          ◾ Franklin Rafael é um cristão batista de tradição
+                          protestante, influenciado pelos grandes reformadores,
+                          os piedosos puritanos e os grandes avivalistas, tanto
+                          em seu estilo bélico quanto em seu jeito pregacional.
+                        </p>
+                        <p>
+                          ◾ Como Teólogo, se identifica como um
+                          arminiano-wesleyano, lapidado pela cosmovisão de Jacob
+                          Armínio e a teologia de John Wesley. De um modo
+                          peculiar, ele elaborou o seu próprio acróstico{" "}
+                          <strong className="text-gold">SWORD</strong>, que
+                          significa espada, para descrever sua própria posição
+                          teológica.
+                        </p>
+                      </div>
+                    </div>
 
-              <div>
-                <h3 className="font-heading text-lg md:text-xl text-foreground mb-3">
-                  🗽 Cidadania e Política
-                </h3>
-                <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
-                  <p>
-                    ◾ Em termos de cidadania e política, ele adota o conservadorismo
-                    histórico, cuja mentalidade se remete ao legado de homens como Edmund
-                    Burke, Russell Kirk, Roger Scruton e tantos outros intelectuais,
-                    filósofos e literatos no percurso da história.
-                  </p>
-                  <p>
-                    ◾ No ano de 2020, fundou no YouTube o canal{" "}
-                    <strong className="text-gold">Reformado Franklin Rafael</strong>, uma
-                    plataforma feita para todos aqueles que desejam conhecer sua
-                    personalidade, seu pensamento e as suas obras.
-                  </p>
-                  <p>
-                    ◾ Também é o fundador da{" "}
-                    <strong className="text-gold">Livraria FrankBooks</strong>, uma
-                    plataforma online que consiste na divulgação de toda a sua obra
-                    literária e na venda de todos os seus livros.
-                  </p>
-                </div>
-              </div>
-            </div>
+                    <div>
+                      <h3 className="font-heading text-lg md:text-xl text-foreground mb-3">
+                        🗽 Cidadania e Política
+                      </h3>
+                      <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
+                        <p>
+                          ◾ Em termos de cidadania e política, ele adota o
+                          conservadorismo histórico, cuja mentalidade se remete
+                          ao legado de homens como Edmund Burke, Russell Kirk,
+                          Roger Scruton e tantos outros intelectuais, filósofos
+                          e literatos no percurso da história.
+                        </p>
+                        <p>
+                          ◾ No ano de 2020, fundou no YouTube o canal{" "}
+                          <strong className="text-gold">
+                            Reformado Franklin Rafael
+                          </strong>
+                          , uma plataforma feita para todos aqueles que desejam
+                          conhecer sua personalidade, seu pensamento e as suas
+                          obras.
+                        </p>
+                        <p>
+                          ◾ Também é o fundador da{" "}
+                          <strong className="text-gold">
+                            Livraria FrankBooks
+                          </strong>
+                          , uma plataforma online que consiste na divulgação de
+                          toda a sua obra literária e na venda de todos os seus
+                          livros.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </section>
 
           {/* Outras seções (citações, linha do tempo) */}
