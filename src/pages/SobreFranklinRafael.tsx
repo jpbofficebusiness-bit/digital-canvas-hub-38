@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import { ChevronRight, Quote, Clock } from "lucide-react";
+import { ChevronRight, Quote, Clock, BookOpen } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const otherSections = [
+  {
+    to: "/o-autor/biografia",
+    title: "Biografia",
+    description: "A trajetória, religião e influências de Franklin Rafael.",
+    icon: BookOpen,
+  },
   {
     to: "/o-autor/citacoes",
     title: "Citações",
