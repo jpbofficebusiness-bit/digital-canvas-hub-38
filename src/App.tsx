@@ -13,6 +13,7 @@ import Obras from "./pages/Obras";
 import ObrasCategoria from "./pages/ObrasCategoria";
 import LivroDetalhe from "./pages/LivroDetalhe";
 import PorVir from "./pages/PorVir";
+import ObraPrima from "./pages/ObraPrima";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/obras/:categoria" element={<ObrasCategoria />} />
           <Route path="/obras/:categoria/:livro" element={<LivroDetalhe />} />
           <Route path="/por-vir" element={<PorVir />} />
+          <Route path="/obra-prima" element={<ObraPrima />} />
           <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
