@@ -13,6 +13,7 @@ import Obras from "./pages/Obras";
 import ObrasCategoria from "./pages/ObrasCategoria";
 import LivroDetalhe from "./pages/LivroDetalhe";
 import PorVir from "./pages/PorVir";
+import ObraPrima from "./pages/ObraPrima";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
