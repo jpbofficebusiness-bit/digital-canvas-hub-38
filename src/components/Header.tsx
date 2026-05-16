@@ -9,8 +9,8 @@ const mobileMenuLinks = [
   { label: "Todos os Seus Livros", href: "/obras", isAnchor: false, icon: BookOpen },
   { label: "Por Vir", href: "/por-vir", isAnchor: false, icon: Clock },
   { label: "(FAQ) Perguntas Frequentes", href: "/faq", isAnchor: false, icon: HelpCircle },
-  { label: "Obra-Prima", href: "#obra-prima", isAnchor: true, icon: Star },
-  { label: "Franklin Rafael Oficial", href: "https://www.youtube.com/@franklinrafaeloficial", isExternal: true, icon: Youtube },
+  { label: "Obra-Prima", href: "/obra-prima", isAnchor: false, icon: Star },
+  { label: "Canal No Youtube - Franklin Rafael Oficial", href: "https://www.youtube.com/@franklinrafaeloficial", isExternal: true, icon: Youtube },
   { label: "The Franklin Village", href: "https://www.youtube.com/@espadicaoficial", isExternal: true, icon: Home },
 ];
 
