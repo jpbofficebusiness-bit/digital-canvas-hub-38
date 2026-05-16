@@ -33,24 +33,30 @@ const ObrasCategoria = () => {
             </p>
           </header>
 
-          <ul className="divide-y divide-border">
+          <ul className="space-y-8">
             {section.books.map((book) => {
               const inner = (
-                <div className="flex items-center justify-between gap-4">
-                  <div className="min-w-0">
-                    <h2 className="font-heading text-xl md:text-2xl text-foreground leading-snug group-hover:text-gold transition-colors">
-                      {book.title}
-                    </h2>
-                    {book.subtitle && (
-                      <p className="font-body italic text-sm md:text-base text-muted-foreground mt-1">
-                        {book.subtitle}
-                      </p>
-                    )}
-                  </div>
-                  {book.soon && (
-                    <span className="font-body text-xs uppercase tracking-widest text-muted-foreground flex-shrink-0">
-                      Em breve
-                    </span>
+                <div className="flex flex-col items-center text-center">
+                  {book.img ? (
+                    <img
+                      src={book.img}
+                      alt={book.title}
+                      className="w-40 md:w-48 h-auto rounded-sm shadow-md group-hover:shadow-xl transition-shadow"
+                    />
+                  ) : (
+                    <div className="w-40 md:w-48 aspect-[2/3] bg-muted rounded-sm flex items-center justify-center">
+                      <span className="font-body text-xs text-muted-foreground uppercase tracking-widest">
+                        Em breve
+                      </span>
+                    </div>
+                  )}
+                  <h2 className="font-heading text-lg md:text-xl text-foreground mt-4 group-hover:text-gold transition-colors">
+                    {book.title}
+                  </h2>
+                  {book.subtitle && (
+                    <p className="font-body italic text-sm text-muted-foreground mt-1">
+                      {book.subtitle}
+                    </p>
                   )}
                 </div>
               );
@@ -58,11 +64,11 @@ const ObrasCategoria = () => {
               return (
                 <li key={book.slug}>
                   {book.soon ? (
-                    <div className="block py-5 md:py-6 group">{inner}</div>
+                    <div className="block group">{inner}</div>
                   ) : (
                     <Link
                       to={`/obras/${section.slug}/${book.slug}`}
-                      className="block py-5 md:py-6 group"
+                      className="block group"
                     >
                       {inner}
                     </Link>
