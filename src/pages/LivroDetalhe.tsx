@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
 import { getBook } from "@/data/books";
+import uiclapIcon from "@/assets/uiclap-icon.png";
 
 const LivroDetalhe = () => {
   const { categoria, livro } = useParams<{
