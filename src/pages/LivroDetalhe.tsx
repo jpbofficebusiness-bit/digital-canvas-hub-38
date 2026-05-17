@@ -88,11 +88,6 @@ const LivroDetalhe = () => {
               <p className="font-body text-foreground/80 leading-relaxed mb-8">
                 {book.sinopse}
               </p>
-
-              <p className="font-body text-sm text-muted-foreground italic mb-8">
-                Mais informações sobre esta obra serão adicionadas em breve.
-              </p>
-
               {book.link && (
                 <a
                   href={book.link}
