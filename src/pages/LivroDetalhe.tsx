@@ -94,24 +94,19 @@ const LivroDetalhe = () => {
               </p>
 
               {book.link && (
-                <div className="flex flex-col items-start gap-3">
-                  <a
-                    href={book.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center self-start px-6 py-3 bg-foreground text-background font-body text-sm tracking-wider uppercase hover:bg-foreground/90 transition-colors rounded-sm"
-                  >
-                    Saiba mais
-                  </a>
-                  <a
-                    href={book.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center self-start px-4 py-2 mt-4 bg-red-700 text-white font-body text-sm tracking-wider uppercase hover:bg-red-800 transition-colors rounded-md"
-                  >
-                    Comprar na UICLAP
-                  </a>
-                </div>
+                <a
+                  href={book.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 self-start px-5 py-3 bg-red-700 text-white font-body text-sm tracking-wider uppercase hover:bg-red-800 transition-colors rounded-md"
+                >
+                  <img
+                    src={uiclapIcon}
+                    alt="UICLAP"
+                    className="h-5 w-5 object-contain"
+                  />
+                  Saiba mais na UICLAP
+                </a>
               )}
             </div>
           </article>
