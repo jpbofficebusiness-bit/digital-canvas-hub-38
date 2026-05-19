@@ -54,7 +54,7 @@ const entries: YearEntry[] = [
   { year: "2025", paragraphs: ["Publicou sua obra O Homem Aceso, em 24 de dezembro de 2025."] },
 ];
 
-const navYears = ["1994", "2000", "2005", "2010", "2015", "2020", "2024", "2025"];
+const navYears = Array.from(new Set(entries.map((e) => e.year)));
 
 const slugify = (year: string, idx: number) => `ano-${year}-${idx}`;
 
