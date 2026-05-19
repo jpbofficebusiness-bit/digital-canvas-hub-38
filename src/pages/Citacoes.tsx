@@ -3,10 +3,9 @@ import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
 
 const quotes = [
-  "A Igreja é uma bela adormecida. Só o beijo do Príncipe Jesus pode despertá-la.",
+  "A Igreja é uma bela adormecida. Só o beijo do Príncipe, Jesus, pode despertá-la.",
   "O Diário de Anne Frank, de algum modo, sussurra à igreja: um Hitler pior virá.",
   "A consciência instruída na Bíblia, será teu guarda vigilante, principalmente quando a ameaça for você mesmo.",
-  "Prefiro as exortações constantes da casa de Deus Pai, do que os doces dos orfanatos evangélicos.",
   "Se o Messias, mesmo vindo de uma manjedoura, teve que ir à cruz para salvar, assim também os filhos de berço evangélico precisam ir à sua cruz para serem salvos.",
   "O cristão que peca escondido passeia à beira do inferno — o momento em que os demônios mais torcem em silêncio pela sua queda.",
   "O papado ainda é a velha Fábrica do Diabo, e o papa, seu empresário. Nosso problema atual é que muitos dos seus mercadores se disfarçaram de evangélicos.",
@@ -17,7 +16,7 @@ const quotes = [
   "É lamentável que, na era da informação, a desinformação do verdadeiro Evangelho seja o perfil dessa era.",
   "Não se engane! Nossos jovens brigam para extravasar em uma versão evangélica, porque perdem diariamente a luta de serem felizes em Deus.",
   "Bendito seja o pastor que não viveria sem cuidar de um rebanho. E bendita seja a ovelha que não viveria sem os cuidados de um pastor.",
-  "Depois de tudo o que já vi, se o diabo adornasse o inferno e colocasse na entrada uma placa, dizendo: Céu Gospel, muitos desses que se acham evangélicos brigariam por uma vaga lá.",
+  "Depois de tudo o que já vi, se o diabo adornasse o inferno e colocasse na entrada uma placa, dizendo: Céu Gospel , muitos desses que se acham evangélicos brigariam por uma vaga lá.",
   "Vi a igreja ler A Cinderela, e esta lhe disse: Não se perturbe! Ainda que muitas se passem por ti, em meio a toda essa confusão, só em teu pé caberá o sapato do Evangelho, e o teu Príncipe, Jesus, saberá que tu és a noiva.",
   "Nos dias atuais, é mais fácil encontrar um jovem que se acha no direito de ser visto como evangélico, do que um jovem procurando ser um evangélico direito, pouco se importando em ser visto.",
   "Um suposto profeta ordena que fechemos os olhos para o mover de Deus. Engraçado, a igreja e os profetas da Bíblia foram movidos, mas de olhos abertos.",
@@ -40,7 +39,7 @@ const quotes = [
   "Os ridículos que correm, pulam, rodopiam e caem na igreja, odeiam a teologia, não porque eles são do fogo, mas porque ela lhes dirá que isso é caso de hospício.",
   "Se minhas palavras são pesadas? Claro que são! Ninguém fica forte sem lidar com peso, inclusive o do vernáculo.",
   "Fui pescar os perdidos com os irmãos evangélicos. Tive que voltar com a rede cheia de evangélicos.",
-  "O pastor que censura a pregação, proibindo o pregoeiro de pregar algum assunto da Bíblia, faz isso inspirado, não por Deus, mas pelo diabo.",
+  "O pastor que censura a pregação, proibindo o pregoeiro de pregar algum assunto da Bíblia, faz isso movido, não por Deus, mas pelo diabo.",
   "Você pode ver a pobreza intelectual de uma cidade, quando na porta da Secretaria de Educação, os professores são feitos de mendigos.",
   "As lágrimas que caem no inferno, são aquelas que não caíram arrependidas no quarto de oração.",
 ];
