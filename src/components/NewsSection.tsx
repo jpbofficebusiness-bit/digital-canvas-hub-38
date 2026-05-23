@@ -47,13 +47,13 @@ const NewsSection = () => {
           </div>
 
           <div className="order-1 lg:order-2 flex justify-center lg:sticky lg:top-24">
-            <figure className="p-3 bg-card border-8 border-double border-primary/70 shadow-xl rounded-sm">
+            <figure className="p-3 bg-black border-[10px] border-gold shadow-2xl">
               <img
                 src={franklinSketch}
                 alt="Retrato artístico de Franklin Rafael"
                 className="w-56 md:w-64 h-auto block grayscale-[20%]"
               />
-              <figcaption className="font-heading text-center text-sm text-foreground mt-3 italic">
+              <figcaption className="font-heading text-center text-sm text-gold mt-3 italic">
                 Franklin Rafael
               </figcaption>
             </figure>
