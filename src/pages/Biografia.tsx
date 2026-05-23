@@ -110,20 +110,20 @@ const Biografia = () => {
             </section>
 
             <section className="pt-4">
-              <h2 className="font-heading text-xl md:text-2xl text-foreground mb-6 text-center">
-                Galeria
-              </h2>
-              <Carousel
-                opts={{ align: "start", loop: true }}
-                className="w-full"
-              >
-                <CarouselContent className="-ml-3">
-                  {galleryImages.map((img, i) => (
-                    <CarouselItem
-                      key={i}
-                      className="pl-3 basis-2/3 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
-                    >
-                      <figure className="bg-black border-[6px] border-gold shadow-xl overflow-hidden">
+              <div className="bg-black py-10 px-4 sm:px-10 md:px-16 shadow-2xl">
+                <h2 className="font-heading text-2xl md:text-3xl text-gold mb-8 text-center tracking-[0.2em]">
+                  GALERIA DE FOTOS
+                </h2>
+                <Carousel
+                  opts={{ align: "start", loop: true }}
+                  className="w-full"
+                >
+                  <CarouselContent className="-ml-3">
+                    {galleryImages.map((img, i) => (
+                      <CarouselItem
+                        key={i}
+                        className="pl-3 basis-2/3 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+                      >
                         <div className="aspect-[3/4] w-full overflow-hidden">
                           <img
                             src={img.src}
@@ -132,13 +132,13 @@ const Biografia = () => {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                      </figure>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="hidden sm:flex -left-4 bg-background border-gold text-gold hover:bg-gold hover:text-background" />
-                <CarouselNext className="hidden sm:flex -right-4 bg-background border-gold text-gold hover:bg-gold hover:text-background" />
-              </Carousel>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="-left-2 sm:-left-6 h-12 w-12 rounded-none bg-gold text-black border-0 hover:bg-gold/80 hover:text-black" />
+                  <CarouselNext className="-right-2 sm:-right-6 h-12 w-12 rounded-none bg-gold text-black border-0 hover:bg-gold/80 hover:text-black" />
+                </Carousel>
+              </div>
             </section>
           </article>
         </div>
