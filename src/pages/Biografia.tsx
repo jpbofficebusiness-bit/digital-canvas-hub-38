@@ -111,7 +111,7 @@ const Biografia = () => {
 
             <section className="pt-4">
               <div className="bg-black py-10 px-4 sm:px-10 md:px-16 shadow-2xl">
-                <h2 className="font-heading text-2xl md:text-3xl text-gold mb-8 text-center tracking-[0.2em]">
+                <h2 className="font-heading text-2xl md:text-3xl text-white mb-8 text-center tracking-[0.2em]">
                   GALERIA DE FOTOS
                 </h2>
                 <Carousel
@@ -135,8 +135,8 @@ const Biografia = () => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="-left-2 sm:-left-6 h-12 w-12 rounded-none bg-gold text-black border-0 hover:bg-gold/80 hover:text-black" />
-                  <CarouselNext className="-right-2 sm:-right-6 h-12 w-12 rounded-none bg-gold text-black border-0 hover:bg-gold/80 hover:text-black" />
+                  <CarouselPrevious className="-left-2 sm:-left-6 h-12 w-12 rounded-none bg-transparent text-white border-0 hover:bg-white/10 hover:text-white" />
+                  <CarouselNext className="-right-2 sm:-right-6 h-12 w-12 rounded-none bg-transparent text-white border-0 hover:bg-white/10 hover:text-white" />
                 </Carousel>
               </div>
             </section>

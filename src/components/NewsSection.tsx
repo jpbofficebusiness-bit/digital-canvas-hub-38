@@ -25,18 +25,26 @@ const NewsSection = () => {
   return (
     <section id="noticias" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
+        <div className="flex justify-center mb-10">
+          <img
+            src={franklinSketch}
+            alt="Retrato artístico de Franklin Rafael"
+            className="w-56 md:w-64 h-auto block grayscale-[20%]"
+          />
+        </div>
+
         <h2 className="font-heading text-3xl md:text-4xl font-semibold text-center mb-12 text-foreground">
           NOTÍCIAS RECENTES
         </h2>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-start">
-          <div className="space-y-8 order-2 lg:order-1">
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-8">
             {newsItems.map((news) => (
               <article
                 key={news.id}
                 className="border-b border-border pb-8 last:border-b-0"
               >
-                <h3 className="font-heading text-xl md:text-2xl font-medium text-foreground mb-3">
+                <h3 className="font-heading text-xl md:text-2xl font-medium text-foreground mb-3 uppercase">
                   {news.title}
                 </h3>
                 <p className="font-body text-muted-foreground leading-relaxed">
@@ -44,19 +52,6 @@ const NewsSection = () => {
                 </p>
               </article>
             ))}
-          </div>
-
-          <div className="order-1 lg:order-2 flex justify-center lg:sticky lg:top-24">
-            <figure className="p-3 bg-black border-[10px] border-gold shadow-2xl">
-              <img
-                src={franklinSketch}
-                alt="Retrato artístico de Franklin Rafael"
-                className="w-56 md:w-64 h-auto block grayscale-[20%]"
-              />
-              <figcaption className="font-heading text-center text-sm text-gold mt-3 italic">
-                Franklin Rafael
-              </figcaption>
-            </figure>
           </div>
         </div>
       </div>
