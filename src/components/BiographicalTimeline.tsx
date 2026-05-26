@@ -98,7 +98,7 @@ const BiographicalTimeline = () => {
         Linha do Tempo Biográfica
       </h2>
       <p className="font-body text-sm text-muted-foreground mb-6">
-        Franklin Rafael
+        Os principais marcos da vida de Franklin Rafael.
       </p>
 
       <nav className="flex flex-wrap gap-1.5 border-b border-border pb-4 mb-10 -mx-2 px-2 py-2">
