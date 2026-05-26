@@ -101,7 +101,7 @@ const BiographicalTimeline = () => {
         Franklin Rafael
       </p>
 
-      <nav className="flex flex-wrap gap-1.5 border-b border-border pb-4 mb-10 sticky top-16 md:top-20 bg-background/95 backdrop-blur z-10 -mx-2 px-2 py-2">
+      <nav className="flex flex-wrap gap-1.5 border-b border-border pb-4 mb-10 -mx-2 px-2 py-2">
         {navYears.map((y) => (
           <button
             key={y}
