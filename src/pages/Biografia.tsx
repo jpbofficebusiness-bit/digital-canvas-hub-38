@@ -135,8 +135,8 @@ const Biografia = () => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="-left-2 sm:-left-6 h-12 w-12 rounded-none bg-gold text-black border-0 hover:bg-gold/80 hover:text-black" />
-                  <CarouselNext className="-right-2 sm:-right-6 h-12 w-12 rounded-none bg-gold text-black border-0 hover:bg-gold/80 hover:text-black" />
+                  <CarouselPrevious className="-left-2 sm:-left-6 h-12 w-12 rounded-none bg-transparent text-white border-0 hover:bg-white/10 hover:text-white" />
+                  <CarouselNext className="-right-2 sm:-right-6 h-12 w-12 rounded-none bg-transparent text-white border-0 hover:bg-white/10 hover:text-white" />
                 </Carousel>
               </div>
             </section>
