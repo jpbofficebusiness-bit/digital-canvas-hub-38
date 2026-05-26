@@ -111,7 +111,7 @@ const Biografia = () => {
 
             <section className="pt-4">
               <div className="bg-black py-10 px-4 sm:px-10 md:px-16 shadow-2xl">
-                <h2 className="font-heading text-2xl md:text-3xl text-gold mb-8 text-center tracking-[0.2em]">
+                <h2 className="font-heading text-2xl md:text-3xl text-white mb-8 text-center tracking-[0.2em]">
                   GALERIA DE FOTOS
                 </h2>
                 <Carousel
