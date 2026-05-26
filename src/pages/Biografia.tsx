@@ -70,13 +70,13 @@ const Biografia = () => {
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
-                  ◾ Franklin Rafael é um cristão batista de tradição protestante,
+                  Franklin Rafael é um cristão batista de tradição protestante,
                   influenciado pelos grandes reformadores, os piedosos puritanos e os
                   grandes avivalistas, tanto em seu estilo bélico quanto em seu jeito
                   pregacional.
                 </p>
                 <p>
-                  ◾ Como Teólogo, se identifica como um arminiano-wesleyano, lapidado
+                  Como Teólogo, se identifica como um arminiano-wesleyano, lapidado
                   pela cosmovisão de Jacob Armínio e a teologia de John Wesley. De um
                   modo peculiar, ele elaborou o seu próprio acróstico SWORD, que
                   significa espada, para descrever sua própria posição teológica.
@@ -90,18 +90,18 @@ const Biografia = () => {
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
-                  ◾ Em termos de cidadania e política, ele adota o conservadorismo
+                  Em termos de cidadania e política, ele adota o conservadorismo
                   histórico, cuja mentalidade se remete ao legado de homens como Edmund
                   Burke, Russell Kirk, Roger Scruton e tantos outros intelectuais,
                   filósofos e literatos no percurso da história.
                 </p>
                 <p>
-                  ◾ No ano de 2020, fundou no YouTube o canal Reformado Franklin
+                  No ano de 2020, fundou no YouTube o canal Reformado Franklin
                   Rafael, uma plataforma feita para todos aqueles que desejam conhecer
                   sua personalidade, seu pensamento e as suas obras.
                 </p>
                 <p>
-                  ◾ Também é o fundador da Livraria FrankBooks, uma plataforma online
+                  Também é o fundador da Livraria FrankBooks, uma plataforma online
                   que consiste na divulgação de toda a sua obra literária e na venda
                   de todos os seus livros.
                 </p>
