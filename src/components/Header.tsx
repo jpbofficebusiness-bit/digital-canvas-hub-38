@@ -138,7 +138,7 @@ const Header = () => {
                   <Link
                     key={link.label}
                     to={link.href}
-                    className="flex items-center gap-3 font-body text-base tracking-wide text-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-200 py-4 px-3 rounded-md border-b border-border"
+                    className="flex items-center gap-3 font-body text-lg md:text-xl tracking-wide text-foreground hover:text-primary hover:bg-accent/50 transition-colors duration-200 py-5 px-3 rounded-md border-b border-border"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Icon className="h-5 w-5" />
