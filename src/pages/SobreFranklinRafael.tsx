@@ -56,9 +56,6 @@ const SobreFranklinRafael = () => {
                     <h2 className="font-heading text-lg md:text-xl text-foreground">
                       {s.title}
                     </h2>
-                    <p className="font-body text-sm text-muted-foreground mt-0.5">
-                      {s.description}
-                    </p>
                   </div>
                   <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors flex-shrink-0" />
                 </Link>
