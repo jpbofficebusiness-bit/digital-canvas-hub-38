@@ -8,19 +8,16 @@ const otherSections = [
   {
     to: "/o-autor/biografia",
     title: "Biografia",
-    description: "A trajetória, religião e influências de Franklin Rafael.",
     icon: BookOpen,
   },
   {
     to: "/o-autor/citacoes",
     title: "Citações",
-    description: "Frases e pensamentos marcantes do autor.",
     icon: Quote,
   },
   {
     to: "/o-autor/linha-do-tempo",
     title: "Linha do Tempo Biográfica",
-    description: "Os principais marcos da vida de Franklin Rafael.",
     icon: Clock,
   },
 ];
