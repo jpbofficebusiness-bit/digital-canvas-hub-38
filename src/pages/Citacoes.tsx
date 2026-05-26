@@ -57,7 +57,7 @@ const Citacoes = () => {
               Citações
             </h1>
             <p className="font-body text-muted-foreground">
-              Citações de Franklin Rafael
+              Frases e pensamentos marcantes do autor.
             </p>
           </header>
 

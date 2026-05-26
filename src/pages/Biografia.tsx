@@ -44,7 +44,9 @@ const Biografia = () => {
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-3">
               Biografia
             </h1>
-            <p className="font-body text-muted-foreground">Franklin Rafael</p>
+            <p className="font-body text-muted-foreground">
+              A trajetória, religião e influências de Franklin Rafael.
+            </p>
           </header>
 
           <article className="space-y-10">
@@ -76,9 +78,8 @@ const Biografia = () => {
                 <p>
                   ◾ Como Teólogo, se identifica como um arminiano-wesleyano, lapidado
                   pela cosmovisão de Jacob Armínio e a teologia de John Wesley. De um
-                  modo peculiar, ele elaborou o seu próprio acróstico{" "}
-                  <strong className="text-gold">SWORD</strong>, que significa espada,
-                  para descrever sua própria posição teológica.
+                  modo peculiar, ele elaborou o seu próprio acróstico SWORD, que
+                  significa espada, para descrever sua própria posição teológica.
                 </p>
               </div>
             </section>
@@ -95,16 +96,14 @@ const Biografia = () => {
                   filósofos e literatos no percurso da história.
                 </p>
                 <p>
-                  ◾ No ano de 2020, fundou no YouTube o canal{" "}
-                  <strong className="text-gold">Reformado Franklin Rafael</strong>, uma
-                  plataforma feita para todos aqueles que desejam conhecer sua
-                  personalidade, seu pensamento e as suas obras.
+                  ◾ No ano de 2020, fundou no YouTube o canal Reformado Franklin
+                  Rafael, uma plataforma feita para todos aqueles que desejam conhecer
+                  sua personalidade, seu pensamento e as suas obras.
                 </p>
                 <p>
-                  ◾ Também é o fundador da{" "}
-                  <strong className="text-gold">Livraria FrankBooks</strong>, uma
-                  plataforma online que consiste na divulgação de toda a sua obra
-                  literária e na venda de todos os seus livros.
+                  ◾ Também é o fundador da Livraria FrankBooks, uma plataforma online
+                  que consiste na divulgação de toda a sua obra literária e na venda
+                  de todos os seus livros.
                 </p>
               </div>
             </section>
