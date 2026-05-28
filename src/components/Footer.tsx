@@ -1,9 +1,9 @@
 const footerLinks = [
-  { label: "O AUTOR", href: "#autor" },
-  { label: "NOTÍCIAS", href: "#noticias" },
+  { label: "O Autor", href: "#autor" },
+  { label: "Notícias", href: "#noticias" },
   { label: "FAQ", href: "#faq" },
-  { label: "CONTATO", href: "#contato" },
-  { label: "POLÍTICA DE PRIVACIDADE", href: "#privacidade" },
+  { label: "Contato", href: "#contato" },
+  { label: "Política de Privacidade", href: "#privacidade" },
 ];
 
 const Footer = () => {
@@ -19,6 +19,10 @@ const Footer = () => {
             className="font-heading text-2xl font-semibold tracking-wide inline-block"
           >
             FRANKLIN RAFAEL
+          </a>
+        </div>
+
+        {/* placeholder removed */}
           </a>
         </div>
 

@@ -3,13 +3,13 @@ import franklinSketch from "@/assets/franklin-rafael-sketch.jpeg";
 const newsItems = [
   {
     id: 1,
-    title: "10 anos de cátedra como professor",
+    title: "10 Anos de Cátedra como Professor",
     excerpt:
       'Nesse ano de 2026, Franklin Rafael comemora 10 anos que tem exercido sua vocação de cátedra como um professor incansável. Sobre isso, ele comentou: "Minhas forças continuam as mesmas, tão intensas quanto o primeiro dia em que entrei em uma escola para ensinar."',
   },
   {
     id: 2,
-    title: 'Medalha Ascensão — Ranking Editora Uiclap',
+    title: "Medalha Ascensão — Ranking Editora Uiclap",
     excerpt:
       'Franklin Rafael recebeu a "Medalha Ascensão" pelo Ranking da Editora Uiclap, um prémio que classifica os escritores pela relevância de vendas relacionadas às suas obras literárias.',
   },
@@ -34,7 +34,7 @@ const NewsSection = () => {
         </div>
 
         <h2 className="font-heading text-3xl md:text-4xl font-semibold text-center mb-12 text-foreground">
-          NOTÍCIAS RECENTES
+          Notícias Recentes
         </h2>
 
         <div className="max-w-3xl mx-auto">
@@ -44,7 +44,7 @@ const NewsSection = () => {
                 key={news.id}
                 className="border-b border-border pb-8 last:border-b-0"
               >
-                <h3 className="font-heading text-xl md:text-2xl font-medium text-foreground mb-3 uppercase">
+                <h3 className="font-heading text-xl md:text-2xl font-medium text-foreground mb-3">
                   {news.title}
                 </h3>
                 <p className="font-body text-muted-foreground leading-relaxed">

@@ -6,7 +6,7 @@ const AboutAuthor = () => {
     <section id="autor" className="py-16 md:py-24 bg-gradient-to-br from-teal to-forest">
       <div className="container mx-auto px-4">
         <h2 className="font-heading text-3xl md:text-4xl font-semibold text-center mb-12 text-primary-foreground">
-          SOBRE FRANKLIN RAFAEL
+          Sobre Franklin Rafael
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-5xl mx-auto">
