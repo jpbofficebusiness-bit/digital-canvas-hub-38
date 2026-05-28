@@ -1,9 +1,9 @@
 const footerLinks = [
-  { label: "O AUTOR", href: "#autor" },
-  { label: "NOTÍCIAS", href: "#noticias" },
+  { label: "O Autor", href: "#autor" },
+  { label: "Notícias", href: "#noticias" },
   { label: "FAQ", href: "#faq" },
-  { label: "CONTATO", href: "#contato" },
-  { label: "POLÍTICA DE PRIVACIDADE", href: "#privacidade" },
+  { label: "Contato", href: "#contato" },
+  { label: "Política de Privacidade", href: "#privacidade" },
 ];
 
 const Footer = () => {
@@ -21,6 +21,7 @@ const Footer = () => {
             FRANKLIN RAFAEL
           </a>
         </div>
+
 
         {/* Links */}
         <nav className="flex flex-wrap justify-center gap-6 mb-8">
