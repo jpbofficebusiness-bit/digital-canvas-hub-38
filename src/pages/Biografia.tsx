@@ -111,7 +111,7 @@ const Biografia = () => {
             <section className="pt-4 relative left-1/2 right-1/2 -mx-[50vw] w-screen">
               <div className="bg-black py-10 px-4 sm:px-10 md:px-16 shadow-2xl">
                 <h2 className="font-heading text-2xl md:text-3xl text-white mb-8 text-center tracking-[0.2em]">
-                  Galeria de Fotos
+                  GALERIA DE FOTOS
                 </h2>
                 <Carousel
                   opts={{ align: "start", loop: true }}

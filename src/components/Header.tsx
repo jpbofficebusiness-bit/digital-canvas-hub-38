@@ -15,10 +15,10 @@ const mobileMenuLinks = [
 ];
 
 const desktopNavLinks = [
-  { label: "Obras", href: "/obras", isAnchor: false },
-  { label: "O Autor", href: "/sobre-franklin-rafael", isAnchor: false },
+  { label: "OBRAS", href: "/obras", isAnchor: false },
+  { label: "O AUTOR", href: "/sobre-franklin-rafael", isAnchor: false },
   { label: "FAQ", href: "/faq", isAnchor: false },
-  { label: "Informações Acadêmicas", href: "/informacoes-academicas", isAnchor: false },
+  { label: "INFORMAÇÕES ACADÊMICAS", href: "/informacoes-academicas", isAnchor: false },
 ];
 
 const Header = () => {
@@ -48,8 +48,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="font-heading font-semibold text-forest tracking-wide flex flex-col leading-tight">
-            <span className="text-sm md:text-base tracking-[0.3em]">Franklin</span>
-            <span className="text-2xl md:text-3xl">Rafael</span>
+            <span className="text-sm md:text-base tracking-[0.3em]">FRANKLIN</span>
+            <span className="text-2xl md:text-3xl">RAFAEL</span>
           </Link>
 
           {/* Desktop Navigation */}
