@@ -55,55 +55,81 @@ const Biografia = () => {
                 Franklin Rafael
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed">
-                🏹 Franklin Rafael é um teólogo reformado e um exímio escritor de obras
-                cristãs e alta fantasia, um gênero definido pela criação de mundos
-                imaginários e histórias épicas, permeadas de personagens, filosofias
-                próprias e heróis notáveis. Também é conhecido como um pregoeiro batista
-                descendente da Reforma Protestante, de estilo veemente e ancestral, além
-                de um professor relevante em sua época.
+                🏹 Franklin Rafael é um teólogo cristão reformado e um exímio escritor de literatura protestante e alta fantasia, um gênero definido pela criação de mundos imaginários e histórias épicas, permeadas de personagens, filosofias próprias e heróis notáveis. Também é conhecido como um pregoeiro batista descendente da Reforma Protestante, de estilo veemente e ancestral, além de um professor relevante em sua época.
               </p>
             </section>
 
             <section>
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
-                ⛪ Religião e Influências
+                🎓 FORMAÇÃO ACADÊMICA
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
+                <p>A trajetória educacional de Franklin Rafael é extensa e diversificada:</p>
                 <p>
-                  Franklin Rafael é um cristão batista de tradição protestante,
-                  influenciado pelos grandes reformadores, os piedosos puritanos e os
-                  grandes avivalistas, tanto em seu estilo bélico quanto em seu jeito
-                  pregacional.
+                  É graduado em Letras pela Faculdade de Administração, Humanas e Exatas (UNIFAHE), em São José dos Campos, São Paulo.
                 </p>
                 <p>
-                  Como Teólogo, se identifica como um arminiano-wesleyano, lapidado
-                  pela cosmovisão de Jacob Armínio e a teologia de John Wesley. De um
-                  modo peculiar, ele elaborou o seu próprio acróstico SWORD, que
-                  significa espada, para descrever sua própria posição teológica.
+                  Graduado em Teologia pela Faculdade Regional do Jacuípe (FARJ), Bahia.
+                </p>
+                <p>
+                  Graduado em Pedagogia pela Faculdade de Ciências e Tecnologia (FACITE) Bahia.
+                </p>
+                <p>
+                  Pós-graduado em Língua Inglesa pela Faculdade de Administração, Humanas e Exatas (UNIFAHE), em São José dos Campos, São Paulo.
+                </p>
+                <p>
+                  E pós-graduado em Psicopedagogia Institucional e Clínica pela Faculdade Regional do Jacuípe (FARJ), Bahia.
                 </p>
               </div>
             </section>
 
             <section>
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
-                🗽 Cidadania e Política
+                ⛪ RELIGIÃO E INFLUÊNCIAS
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
-                  Em termos de cidadania e política, ele adota o conservadorismo
-                  histórico, cuja mentalidade se remete ao legado de homens como Edmund
-                  Burke, Russell Kirk, Roger Scruton e tantos outros intelectuais,
-                  filósofos e literatos no percurso da história.
+                  Franklin Rafael é um cristão batista de tradição protestante, influenciado pelos grandes reformadores, os piedosos puritanos e os grandes avivalistas, tanto em seu estilo bélico quanto em seu jeito pregacional.
                 </p>
                 <p>
-                  No ano de 2020, fundou no YouTube o canal Reformado Franklin
-                  Rafael, uma plataforma feita para todos aqueles que desejam conhecer
-                  sua personalidade, seu pensamento e as suas obras.
+                  Como Teólogo, se identifica como um arminiano-wesleyano, lapidado pela cosmovisão de Jacob Armínio e a teologia de John Wesley. De um modo peculiar, ele elaborou o seu próprio acróstico sword, que significa espada, para descrever sua própria posição teológica.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
+                🗽 CIDADANIA E POLÍTICA
+              </h2>
+              <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
+                <p>
+                  Em termos de cidadania e política, ele adota o conservadorismo histórico, cuja mentalidade se remete ao legado de homens como Edmund Burke, T. S. Eliot, Russell Kirk, Roger Scruton e tantos outros intelectuais, filósofos e literatos no percurso da história.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
+                🏛️ ATUAÇÕES RELEVANTES
+              </h2>
+              <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
+                <p>
+                  Atualmente, Franklin Rafael atua como professor em rede pública, conhecido pelo seu modo intelectual de educador clássico e conservador, influenciado profundamente pelas artes liberais, isto é:
                 </p>
                 <p>
-                  Também é o fundador da Livraria FrankBooks, uma plataforma online
-                  que consiste na divulgação de toda a sua obra literária e na venda
-                  de todos os seus livros.
+                  O Trivium: Gramática, Lógica e Retórica.
+                </p>
+                <p>
+                  E o Quadrivium: Aritmética, Geometria, Música e Astronomia.
+                </p>
+                <p>
+                  Como professor, ele acredita e defende que este é o melhor método para o desenvolvimento completo de um ser humano livre, preparando-o para viver como um indivíduo completo em todos os ramos da vida pública, intelectual e cultural. Franklin acredita que, ao contrário dos artifícios pedagógicos recentes e passageiros, as artes liberais se mostraram eficazes ao longo de mais de 1500 anos de história, tendo formado a mente de filósofos, cientistas, teólogos, juristas, escritores e pessoas que transformaram civilizações.
+                </p>
+                <p>
+                  No ano de 2020, fundou no YouTube o canal Franklin Rafael Oficial, uma plataforma feita para todos aqueles que desejam conhecer sua personalidade, seu pensamento e as suas obras.
+                </p>
+                <p>
+                  Também é o fundador da Livraria Herança Livros, uma plataforma online que consiste na divulgação de toda a sua obra literária e na venda de todos os seus livros.
                 </p>
               </div>
             </section>
