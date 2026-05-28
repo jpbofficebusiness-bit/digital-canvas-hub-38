@@ -22,9 +22,6 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* placeholder removed */}
-          </a>
-        </div>
 
         {/* Links */}
         <nav className="flex flex-wrap justify-center gap-6 mb-8">
