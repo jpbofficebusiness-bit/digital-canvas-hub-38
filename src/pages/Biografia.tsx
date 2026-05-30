@@ -8,16 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import bio01 from "@/assets/bio/bio-01.jpeg";
-import bio02 from "@/assets/bio/bio-02.jpeg";
-import bio03 from "@/assets/bio/bio-03.jpeg";
-import bio04 from "@/assets/bio/bio-04.jpeg";
-import bio05 from "@/assets/bio/bio-05.jpeg";
-import bio06 from "@/assets/bio/bio-06.jpeg";
-import bio07 from "@/assets/bio/bio-07.jpeg";
-import bio08 from "@/assets/bio/bio-08.jpeg";
-import bio09 from "@/assets/bio/bio-09.jpeg";
-import bio10 from "@/assets/bio/bio-10.jpeg";
 import bio11 from "@/assets/bio/bio-11.png";
 import bio12 from "@/assets/bio/bio-12.png";
 import bio13 from "@/assets/bio/bio-13.png";
@@ -29,25 +19,15 @@ import bio18 from "@/assets/bio/bio-18.jpeg";
 import bio19 from "@/assets/bio/bio-19.jpeg";
 
 const galleryImages = [
-  { src: bio01, alt: "Franklin Rafael — retrato 1" },
-  { src: bio02, alt: "Franklin Rafael — retrato 2" },
-  { src: bio03, alt: "Franklin Rafael — retrato 3" },
-  { src: bio04, alt: "Franklin Rafael — retrato 4" },
-  { src: bio05, alt: "Franklin Rafael — retrato 5" },
-  { src: bio06, alt: "Franklin Rafael — retrato 6" },
-  { src: bio07, alt: "Franklin Rafael — retrato 7" },
-  { src: bio08, alt: "Franklin Rafael — retrato 8" },
-  { src: bio09, alt: "Franklin Rafael — retrato 9" },
-  { src: bio10, alt: "Franklin Rafael — retrato 10" },
-  { src: bio11, alt: "Franklin Rafael — retrato 11" },
-  { src: bio12, alt: "Franklin Rafael — retrato 12" },
-  { src: bio13, alt: "Franklin Rafael — retrato 13" },
-  { src: bio14, alt: "Franklin Rafael — retrato 14" },
-  { src: bio15, alt: "Franklin Rafael — retrato 15" },
-  { src: bio16, alt: "Franklin Rafael — retrato 16" },
-  { src: bio17, alt: "Franklin Rafael — retrato 17" },
-  { src: bio18, alt: "Franklin Rafael — retrato 18" },
-  { src: bio19, alt: "Franklin Rafael — retrato 19" },
+  { src: bio11, alt: "Franklin Rafael — retrato 1" },
+  { src: bio12, alt: "Franklin Rafael — retrato 2" },
+  { src: bio13, alt: "Franklin Rafael — retrato 3" },
+  { src: bio14, alt: "Franklin Rafael — retrato 4" },
+  { src: bio15, alt: "Franklin Rafael — retrato 5" },
+  { src: bio16, alt: "Franklin Rafael — retrato 6" },
+  { src: bio17, alt: "Franklin Rafael — retrato 7" },
+  { src: bio18, alt: "Franklin Rafael — retrato 8" },
+  { src: bio19, alt: "Franklin Rafael — retrato 9" },
 ];
 
 const Biografia = () => {
