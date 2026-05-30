@@ -18,6 +18,15 @@ import bio07 from "@/assets/bio/bio-07.jpeg";
 import bio08 from "@/assets/bio/bio-08.jpeg";
 import bio09 from "@/assets/bio/bio-09.jpeg";
 import bio10 from "@/assets/bio/bio-10.jpeg";
+import bio11 from "@/assets/bio/bio-11.png";
+import bio12 from "@/assets/bio/bio-12.png";
+import bio13 from "@/assets/bio/bio-13.png";
+import bio14 from "@/assets/bio/bio-14.png";
+import bio15 from "@/assets/bio/bio-15.png";
+import bio16 from "@/assets/bio/bio-16.png";
+import bio17 from "@/assets/bio/bio-17.jpeg";
+import bio18 from "@/assets/bio/bio-18.jpeg";
+import bio19 from "@/assets/bio/bio-19.jpeg";
 
 const galleryImages = [
   { src: bio01, alt: "Franklin Rafael — retrato 1" },
@@ -30,6 +39,15 @@ const galleryImages = [
   { src: bio08, alt: "Franklin Rafael — retrato 8" },
   { src: bio09, alt: "Franklin Rafael — retrato 9" },
   { src: bio10, alt: "Franklin Rafael — retrato 10" },
+  { src: bio11, alt: "Franklin Rafael — retrato 11" },
+  { src: bio12, alt: "Franklin Rafael — retrato 12" },
+  { src: bio13, alt: "Franklin Rafael — retrato 13" },
+  { src: bio14, alt: "Franklin Rafael — retrato 14" },
+  { src: bio15, alt: "Franklin Rafael — retrato 15" },
+  { src: bio16, alt: "Franklin Rafael — retrato 16" },
+  { src: bio17, alt: "Franklin Rafael — retrato 17" },
+  { src: bio18, alt: "Franklin Rafael — retrato 18" },
+  { src: bio19, alt: "Franklin Rafael — retrato 19" },
 ];
 
 const Biografia = () => {
