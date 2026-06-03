@@ -65,7 +65,7 @@ const InformacoesAcademicas = () => {
               <div className="flex items-center gap-3 mb-6">
                 <Building className="w-8 h-8 text-gold" />
                 <h2 className="font-heading text-2xl md:text-3xl font-semibold text-primary-foreground">
-                  ATUAÇÕES RELEVANTES
+                  Atuações Relevantes
                 </h2>
               </div>
               
