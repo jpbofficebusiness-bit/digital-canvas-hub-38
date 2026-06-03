@@ -97,7 +97,7 @@ const Biografia = () => {
 
             <section>
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
-                🗽 CIDADANIA E POLÍTICA
+                🗽 Cidadania e Política
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
