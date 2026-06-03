@@ -10,15 +10,15 @@ const mobileMenuLinks = [
   { label: "Por Vir", href: "/por-vir", isAnchor: false, icon: Clock },
   { label: "(FAQ) Perguntas Frequentes", href: "/faq", isAnchor: false, icon: HelpCircle },
   { label: "Obra-Prima", href: "/obra-prima", isAnchor: false, icon: Star },
-  { label: "Canal No Youtube - Franklin Rafael Oficial", href: "https://www.youtube.com/@franklinrafaeloficial", isExternal: true, icon: Youtube },
+  { label: "Canal no YouTube — Franklin Rafael Oficial", href: "https://www.youtube.com/@franklinrafaeloficial", isExternal: true, icon: Youtube },
   { label: "The Franklin Village", href: "https://www.youtube.com/@espadicaoficial", isExternal: true, icon: Home },
 ];
 
 const desktopNavLinks = [
-  { label: "OBRAS", href: "/obras", isAnchor: false },
-  { label: "O AUTOR", href: "/sobre-franklin-rafael", isAnchor: false },
+  { label: "Obras", href: "/obras", isAnchor: false },
+  { label: "O Autor", href: "/sobre-franklin-rafael", isAnchor: false },
   { label: "FAQ", href: "/faq", isAnchor: false },
-  { label: "INFORMAÇÕES ACADÊMICAS", href: "/informacoes-academicas", isAnchor: false },
+  { label: "Informações Acadêmicas", href: "/informacoes-academicas", isAnchor: false },
 ];
 
 const Header = () => {
