@@ -29,7 +29,7 @@ const InformacoesAcademicas = () => {
               <div className="flex items-center gap-3 mb-6">
                 <GraduationCap className="w-8 h-8 text-gold" />
                 <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground">
-                  FORMAÇÃO ACADÊMICA
+                  Formação Acadêmica
                 </h2>
               </div>
               
