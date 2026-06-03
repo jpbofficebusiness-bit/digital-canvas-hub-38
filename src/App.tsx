@@ -28,22 +28,24 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/sobre-franklin-rafael" element={<SobreFranklinRafael />} />
-          <Route path="/o-autor/biografia" element={<Biografia />} />
-          <Route path="/o-autor/citacoes" element={<Citacoes />} />
-          <Route path="/o-autor/linha-do-tempo" element={<LinhaDoTempo />} />
-          <Route path="/informacoes-academicas" element={<InformacoesAcademicas />} />
-          <Route path="/obras" element={<Obras />} />
-          <Route path="/obras/:categoria" element={<ObrasCategoria />} />
-          <Route path="/obras/:categoria/:livro" element={<LivroDetalhe />} />
-          <Route path="/por-vir" element={<PorVir />} />
-          <Route path="/obra-prima" element={<ObraPrima />} />
-          <Route path="/faq" element={<FAQ />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <PageTransition>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/sobre-franklin-rafael" element={<SobreFranklinRafael />} />
+            <Route path="/o-autor/biografia" element={<Biografia />} />
+            <Route path="/o-autor/citacoes" element={<Citacoes />} />
+            <Route path="/o-autor/linha-do-tempo" element={<LinhaDoTempo />} />
+            <Route path="/informacoes-academicas" element={<InformacoesAcademicas />} />
+            <Route path="/obras" element={<Obras />} />
+            <Route path="/obras/:categoria" element={<ObrasCategoria />} />
+            <Route path="/obras/:categoria/:livro" element={<LivroDetalhe />} />
+            <Route path="/por-vir" element={<PorVir />} />
+            <Route path="/obra-prima" element={<ObraPrima />} />
+            <Route path="/faq" element={<FAQ />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </PageTransition>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
