@@ -94,7 +94,7 @@ const Header = () => {
 
       {/* Fullscreen Mobile Navigation - rendered via portal so it escapes header's stacking context */}
       {isMenuOpen && typeof document !== "undefined" && createPortal(
-        <div className="lg:hidden fixed inset-0 bg-background z-[100] overflow-y-auto pt-20">
+        <div className="lg:hidden fixed inset-0 bg-background z-[100] overflow-y-auto pt-20 animate-slide-in-right">
           <button
             onClick={() => setIsMenuOpen(false)}
             aria-label="Fechar menu"
