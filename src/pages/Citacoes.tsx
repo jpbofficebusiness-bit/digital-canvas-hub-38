@@ -54,7 +54,7 @@ const Citacoes = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <header className="text-center mb-12">
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-3">
-              Citações
+              CITAÇÕES
             </h1>
             <p className="font-body text-muted-foreground">
               Frases e pensamentos marcantes do autor.
