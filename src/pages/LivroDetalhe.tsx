@@ -100,7 +100,7 @@ const LivroDetalhe = () => {
                     alt="UICLAP"
                     className="h-5 w-5 object-contain"
                   />
-                  Saiba mais na UICLAP
+                  Saiba Mais na UICLAP
                 </a>
               )}
             </div>
