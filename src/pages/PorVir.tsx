@@ -18,7 +18,7 @@ const PorVir = () => {
         <div className="container mx-auto px-4 max-w-3xl">
           <header className="text-center mb-12">
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-3">
-              Por Vir
+              POR VIR
             </h1>
             <p className="font-body text-muted-foreground">
               Obras em desenvolvimento por Franklin Rafael
