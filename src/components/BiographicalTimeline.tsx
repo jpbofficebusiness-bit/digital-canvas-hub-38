@@ -95,7 +95,7 @@ const BiographicalTimeline = () => {
   return (
     <div className="max-w-3xl mx-auto py-6">
       <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-1">
-        Linha do Tempo Biográfica
+        LINHA DO TEMPO BIOGRÁFICA
       </h2>
       <p className="font-body text-sm text-muted-foreground mb-6">
         Os principais marcos da vida de Franklin Rafael.
