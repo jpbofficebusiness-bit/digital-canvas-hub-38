@@ -3,7 +3,7 @@ import franklinSketch from "@/assets/franklin-rafael-sketch.jpeg";
 const newsItems = [
   {
     id: 1,
-    title: "10 anos de cátedra como professor",
+    title: "10 Anos de Cátedra como Professor",
     excerpt:
       'Nesse ano de 2026, Franklin Rafael comemora 10 anos que tem exercido sua vocação de cátedra como um professor incansável. Sobre isso, ele comentou: "Minhas forças continuam as mesmas, tão intensas quanto o primeiro dia em que entrei em uma escola para ensinar."',
   },
@@ -34,7 +34,7 @@ const NewsSection = () => {
         </div>
 
         <h2 className="font-heading text-3xl md:text-4xl font-semibold text-center mb-12 text-foreground">
-          NOTÍCIAS RECENTES
+          Notícias Recentes
         </h2>
 
         <div className="max-w-3xl mx-auto">

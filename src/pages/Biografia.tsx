@@ -40,7 +40,7 @@ const Biografia = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <header className="text-center mb-12">
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-3">
-              Biografia
+              BIOGRAFIA
             </h1>
             <p className="font-body text-muted-foreground">
               A trajetória, religião e influências de Franklin Rafael.
@@ -59,7 +59,7 @@ const Biografia = () => {
 
             <section>
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
-                🎓 FORMAÇÃO ACADÊMICA
+                🎓 Formação Acadêmica
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>A trajetória educacional de Franklin Rafael é extensa e diversificada:</p>
@@ -83,7 +83,7 @@ const Biografia = () => {
 
             <section>
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
-                ⛪ RELIGIÃO E INFLUÊNCIAS
+                ⛪ Religião e Influências
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
@@ -97,7 +97,7 @@ const Biografia = () => {
 
             <section>
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
-                🗽 CIDADANIA E POLÍTICA
+                🗽 Cidadania e Política
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
@@ -108,7 +108,7 @@ const Biografia = () => {
 
             <section>
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
-                🏛️ ATUAÇÕES RELEVANTES
+                🏛️ Atuações Relevantes
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
@@ -135,7 +135,7 @@ const Biografia = () => {
             <section className="pt-4 relative left-1/2 right-1/2 -mx-[50vw] w-screen">
               <div className="bg-black py-10 px-4 sm:px-10 md:px-16 shadow-2xl">
                 <h2 className="font-heading text-2xl md:text-3xl text-white mb-8 text-center tracking-[0.2em]">
-                  GALERIA DE FOTOS
+                  Galeria de Fotos
                 </h2>
                 <Carousel
                   opts={{ align: "start", loop: true }}

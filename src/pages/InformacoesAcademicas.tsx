@@ -20,7 +20,7 @@ const InformacoesAcademicas = () => {
           
           {/* Page Title */}
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-center text-foreground mb-12">
-            Informações Acadêmicas
+            INFORMAÇÕES ACADÊMICAS
           </h1>
           
           {/* Seção 1: Formação Acadêmica */}
@@ -29,7 +29,7 @@ const InformacoesAcademicas = () => {
               <div className="flex items-center gap-3 mb-6">
                 <GraduationCap className="w-8 h-8 text-gold" />
                 <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground">
-                  FORMAÇÃO ACADÊMICA
+                  Formação Acadêmica
                 </h2>
               </div>
               
@@ -65,7 +65,7 @@ const InformacoesAcademicas = () => {
               <div className="flex items-center gap-3 mb-6">
                 <Building className="w-8 h-8 text-gold" />
                 <h2 className="font-heading text-2xl md:text-3xl font-semibold text-primary-foreground">
-                  ATUAÇÕES RELEVANTES
+                  Atuações Relevantes
                 </h2>
               </div>
               
@@ -152,7 +152,7 @@ const InformacoesAcademicas = () => {
                 >
                   <a href="https://www.youtube.com/@franklinrafaeloficial" target="_blank" rel="noopener noreferrer">
                     <Youtube className="h-5 w-5" />
-                    Canal No Youtube - Franklin Rafael Oficial
+                    Canal no YouTube — Franklin Rafael Oficial
                   </a>
                 </Button>
                 <Button 
@@ -162,7 +162,7 @@ const InformacoesAcademicas = () => {
                 >
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <BookOpen className="h-5 w-5" />
-                    LIVRARIA FRANKBOOKS
+                    Livraria FrankBooks
                   </a>
                 </Button>
               </div>

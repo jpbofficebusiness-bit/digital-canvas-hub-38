@@ -13,7 +13,7 @@ const Obras = () => {
         <div className="container mx-auto px-4 max-w-3xl">
           <header className="mb-12 md:mb-16 text-center">
             <h1 className="font-heading text-4xl md:text-5xl text-foreground mb-3">
-              Obras
+              OBRAS
             </h1>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
               Coleção completa dos livros de Franklin Rafael, organizada por

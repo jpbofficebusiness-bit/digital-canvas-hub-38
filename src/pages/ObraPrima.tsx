@@ -16,7 +16,7 @@ const ObraPrima = () => {
               <Star className="h-7 w-7" />
             </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-3">
-              Obra-Prima
+              OBRA-PRIMA
             </h1>
             <p className="font-body text-muted-foreground italic">
               Os Espadeiros

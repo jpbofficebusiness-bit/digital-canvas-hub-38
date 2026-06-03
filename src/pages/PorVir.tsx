@@ -18,7 +18,7 @@ const PorVir = () => {
         <div className="container mx-auto px-4 max-w-3xl">
           <header className="text-center mb-12">
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-3">
-              Por Vir
+              POR VIR
             </h1>
             <p className="font-body text-muted-foreground">
               Obras em desenvolvimento por Franklin Rafael
@@ -34,7 +34,7 @@ const PorVir = () => {
                 <div className="flex items-center gap-2 text-gold mb-3">
                   <span className="text-base leading-none" aria-hidden="true">✍️</span>
                   <span className="font-body text-xs uppercase tracking-widest">
-                    Escrevendo...
+                  Escrevendo...
                   </span>
                 </div>
                 <h2 className="font-heading text-xl md:text-2xl text-foreground mb-1">
