@@ -165,7 +165,7 @@ const Newsletter = () => {
               disabled={isSubmitting}
               className="w-full bg-gold text-foreground hover:bg-gold/90 font-body tracking-wider mt-6"
             >
-              {isSubmitting ? "ENVIANDO..." : "CADASTRAR"}
+              {isSubmitting ? "Enviando..." : "Cadastrar"}
             </Button>
           </form>
         </div>
