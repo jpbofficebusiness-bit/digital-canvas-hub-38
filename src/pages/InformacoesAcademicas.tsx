@@ -20,7 +20,7 @@ const InformacoesAcademicas = () => {
           
           {/* Page Title */}
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-center text-foreground mb-12">
-            Informações Acadêmicas
+            INFORMAÇÕES ACADÊMICAS
           </h1>
           
           {/* Seção 1: Formação Acadêmica */}
