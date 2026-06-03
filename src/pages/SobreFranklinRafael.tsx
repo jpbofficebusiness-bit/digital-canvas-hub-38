@@ -32,7 +32,7 @@ const SobreFranklinRafael = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <header className="text-center mb-12">
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-3">
-              O Autor
+              O AUTOR
             </h1>
             <p className="font-body text-muted-foreground">
               Conheça Franklin Rafael
