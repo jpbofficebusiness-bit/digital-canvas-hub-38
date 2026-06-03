@@ -83,7 +83,7 @@ const Biografia = () => {
 
             <section>
               <h2 className="font-heading text-xl md:text-2xl text-foreground mb-3">
-                ⛪ RELIGIÃO E INFLUÊNCIAS
+                ⛪ Religião e Influências
               </h2>
               <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
                 <p>
