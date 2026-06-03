@@ -162,7 +162,7 @@ const InformacoesAcademicas = () => {
                 >
                   <a href="#" target="_blank" rel="noopener noreferrer">
                     <BookOpen className="h-5 w-5" />
-                    LIVRARIA FRANKBOOKS
+                    Livraria FrankBooks
                   </a>
                 </Button>
               </div>
