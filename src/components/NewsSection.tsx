@@ -34,7 +34,7 @@ const NewsSection = () => {
         </div>
 
         <h2 className="font-heading text-3xl md:text-4xl font-semibold text-center mb-12 text-foreground">
-          NOTÍCIAS RECENTES
+          Notícias Recentes
         </h2>
 
         <div className="max-w-3xl mx-auto">
