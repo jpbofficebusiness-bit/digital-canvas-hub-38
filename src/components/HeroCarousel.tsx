@@ -71,23 +71,26 @@ const HeroCarousel = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden bg-black">
-      <div className="overflow-hidden h-full" ref={emblaRef}>
-        <div className="flex h-full">
+    <section className="relative w-full h-auto overflow-hidden bg-black">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="flex-[0_0_100%] min-w-0 h-full relative"
+              className="flex-[0_0_100%] min-w-0 relative"
             >
-              {/* Full banner image */}
+              {/* Banner image — object-contain so nothing is cropped */}
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover object-center"
+                className="w-full h-auto object-contain object-center"
               />
 
-              {/* CTA Button */}
-              <div className="absolute inset-x-0 bottom-10 md:bottom-14 flex justify-center animate-fade-in">
+              {/* Title + CTA overlay — aligned to bottom-left */}
+              <div className="absolute bottom-8 left-4 sm:left-6 md:left-10 lg:left-16 flex flex-col items-start gap-3 md:gap-4">
+                <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] tracking-wide">
+                  {slide.title}
+                </h2>
                 <Button
                   asChild
                   variant="outline"
