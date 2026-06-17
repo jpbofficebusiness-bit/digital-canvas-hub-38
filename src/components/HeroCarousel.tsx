@@ -87,12 +87,12 @@ const HeroCarousel = () => {
               />
 
               {/* CTA overlay — centered at bottom, below the image title */}
-              <div className="absolute bottom-8 left-[38%] -translate-x-1/2">
+              <div className="absolute bottom-8 left-[42%] -translate-x-1/2">
                 <Button
                   asChild
                   variant="outline"
                   size="sm"
-                  className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-body tracking-wider px-3 py-1 text-xs"
+                  className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-body tracking-wider px-2 py-0.5 text-[10px]"
                 >
                   <Link to={slide.to}>{slide.cta}</Link>
                 </Button>
