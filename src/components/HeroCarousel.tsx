@@ -71,13 +71,13 @@ const HeroCarousel = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative w-full h-auto overflow-hidden bg-black">
+    <section className="relative w-full overflow-hidden bg-black">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="flex-[0_0_100%] min-w-0 relative"
+              className="flex-[0_0_100%] min-w-0 flex flex-col"
             >
               {/* Banner image — object-contain so nothing is cropped */}
               <img
@@ -86,8 +86,8 @@ const HeroCarousel = () => {
                 className="w-full h-auto object-contain object-center"
               />
 
-              {/* CTA overlay — aligned to bottom-left, below the image title */}
-              <div className="absolute bottom-8 left-4 sm:left-6 md:left-10 lg:left-16">
+              {/* CTA placed below the image, aligned to the left under the subtitle */}
+              <div className="w-full bg-black px-4 sm:px-6 md:px-10 lg:px-16 py-4 md:py-5">
                 <Button
                   asChild
                   variant="outline"
