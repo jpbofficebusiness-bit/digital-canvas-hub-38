@@ -86,8 +86,8 @@ const HeroCarousel = () => {
                 className="w-full h-auto object-contain object-center"
               />
 
-              {/* CTA overlay — aligned to bottom-left, below the image title */}
-              <div className="absolute bottom-8 left-4 sm:left-6 md:left-10 lg:left-16">
+              {/* CTA overlay — centered at bottom, below the image title */}
+              <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
                 <Button
                   asChild
                   variant="outline"
