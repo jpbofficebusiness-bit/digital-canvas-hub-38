@@ -86,12 +86,12 @@ const HeroCarousel = () => {
                 className="w-full h-auto object-contain object-center"
               />
 
-              {/* CTA overlay — solid white button below subtitle */}
+              {/* CTA overlay — transparent button below subtitle */}
               <div className="absolute bottom-[18%] left-[42%] -translate-x-1/2">
                 <Button
                   asChild
                   size="sm"
-                  className="bg-white text-black hover:bg-white/90 font-body rounded-none px-4 py-2 text-xs sm:text-sm md:text-base sm:px-6 sm:py-3"
+                  className="bg-transparent border border-white text-white hover:bg-white/10 font-body rounded-none px-4 py-2 text-xs sm:text-sm md:text-base sm:px-6 sm:py-3"
                 >
                   <Link to={slide.to}>{slide.cta}</Link>
                 </Button>
