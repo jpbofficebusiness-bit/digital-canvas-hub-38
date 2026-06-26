@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { Menu, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import menuBg from "@/assets/menu-bg.png.asset.json";
 
 const mobileMenuLinks = [
   { label: "O Autor", href: "/sobre-franklin-rafael", isAnchor: false, icon: User },
