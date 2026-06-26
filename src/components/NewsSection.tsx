@@ -1,4 +1,4 @@
-import franklinSketch from "@/assets/franklin-rafael-sketch.jpeg";
+import franklinSketch from "@/assets/franklin-rafael-sketch.png.asset.json";
 
 const newsItems = [
   {
