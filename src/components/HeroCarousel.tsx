@@ -15,6 +15,7 @@ type SlideType = {
   cta: string;
   image: string;
   to: string;
+  ctaPosition: string;
 };
 
 const slides: SlideType[] = [
@@ -24,6 +25,7 @@ const slides: SlideType[] = [
     cta: "Saiba Mais",
     image: donzelaHero.url,
     to: "/obras/teologia/donzela-crista",
+    ctaPosition: "bottom-[10%] left-[35%]",
   },
   {
     id: 2,
@@ -31,6 +33,7 @@ const slides: SlideType[] = [
     cta: "Saiba Mais",
     image: alcateiaHero.url,
     to: "/obras/alta-fantasia/alcateia-infernal",
+    ctaPosition: "bottom-[10%] left-[35%]",
   },
   {
     id: 3,
@@ -38,6 +41,7 @@ const slides: SlideType[] = [
     cta: "Saiba Mais",
     image: sequestroHero.url,
     to: "/obras/teologia/o-sequestro-da-cruz",
+    ctaPosition: "bottom-[18%] left-[35%]",
   },
   {
     id: 4,
@@ -45,6 +49,7 @@ const slides: SlideType[] = [
     cta: "Saiba Mais",
     image: homemAcesoHero.url,
     to: "/obras/teologia/o-homem-aceso",
+    ctaPosition: "bottom-[18%] left-[42%]",
   },
 ];
 
@@ -87,7 +92,7 @@ const HeroCarousel = () => {
               />
 
               {/* CTA overlay — transparent button below subtitle */}
-              <div className="absolute bottom-[18%] left-[42%] -translate-x-1/2">
+              <div className={`absolute ${slide.ctaPosition} -translate-x-1/2`}>
                 <Button
                   asChild
                   size="sm"
