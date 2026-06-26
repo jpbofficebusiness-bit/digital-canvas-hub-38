@@ -25,7 +25,7 @@ const slides: SlideType[] = [
     cta: "Saiba Mais",
     image: donzelaHero.url,
     to: "/obras/teologia/donzela-crista",
-    ctaPosition: "bottom-[10%] left-[35%]",
+    ctaPosition: "bottom-[15%] left-[40%]",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const slides: SlideType[] = [
     cta: "Saiba Mais",
     image: alcateiaHero.url,
     to: "/obras/alta-fantasia/alcateia-infernal",
-    ctaPosition: "bottom-[10%] left-[35%]",
+    ctaPosition: "bottom-[15%] left-[40%]",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const slides: SlideType[] = [
     cta: "Saiba Mais",
     image: sequestroHero.url,
     to: "/obras/teologia/o-sequestro-da-cruz",
-    ctaPosition: "bottom-[18%] left-[35%]",
+    ctaPosition: "bottom-[18%] left-[40%]",
   },
   {
     id: 4,
