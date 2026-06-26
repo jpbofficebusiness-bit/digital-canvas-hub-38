@@ -15,6 +15,7 @@ type SlideType = {
   cta: string;
   image: string;
   to: string;
+  ctaPosition: string;
 };
 
 const slides: SlideType[] = [
