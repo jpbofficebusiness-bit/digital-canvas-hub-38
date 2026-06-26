@@ -1,4 +1,4 @@
-import franklinSketch from "@/assets/franklin-rafael-sketch.jpeg";
+import franklinSketch from "@/assets/franklin-rafael-sketch.png.asset.json";
 
 const newsItems = [
   {
@@ -27,7 +27,7 @@ const NewsSection = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-10">
           <img
-            src={franklinSketch}
+            src={franklinSketch.url}
             alt="Retrato artístico de Franklin Rafael"
             className="w-56 md:w-64 h-auto block grayscale-[20%]"
           />
