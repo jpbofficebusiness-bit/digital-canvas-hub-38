@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { Menu, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import menuBg from "@/assets/menu-bg.png.asset.json";
 
 const mobileMenuLinks = [
   { label: "O Autor", href: "/sobre-franklin-rafael", isAnchor: false, icon: User },
@@ -94,7 +95,10 @@ const Header = () => {
 
       {/* Fullscreen Mobile Navigation - rendered via portal so it escapes header's stacking context */}
       {isMenuOpen && typeof document !== "undefined" && createPortal(
-        <div className="lg:hidden fixed inset-0 bg-background z-[100] overflow-y-auto pt-20 animate-slide-in-right">
+        <div
+          className="lg:hidden fixed inset-0 bg-background z-[100] overflow-y-auto pt-20 animate-slide-in-right bg-no-repeat bg-cover bg-center"
+          style={{ backgroundImage: `url(${menuBg.url})` }}
+        >
           <button
             onClick={() => setIsMenuOpen(false)}
             aria-label="Fechar menu"
