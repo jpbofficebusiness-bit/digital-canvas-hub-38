@@ -92,7 +92,7 @@ const HeroCarousel = () => {
               />
 
               {/* CTA overlay — transparent button below subtitle */}
-              <div className="absolute bottom-[18%] left-[42%] -translate-x-1/2">
+              <div className={`absolute ${slide.ctaPosition} -translate-x-1/2`}>
                 <Button
                   asChild
                   size="sm"
