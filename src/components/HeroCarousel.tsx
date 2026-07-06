@@ -96,7 +96,7 @@ const HeroCarousel = () => {
                 <Button
                   asChild
                   size="sm"
-                  className="bg-transparent border border-white text-white hover:bg-white/10 font-body rounded-none px-2 py-1 text-[10px] h-auto sm:h-9 sm:text-sm md:text-base sm:px-6 sm:py-3"
+                  className="bg-transparent border border-white text-white hover:bg-white/10 font-body rounded-none px-4 py-2 text-xs sm:text-sm md:text-base sm:px-6 sm:py-3 max-sm:px-2 max-sm:py-1 max-sm:text-[10px] max-sm:h-auto"
                 >
                   <Link to={slide.to}>{slide.cta}</Link>
                 </Button>
