@@ -15,32 +15,19 @@ const Obras = () => {
             <h1 className="font-heading text-4xl md:text-5xl text-foreground mb-3">
               OBRAS
             </h1>
-            <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              Coleção completa dos livros de Franklin Rafael, organizada por
-              categoria.
-            </p>
           </header>
 
-          <div className="space-y-4">
+          <div className="space-y-0">
             {sections.map((section) => (
               <Link
                 key={section.slug}
                 to={`/obras/${section.slug}`}
-                className="flex items-center gap-4 border border-border bg-card hover:bg-accent/40 transition-colors rounded-sm p-5 md:p-6 group"
+                className="flex items-center justify-between py-5 border-b border-border last:border-b-0 group transition-colors hover:text-gold"
               >
-                <div className="flex-1 min-w-0">
-                  <h2 className="font-heading text-xl md:text-2xl text-foreground">
-                    {section.category}
-                  </h2>
-                  <p className="font-body text-sm text-muted-foreground mt-1">
-                    {section.description}
-                  </p>
-                  <p className="font-body text-xs text-gold mt-2 uppercase tracking-widest">
-                    {section.books.length}{" "}
-                    {section.books.length === 1 ? "livro" : "livros"}
-                  </p>
-                </div>
-                <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors flex-shrink-0" />
+                <h2 className="font-heading text-xl md:text-2xl text-foreground group-hover:text-gold transition-colors">
+                  {section.category}
+                </h2>
+                <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-gold transition-colors flex-shrink-0" />
               </Link>
             ))}
           </div>
