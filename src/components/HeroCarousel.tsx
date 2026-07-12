@@ -2,7 +2,6 @@ import { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { Button } from "@/components/ui/button";
 
 import donzelaHero from "@/assets/hero-donzela-crista.png.asset.json";
 import alcateiaHero from "@/assets/hero-alcateia-infernal.png.asset.json";
@@ -12,44 +11,43 @@ import homemAcesoHero from "@/assets/hero-homem-aceso.png.asset.json";
 type SlideType = {
   id: number;
   title: string;
-  cta: string;
   image: string;
   to: string;
-  ctaPosition: string;
+  // Área clicável sobre o "Saiba Mais" desenhado na imagem (percentuais do banner)
+  cta: { top: string; left: string; width: string; height: string };
 };
+
+// A posição do "Saiba Mais" é praticamente a mesma nas 4 artes.
+const defaultCta = { top: "70%", left: "31%", width: "13%", height: "16%" };
 
 const slides: SlideType[] = [
   {
     id: 1,
     title: "DONZELA CRISTÃ",
-    cta: "Saiba Mais",
     image: donzelaHero.url,
     to: "/obras/teologia/donzela-crista",
-    ctaPosition: "bottom-[15%] left-[40%]",
+    cta: defaultCta,
   },
   {
     id: 2,
     title: "ALCATEIA INFERNAL",
-    cta: "Saiba Mais",
     image: alcateiaHero.url,
     to: "/obras/alta-fantasia/alcateia-infernal",
-    ctaPosition: "bottom-[15%] left-[40%]",
+    cta: defaultCta,
   },
   {
     id: 3,
     title: "O SEQUESTRO DA CRUZ",
-    cta: "Saiba Mais",
     image: sequestroHero.url,
     to: "/obras/teologia/o-sequestro-da-cruz",
-    ctaPosition: "bottom-[18%] left-[40%]",
+    cta: defaultCta,
   },
   {
     id: 4,
     title: "O HOMEM ACESO",
-    cta: "Saiba Mais",
     image: homemAcesoHero.url,
     to: "/obras/teologia/o-homem-aceso",
-    ctaPosition: "bottom-[18%] left-[42%]",
+    cta: defaultCta,
   },
 ];
 
@@ -80,34 +78,32 @@ const HeroCarousel = () => {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide) => (
-            <div
-              key={slide.id}
-              className="flex-[0_0_100%] min-w-0 relative"
-            >
-              {/* Banner image — object-contain so nothing is cropped */}
+            <div key={slide.id} className="flex-[0_0_100%] min-w-0 relative">
               <img
                 src={slide.image}
                 alt={slide.title}
                 className="w-full h-auto object-contain object-center"
               />
 
-              {/* CTA overlay — transparent button below subtitle */}
-              <div className={`absolute ${slide.ctaPosition} -translate-x-1/2`}>
-                <Button
-                  asChild
-                  size="sm"
-                  className="bg-transparent border border-white text-white hover:bg-white/10 font-body rounded-none px-4 py-2 text-xs sm:text-sm md:text-base sm:px-6 sm:py-3 max-[480px]:px-2 max-[480px]:py-1 max-[480px]:text-[10px] max-[480px]:h-auto"
-                >
-                  <Link to={slide.to}>{slide.cta}</Link>
-                </Button>
-              </div>
+              {/* Área clicável invisível sobre o "Saiba Mais" da própria imagem */}
+              <Link
+                to={slide.to}
+                aria-label={`${slide.title} — Saiba Mais`}
+                className="absolute z-10"
+                style={{
+                  top: slide.cta.top,
+                  left: slide.cta.left,
+                  width: slide.cta.width,
+                  height: slide.cta.height,
+                }}
+              />
             </div>
           ))}
         </div>
       </div>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
