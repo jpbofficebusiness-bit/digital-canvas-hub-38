@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -52,26 +52,13 @@ const slides: SlideType[] = [
 ];
 
 const HeroCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: false }),
   ]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
-  }, [emblaApi, onSelect]);
+    // Força o autoplay a iniciar assim que o componente monta
+  }, []);
 
   return (
     <section className="relative w-full h-auto overflow-hidden bg-black">
@@ -102,21 +89,6 @@ const HeroCarousel = () => {
         </div>
       </div>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => scrollTo(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === selectedIndex
-                ? "bg-primary-foreground scale-110"
-                : "bg-primary-foreground/40 hover:bg-primary-foreground/60"
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
     </section>
   );
 };
