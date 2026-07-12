@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
