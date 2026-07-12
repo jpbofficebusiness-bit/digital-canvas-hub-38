@@ -3,19 +3,19 @@ import franklinSketch from "@/assets/franklin-rafael-sketch.png.asset.json";
 const newsItems = [
   {
     id: 1,
-    title: "10 Anos de Cátedra como Professor",
+    title: "23/03/2026",
     excerpt:
       'Nesse ano de 2026, Franklin Rafael comemora 10 anos que tem exercido sua vocação de cátedra como um professor incansável. Sobre isso, ele comentou: "Minhas forças continuam as mesmas, tão intensas quanto o primeiro dia em que entrei em uma escola para ensinar."',
   },
   {
     id: 2,
-    title: 'Medalha Ascensão — Ranking Editora Uiclap',
+    title: "23/03/2026",
     excerpt:
       'Franklin Rafael recebeu a "Medalha Ascensão" pelo Ranking da Editora Uiclap, um prémio que classifica os escritores pela relevância de vendas relacionadas às suas obras literárias.',
   },
   {
     id: 3,
-    title: "Especialização em Teologia Reformada",
+    title: "23/03/2026",
     excerpt:
       "Pouco tempo atrás, Franklin expressou sua alegria por estar se especializando em Teologia Reformada, pelo Instituto Reformado de São Paulo, com o Dr. Augustus Nicodemos, Leandro Lima, Hermisten Maia e Felipe Fontes, professores com os quais têm mantido contato, conhecidos como os maiores pastores renomados da tradição reformada do cristianismo no país e no exterior. Segundo as suas palavras, era um sonho que ele tinha desde a sua adolescência.",
   },
