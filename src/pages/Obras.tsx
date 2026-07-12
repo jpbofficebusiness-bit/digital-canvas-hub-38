@@ -22,12 +22,21 @@ const Obras = () => {
               <Link
                 key={section.slug}
                 to={`/obras/${section.slug}`}
-                className="flex items-center justify-between py-5 border-b border-border last:border-b-0 group transition-colors hover:text-gold"
+                className="block py-5 border-b border-border last:border-b-0 group transition-colors"
               >
-                <h2 className="font-heading text-xl md:text-2xl text-foreground group-hover:text-gold transition-colors">
-                  {section.category}
-                </h2>
-                <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-gold transition-colors flex-shrink-0" />
+                <div className="flex items-center justify-between gap-4">
+                  <h2 className="font-heading text-xl md:text-2xl text-foreground group-hover:text-gold transition-colors">
+                    {section.category}
+                  </h2>
+                  <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-gold transition-colors flex-shrink-0" />
+                </div>
+                <p className="font-body text-sm text-muted-foreground mt-1">
+                  {section.description}
+                </p>
+                <p className="font-body text-xs text-gold mt-2 uppercase tracking-widest">
+                  {section.books.length}{" "}
+                  {section.books.length === 1 ? "livro" : "livros"}
+                </p>
               </Link>
             ))}
           </div>
