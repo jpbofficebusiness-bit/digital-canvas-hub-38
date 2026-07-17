@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
 import { sections } from "@/data/books";
+
 
 const Obras = () => {
   return (
@@ -42,7 +42,6 @@ const Obras = () => {
           </div>
         </div>
       </main>
-      <Newsletter />
       <Footer />
     </div>
   );

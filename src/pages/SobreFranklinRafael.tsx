@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Quote, Clock, BookOpen } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
+
 
 const otherSections = [
   {
@@ -65,7 +65,6 @@ const SobreFranklinRafael = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

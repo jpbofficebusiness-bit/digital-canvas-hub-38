@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
 import {
   Carousel,
   CarouselContent,
@@ -167,7 +166,6 @@ const Biografia = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

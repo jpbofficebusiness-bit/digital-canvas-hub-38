@@ -2,8 +2,8 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
 import { getSection } from "@/data/books";
+
 
 const ObrasCategoria = () => {
   const { categoria } = useParams<{ categoria: string }>();
@@ -79,7 +79,6 @@ const ObrasCategoria = () => {
           </ul>
         </div>
       </main>
-      <Newsletter />
       <Footer />
     </div>
   );

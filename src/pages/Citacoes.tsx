@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
+
 
 const quotes = [
   "A Igreja é uma bela adormecida. Só o beijo do Príncipe, Jesus, pode despertá-la.",
@@ -79,7 +79,6 @@ const Citacoes = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
+
 
 const porVirItems = [
   { title: "Hereges e Heresias", series: "Série: Sermões Franklin" },
@@ -49,7 +49,6 @@ const PorVir = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

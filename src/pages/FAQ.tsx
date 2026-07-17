@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
+
 
 type QA = { q: string; a: React.ReactNode };
 
@@ -364,7 +364,6 @@ const FAQ = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );
