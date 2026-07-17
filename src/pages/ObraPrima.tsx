@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
 import { Star } from "lucide-react";
+
 
 const ObraPrima = () => {
   return (

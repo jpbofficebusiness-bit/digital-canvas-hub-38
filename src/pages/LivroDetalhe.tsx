@@ -2,8 +2,8 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
 import { getBook } from "@/data/books";
+
 import uiclapIcon from "@/assets/uiclap-icon.png";
 
 const LivroDetalhe = () => {

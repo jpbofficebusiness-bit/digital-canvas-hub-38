@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Newsletter from "@/components/Newsletter";
 import BiographicalTimeline from "@/components/BiographicalTimeline";
+
 
 const LinhaDoTempo = () => {
   return (
