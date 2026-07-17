@@ -148,7 +148,6 @@ const LivroDetalhe = () => {
           </nav>
         </div>
       </main>
-      <Newsletter />
       <Footer />
     </div>
   );

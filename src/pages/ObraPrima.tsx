@@ -40,7 +40,6 @@ const ObraPrima = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

@@ -49,7 +49,6 @@ const PorVir = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

@@ -65,7 +65,6 @@ const SobreFranklinRafael = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

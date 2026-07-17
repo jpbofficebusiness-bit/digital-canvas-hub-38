@@ -15,7 +15,6 @@ const LinhaDoTempo = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

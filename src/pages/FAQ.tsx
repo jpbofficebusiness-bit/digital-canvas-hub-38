@@ -364,7 +364,6 @@ const FAQ = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

@@ -166,7 +166,6 @@ const Biografia = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );

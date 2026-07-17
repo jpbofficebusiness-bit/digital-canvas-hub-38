@@ -42,7 +42,6 @@ const Obras = () => {
           </div>
         </div>
       </main>
-      <Newsletter />
       <Footer />
     </div>
   );

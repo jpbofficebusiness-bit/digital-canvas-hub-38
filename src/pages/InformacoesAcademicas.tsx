@@ -172,7 +172,6 @@ const InformacoesAcademicas = () => {
         </div>
       </main>
       
-      <Newsletter />
       <Footer />
     </div>
   );

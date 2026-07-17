@@ -79,7 +79,6 @@ const ObrasCategoria = () => {
           </ul>
         </div>
       </main>
-      <Newsletter />
       <Footer />
     </div>
   );

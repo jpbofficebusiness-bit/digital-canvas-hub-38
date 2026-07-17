@@ -79,7 +79,6 @@ const Citacoes = () => {
         </div>
       </main>
 
-      <Newsletter />
       <Footer />
     </div>
   );
