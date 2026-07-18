@@ -1,33 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import bio11 from "@/assets/bio/bio-11.png";
-import bio12 from "@/assets/bio/bio-12.png";
-import bio13 from "@/assets/bio/bio-13.png";
-import bio14 from "@/assets/bio/bio-14.png";
-import bio15 from "@/assets/bio/bio-15.png";
-import bio16 from "@/assets/bio/bio-16.png";
-import bio17 from "@/assets/bio/bio-17.jpeg";
-import bio18 from "@/assets/bio/bio-18.jpeg";
-import bio19 from "@/assets/bio/bio-19.jpeg";
-
-const galleryImages = [
-  { src: bio11, alt: "Franklin Rafael — retrato 1" },
-  { src: bio12, alt: "Franklin Rafael — retrato 2" },
-  { src: bio13, alt: "Franklin Rafael — retrato 3" },
-  { src: bio14, alt: "Franklin Rafael — retrato 4" },
-  { src: bio15, alt: "Franklin Rafael — retrato 5" },
-  { src: bio16, alt: "Franklin Rafael — retrato 6" },
-  { src: bio17, alt: "Franklin Rafael — retrato 7" },
-  { src: bio18, alt: "Franklin Rafael — retrato 8" },
-  { src: bio19, alt: "Franklin Rafael — retrato 9" },
-];
+import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
 
 const Biografia = () => {
   return (
@@ -38,6 +11,13 @@ const Biografia = () => {
       <main className="flex-1 py-12 md:py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <header className="text-center mb-12">
+            <div className="mx-auto mb-6 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gold shadow-2xl">
+              <img
+                src={bioHero.url}
+                alt="Franklin Rafael"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-3">
               BIOGRAFIA
             </h1>
@@ -131,37 +111,6 @@ const Biografia = () => {
               </div>
             </section>
 
-            <section className="pt-4 relative left-1/2 right-1/2 -mx-[50vw] w-screen">
-              <div className="bg-black py-10 px-4 sm:px-10 md:px-16 shadow-2xl">
-                <h2 className="font-heading text-2xl md:text-3xl text-white mb-8 text-center tracking-[0.2em]">
-                  Galeria de Fotos
-                </h2>
-                <Carousel
-                  opts={{ align: "start", loop: true }}
-                  className="w-full"
-                >
-                  <CarouselContent className="-ml-3">
-                    {galleryImages.map((img, i) => (
-                      <CarouselItem
-                        key={i}
-                        className="pl-3 basis-2/3 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
-                      >
-                        <div className="aspect-[3/4] w-full overflow-hidden">
-                          <img
-                            src={img.src}
-                            alt={img.alt}
-                            loading="lazy"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="-left-2 sm:-left-6 h-12 w-12 rounded-none bg-transparent text-white border-0 hover:bg-white/10 hover:text-white" />
-                  <CarouselNext className="-right-2 sm:-right-6 h-12 w-12 rounded-none bg-transparent text-white border-0 hover:bg-white/10 hover:text-white" />
-                </Carousel>
-              </div>
-            </section>
           </article>
         </div>
       </main>
