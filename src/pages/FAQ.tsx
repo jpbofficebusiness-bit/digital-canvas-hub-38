@@ -330,21 +330,23 @@ const Block = ({ title, items }: { title: string; items: QA[] }) => (
     <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-6 border-b border-border pb-3">
       {title}
     </h2>
-    <div className="space-y-8">
+    <Accordion type="single" collapsible className="w-full">
       {items.map((item, i) => (
-        <article key={i}>
-          <h3 className="font-heading text-lg md:text-xl text-foreground mb-3">
+        <AccordionItem key={i} value={`${title}-${i}`}>
+          <AccordionTrigger className="text-left font-heading text-base md:text-lg text-foreground hover:no-underline">
             {item.q}
-          </h3>
-          <div className="font-body text-muted-foreground leading-relaxed space-y-3">
-            <p className="font-body text-sm uppercase tracking-widest text-gold">
-              Resposta:
-            </p>
-            {item.a}
-          </div>
-        </article>
+          </AccordionTrigger>
+          <AccordionContent>
+            <div className="font-body text-muted-foreground leading-relaxed space-y-3 pt-2">
+              <p className="font-body text-xs uppercase tracking-widest text-gold">
+                Resposta:
+              </p>
+              {item.a}
+            </div>
+          </AccordionContent>
+        </AccordionItem>
       ))}
-    </div>
+    </Accordion>
   </section>
 );
 
