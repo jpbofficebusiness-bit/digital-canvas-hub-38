@@ -77,17 +77,18 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Buttons */}
-          <div className="flex items-center gap-1 lg:hidden">
-            <Button variant="ghost" size="icon" aria-label="Pesquisar">
-              <Search className="h-5 w-5" />
+          <div className="flex items-center gap-2 lg:hidden">
+            <Button variant="ghost" size="icon" aria-label="Pesquisar" className="h-11 w-11">
+              <Search className="!h-7 !w-7" />
             </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Abrir menu"
+              className="h-11 w-11"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="!h-8 !w-8" /> : <Menu className="!h-8 !w-8" />}
             </Button>
           </div>
         </div>

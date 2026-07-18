@@ -33,7 +33,7 @@ const ObrasCategoria = () => {
             </p>
           </header>
 
-          <ul className="space-y-8">
+          <ul className="space-y-16 md:space-y-20">
             {section.books.map((book) => {
               const inner = (
                 <div className="flex flex-col items-center text-center">

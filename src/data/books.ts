@@ -130,6 +130,21 @@ export const sections: Section[] = [
       },
     ],
   },
+  {
+    slug: "serie-sermoes-franklin",
+    category: "Série: Sermões Franklin",
+    description:
+      "Série de sermões pregados e escritos por Franklin Rafael, reunindo pregações doutrinárias, expositivas e temáticas.",
+    books: [
+      {
+        slug: "em-breve",
+        title: "Em breve",
+        img: "",
+        sinopse: "Em breve.",
+        soon: true,
+      },
+    ],
+  },
 ];
 
 export const getSection = (slug: string) =>
