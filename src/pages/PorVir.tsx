@@ -25,16 +25,13 @@ const PorVir = () => {
             </p>
           </header>
 
-          <div className="space-y-5">
+          <div className="space-y-10">
             {porVirItems.map((item, idx) => (
-              <article
-                key={idx}
-                className="border border-border bg-card rounded-sm p-6 border-l-4 border-l-gold"
-              >
-                <div className="flex items-center gap-2 text-gold mb-3">
+              <article key={idx}>
+                <div className="flex items-center gap-2 text-gold mb-2">
                   <span className="text-base leading-none" aria-hidden="true">✍️</span>
                   <span className="font-body text-xs uppercase tracking-widest">
-                  Escrevendo...
+                    Escrevendo...
                   </span>
                 </div>
                 <h2 className="font-heading text-xl md:text-2xl text-foreground mb-1">

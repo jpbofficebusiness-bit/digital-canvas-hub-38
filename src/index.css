@@ -113,6 +113,17 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  /* Subtítulos (parágrafo imediatamente após um heading): primeira letra maiúscula */
+  h1 + p::first-letter,
+  h2 + p::first-letter,
+  h3 + p::first-letter,
+  h4 + p::first-letter,
+  h5 + p::first-letter,
+  h6 + p::first-letter {
+    text-transform: uppercase;
   }
 }
 
