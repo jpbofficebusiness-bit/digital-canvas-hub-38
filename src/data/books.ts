@@ -1,3 +1,14 @@
+import hereges from "@/assets/sermoes/hereges-e-heresias.asset.json";
+import piratas from "@/assets/sermoes/piratas.asset.json";
+import igreja from "@/assets/sermoes/a-igreja.asset.json";
+import misterios from "@/assets/sermoes/misterios.asset.json";
+import arrependimento from "@/assets/sermoes/arrependimento-a-prova.asset.json";
+import torreForte from "@/assets/sermoes/torre-forte.asset.json";
+import noivaPactual from "@/assets/sermoes/a-noiva-pactual.asset.json";
+import clamores from "@/assets/sermoes/clamores-do-inferno.asset.json";
+import avivamento from "@/assets/sermoes/avivamento-no-tumulo.asset.json";
+import ferreiros from "@/assets/sermoes/4-chifres-4-ferreiros.asset.json";
+
 export type Book = {
   slug: string;
   title: string;
