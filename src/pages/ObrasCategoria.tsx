@@ -38,11 +38,13 @@ const ObrasCategoria = () => {
               const inner = (
                 <div className="flex flex-col items-center text-center">
                   {book.img ? (
-                    <img
-                      src={book.img}
-                      alt={book.title}
-                      className="w-40 md:w-48 h-auto rounded-sm shadow-md group-hover:shadow-xl transition-shadow"
-                    />
+                    <div className="w-40 md:w-48 aspect-[2/3] overflow-hidden rounded-sm shadow-md group-hover:shadow-xl transition-shadow">
+                      <img
+                        src={book.img}
+                        alt={book.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   ) : (
                     <div className="w-40 md:w-48 aspect-[2/3] bg-muted rounded-sm flex items-center justify-center">
                       <span className="font-body text-xs text-muted-foreground uppercase tracking-widest">
