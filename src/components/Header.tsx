@@ -47,15 +47,28 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link to="/" className="font-heading font-semibold text-forest tracking-wide flex flex-col leading-tight">
-            <span className="text-sm md:text-base tracking-[0.3em]">FRANKLIN</span>
-            <span className="text-2xl md:text-3xl">RAFAEL</span>
-          </Link>
+        <div className="grid grid-cols-3 items-center h-16 md:h-20">
+          {/* Author portrait */}
+          <div className="flex justify-start">
+            <Link to="/" aria-label="Página inicial">
+              <img
+                src={bioHero.url}
+                alt="Franklin Rafael"
+                className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover border-2 border-gold shadow-md"
+              />
+            </Link>
+          </div>
+
+          {/* Logo - centered */}
+          <div className="flex justify-center">
+            <Link to="/" className="font-heading font-semibold text-forest tracking-wide flex flex-col leading-tight text-center">
+              <span className="text-sm md:text-base tracking-[0.3em]">FRANKLIN</span>
+              <span className="text-2xl md:text-3xl">RAFAEL</span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center justify-end gap-8">
             {desktopNavLinks.map((link) => (
               link.isAnchor ? (
                 <a
@@ -78,7 +91,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Buttons */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex lg:hidden items-center justify-end gap-2">
             <Button variant="ghost" size="icon" aria-label="Pesquisar" className="h-11 w-11">
               <Search className="!h-7 !w-7" />
             </Button>
