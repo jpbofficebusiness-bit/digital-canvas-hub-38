@@ -26,7 +26,14 @@ const ObrasCategoria = () => {
 
           <header className="mb-10 md:mb-12 border-b border-border pb-6">
             <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-3">
-              {section.category}
+              {section.category.includes(":") ? (
+                <>
+                  {section.category.split(":")[0]}:{" "}
+                  <em>{section.category.split(":").slice(1).join(":").trim()}</em>
+                </>
+              ) : (
+                section.category
+              )}
             </h1>
             <p className="font-body text-muted-foreground">
               {section.description}
