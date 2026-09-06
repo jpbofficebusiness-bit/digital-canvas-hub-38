@@ -4,6 +4,7 @@ import { Menu, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube, Home
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import menuBg from "@/assets/menu-bg.png.asset.json";
+import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
 
 const mobileMenuLinks = [
   { label: "O Autor", href: "/sobre-franklin-rafael", isAnchor: false, icon: User },

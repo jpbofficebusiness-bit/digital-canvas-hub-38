@@ -12,7 +12,7 @@ const ObraPrima = () => {
         src={swordRealistic}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 md:-right-32 top-0 h-[800px] md:h-[1200px] w-auto opacity-15 rotate-[25deg] select-none"
+        className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 h-[800px] md:h-[1200px] w-auto opacity-15 rotate-[25deg] select-none"
       />
       <Header />
       <div className="h-16 md:h-20" />

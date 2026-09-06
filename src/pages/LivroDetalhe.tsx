@@ -6,6 +6,18 @@ import { getBook } from "@/data/books";
 
 import uiclapIcon from "@/assets/uiclap-icon.png";
 
+const AmazonIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M15.93 17.09c-.07-.08-.21-.13-.4-.13-.2 0-.4.07-.58.2a6.47 6.47 0 0 1-3.65 1.08c-2.82 0-5.26-1.92-5.26-5.15 0-2.55 1.75-4.45 4.23-4.45 2.08 0 3.46 1.22 3.9 2.87.07.23.28.37.52.37h.02c.32 0 .55-.27.48-.58-.6-2.47-2.66-4.1-5.25-4.1-3.28 0-5.74 2.35-5.74 5.74 0 3.75 2.93 6.3 6.56 6.3 1.74 0 3.15-.53 4.23-1.38.22-.17.25-.42.13-.63l-.09-.14z" />
+    <path d="M18.38 19.7c-2.3 1.7-5.65 2.6-8.54 2.6-4.04 0-7.68-1.5-10.43-3.98-.22-.2-.02-.47.23-.32 2.97 1.73 6.64 2.78 10.43 2.78 2.56 0 5.37-.5 7.96-1.54.38-.17.72.26.35.46z" />
+  </svg>
+);
+
 const LivroDetalhe = () => {
   const { categoria, livro } = useParams<{
     categoria: string;
@@ -110,7 +122,7 @@ const LivroDetalhe = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 self-start px-5 py-3 bg-amber-500 text-white font-body text-sm tracking-wider uppercase hover:bg-amber-600 transition-colors rounded-md mt-3"
                 >
-                  <ShoppingCart className="h-5 w-5" />
+                  <AmazonIcon className="h-5 w-5" />
                   Saiba Mais na Amazon
                 </a>
               )}
