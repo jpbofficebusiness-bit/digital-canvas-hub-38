@@ -1,15 +1,18 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Star, Sword } from "lucide-react";
+import { Star } from "lucide-react";
+import swordRealistic from "@/assets/sword-realistic.png";
 
 
 const ObraPrima = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background relative overflow-hidden">
       {/* Sword background */}
-      <Sword
+      <img
+        src={swordRealistic}
+        alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute -right-16 top-1/4 h-[600px] w-[600px] md:h-[900px] md:w-[900px] text-gold/10 rotate-45"
+        className="pointer-events-none absolute -right-40 md:-right-32 top-0 h-[800px] md:h-[1200px] w-auto opacity-15 rotate-[25deg] select-none"
       />
       <Header />
       <div className="h-16 md:h-20" />
