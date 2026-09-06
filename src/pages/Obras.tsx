@@ -26,7 +26,14 @@ const Obras = () => {
               >
                 <div className="flex items-center justify-between gap-4">
                   <h2 className="font-heading text-xl md:text-2xl text-foreground group-hover:text-gold transition-colors">
-                    {section.category}
+                    {section.category.includes(":") ? (
+                      <>
+                        {section.category.split(":")[0]}:{" "}
+                        <em>{section.category.split(":").slice(1).join(":").trim()}</em>
+                      </>
+                    ) : (
+                      section.category
+                    )}
                   </h2>
                   <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-gold transition-colors flex-shrink-0" />
                 </div>

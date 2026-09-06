@@ -1,5 +1,5 @@
 import { Link, useParams, Navigate } from "react-router-dom";
-import { ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowLeft, ShoppingCart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getBook } from "@/data/books";
@@ -101,6 +101,17 @@ const LivroDetalhe = () => {
                     className="h-5 w-5 object-contain"
                   />
                   Saiba Mais na UICLAP
+                </a>
+              )}
+              {book.amazonLink && (
+                <a
+                  href={book.amazonLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 self-start px-5 py-3 bg-amber-500 text-white font-body text-sm tracking-wider uppercase hover:bg-amber-600 transition-colors rounded-md mt-3"
+                >
+                  <ShoppingCart className="h-5 w-5" />
+                  Saiba Mais na Amazon
                 </a>
               )}
             </div>
