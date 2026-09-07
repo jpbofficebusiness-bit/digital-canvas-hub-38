@@ -5,18 +5,7 @@ import Footer from "@/components/Footer";
 import { getBook } from "@/data/books";
 
 import uiclapIcon from "@/assets/uiclap-icon.png";
-
-const AmazonIcon = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className={className}
-    aria-hidden="true"
-  >
-    <path d="M11.5 4C8.5 4 6 6.5 6 9.5v3c0 3 2.5 5.5 5.5 5.5S17 15.5 17 12.5v-1h-1.5v1c0 2.2-1.8 4-4 4s-4-1.8-4-4v-3c0-2.2 1.8-4 4-4s4 1.8 4 4v1H17V9.5C17 6.5 14.5 4 11.5 4z" />
-    <path d="M4 18.5c3.5 1.8 8 2.2 11.8.6.4-.2.6.4.2.7-4 2.2-9.5 1.8-13-.9-.3-.3-.2-.7.2-.7.2 0 .5.1.8.3z" />
-  </svg>
-);
+import amazonIcon from "@/assets/amazon-icon.png";
 
 const LivroDetalhe = () => {
   const { categoria, livro } = useParams<{
@@ -122,7 +111,11 @@ const LivroDetalhe = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 self-start px-5 py-3 bg-amber-500 text-white font-body text-sm tracking-wider uppercase hover:bg-amber-600 transition-colors rounded-md mt-3"
                 >
-                  <AmazonIcon className="h-5 w-5" />
+                  <img
+                    src={amazonIcon}
+                    alt="Amazon"
+                    className="h-5 w-5 object-contain"
+                  />
                   Saiba Mais na Amazon
                 </a>
               )}
