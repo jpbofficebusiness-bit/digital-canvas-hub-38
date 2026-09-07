@@ -4,6 +4,28 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getSection } from "@/data/books";
 
+const CategoryTitle = ({ category }: { category: string }) => {
+  if (category === "Série: Sermões Franklin") {
+    return (
+      <>
+        <span className="font-bold tracking-wider">SÉRIE</span>
+        <span className="mx-1">:</span>
+        <em className="font-bold">Sermões Franklin</em>
+      </>
+    );
+  }
+
+  if (category.includes(":")) {
+    return (
+      <>
+        {category.split(":")[0]}:{" "}
+        <em>{category.split(":").slice(1).join(":").trim()}</em>
+      </>
+    );
+  }
+
+  return <>{category}</>;
+};
 
 const ObrasCategoria = () => {
   const { categoria } = useParams<{ categoria: string }>();
@@ -26,14 +48,7 @@ const ObrasCategoria = () => {
 
           <header className="mb-10 md:mb-12 border-b border-border pb-6">
             <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-3">
-              {section.category.includes(":") ? (
-                <>
-                  {section.category.split(":")[0]}:{" "}
-                  <em>{section.category.split(":").slice(1).join(":").trim()}</em>
-                </>
-              ) : (
-                section.category
-              )}
+              <CategoryTitle category={section.category} />
             </h1>
             <p className="font-body text-muted-foreground">
               {section.description}
