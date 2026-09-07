@@ -10,13 +10,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-foreground text-gold py-12">
       <div className="container mx-auto px-4">
         {/* Logo */}
         <div className="text-center mb-8">
           <a
             href="#"
-            className="font-heading text-2xl font-semibold tracking-wide inline-block"
+            className="font-heading text-2xl font-semibold tracking-wide inline-block text-gold"
           >
             FRANKLIN RAFAEL
           </a>
@@ -28,7 +28,7 @@ const Footer = () => {
             <a
               key={link.label}
               href={link.href}
-              className="font-body text-sm text-background/70 hover:text-background transition-colors duration-200"
+              className="font-body text-sm text-gold/80 hover:text-gold transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -36,8 +36,8 @@ const Footer = () => {
         </nav>
 
         {/* Divider */}
-        <div className="border-t border-background/20 pt-8">
-          <p className="font-body text-sm text-center text-background/60">
+        <div className="border-t border-gold/20 pt-8">
+          <p className="font-body text-sm text-center text-gold/70">
             © {currentYear} Franklin Rafael. Todos os direitos reservados.
           </p>
         </div>
