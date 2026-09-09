@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube, Home } from "lucide-react";
+import { Menu, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import menuBg from "@/assets/menu-bg.png.asset.json";
 import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
+import swordRealistic from "@/assets/sword-realistic.png";
 
 const mobileMenuLinks = [
   { label: "O Autor", href: "/sobre-franklin-rafael", isAnchor: false, icon: User },
@@ -13,7 +13,6 @@ const mobileMenuLinks = [
   { label: "(FAQ) Perguntas Frequentes", href: "/faq", isAnchor: false, icon: HelpCircle },
   { label: "Obra-Prima", href: "/obra-prima", isAnchor: false, icon: Star },
   { label: "Canal no YouTube — Franklin Rafael Oficial", href: "https://www.youtube.com/@franklinrafaeloficial", isExternal: true, icon: Youtube },
-  { label: "The Franklin Village", href: "https://www.youtube.com/@espadicaoficial", isExternal: true, icon: Home },
 ];
 
 const desktopNavLinks = [
@@ -111,17 +110,23 @@ const Header = () => {
       {/* Fullscreen Mobile Navigation - rendered via portal so it escapes header's stacking context */}
       {isMenuOpen && typeof document !== "undefined" && createPortal(
         <div
-          className="lg:hidden fixed inset-0 bg-background z-[100] overflow-y-auto pt-20 animate-slide-in-right bg-no-repeat bg-cover bg-center"
-          style={{ backgroundImage: `url(${menuBg.url})` }}
+          className="lg:hidden fixed inset-0 bg-background z-[100] overflow-hidden pt-20 animate-slide-in-right"
         >
+          <div className="absolute inset-0 bg-background" aria-hidden="true" />
+          <img
+            src={swordRealistic}
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[115%] w-auto -translate-x-1/2 -translate-y-1/2 rotate-[25deg] opacity-15 select-none"
+          />
           <button
             onClick={() => setIsMenuOpen(false)}
             aria-label="Fechar menu"
-            className="absolute top-4 right-4 p-2 rounded-md text-foreground hover:bg-accent/50"
+            className="absolute top-4 right-4 z-10 p-2 rounded-md text-foreground hover:bg-accent/50"
           >
             <X className="h-6 w-6" />
           </button>
-          <nav className="container mx-auto px-4 py-6">
+          <nav className="relative z-10 container mx-auto px-4 py-6">
             <div className="flex flex-col gap-1">
               {mobileMenuLinks.map((link) => {
                 const Icon = link.icon;
