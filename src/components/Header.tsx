@@ -112,6 +112,7 @@ const Header = () => {
         <div
           className="lg:hidden fixed inset-0 bg-background z-[100] overflow-hidden pt-20 animate-slide-in-right"
         >
+          <div className="absolute inset-0 bg-background" aria-hidden="true" />
           <img
             src={swordRealistic}
             alt=""
