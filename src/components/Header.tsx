@@ -110,17 +110,22 @@ const Header = () => {
       {/* Fullscreen Mobile Navigation - rendered via portal so it escapes header's stacking context */}
       {isMenuOpen && typeof document !== "undefined" && createPortal(
         <div
-          className="lg:hidden fixed inset-0 bg-background z-[100] overflow-y-auto pt-20 animate-slide-in-right bg-no-repeat bg-center bg-contain"
-          style={{ backgroundImage: `url(${swordRealistic})` }}
+          className="lg:hidden fixed inset-0 bg-background z-[100] overflow-hidden pt-20 animate-slide-in-right"
         >
+          <img
+            src={swordRealistic}
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[115%] w-auto -translate-x-1/2 -translate-y-1/2 rotate-[25deg] opacity-15 select-none"
+          />
           <button
             onClick={() => setIsMenuOpen(false)}
             aria-label="Fechar menu"
-            className="absolute top-4 right-4 p-2 rounded-md text-foreground hover:bg-accent/50"
+            className="absolute top-4 right-4 z-10 p-2 rounded-md text-foreground hover:bg-accent/50"
           >
             <X className="h-6 w-6" />
           </button>
-          <nav className="container mx-auto px-4 py-6">
+          <nav className="relative z-10 container mx-auto px-4 py-6">
             <div className="flex flex-col gap-1">
               {mobileMenuLinks.map((link) => {
                 const Icon = link.icon;
