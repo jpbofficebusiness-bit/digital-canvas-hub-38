@@ -85,7 +85,7 @@ export const sections: Section[] = [
     slug: "serie-sermoes-franklin",
     category: "Série: Sermões Franklin",
     description:
-      "Série de sermões pregados e escritos por Franklin Rafael, reunindo pregações doutrinárias, expositivas e temáticas.",
+      "Série de sermões pregados e escritos por Franklin Rafael.",
     books: [
       {
         slug: "hereges-e-heresias",
