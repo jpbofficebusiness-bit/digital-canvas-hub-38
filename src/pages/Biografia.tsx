@@ -124,9 +124,84 @@ const Biografia = () => {
         </div>
       </main>
 
+      <section className="bg-black py-12 md:py-16">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-gold text-center mb-8 tracking-wider">
+            GALERIA DE FOTOS
+          </h2>
+          <BioPhotoCarousel />
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
 };
 
+const carouselImages = [
+  { src: carousel1.url, alt: "Franklin Rafael - Foto 1" },
+  { src: carousel2.url, alt: "Franklin Rafael - Foto 2" },
+  { src: carousel3.url, alt: "Franklin Rafael - Foto 3" },
+  { src: carousel4.url, alt: "Franklin Rafael - Foto 4" },
+  { src: carousel5.url, alt: "Franklin Rafael - Foto 5" },
+  { src: carousel6.url, alt: "Franklin Rafael - Foto 6" },
+];
+
+const BioPhotoCarousel = () => {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => setCurrent((i) => (i === 0 ? carouselImages.length - 1 : i - 1));
+  const next = () => setCurrent((i) => (i === carouselImages.length - 1 ? 0 : i + 1));
+
+  return (
+    <div className="relative">
+      <div className="overflow-hidden rounded-sm border border-gold/30">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {carouselImages.map((img, idx) => (
+            <div key={idx} className="min-w-full">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto max-h-[60vh] object-contain bg-black"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button
+        onClick={prev}
+        aria-label="Foto anterior"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/70 text-gold border border-gold/50 hover:bg-gold hover:text-black transition-colors"
+      >
+        <ChevronLeft className="h-6 w-6 md:h-8 md:w-8" />
+      </button>
+      <button
+        onClick={next}
+        aria-label="Próxima foto"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/70 text-gold border border-gold/50 hover:bg-gold hover:text-black transition-colors"
+      >
+        <ChevronRight className="h-6 w-6 md:h-8 md:w-8" />
+      </button>
+
+      <div className="flex justify-center gap-2 mt-4">
+        {carouselImages.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrent(idx)}
+            aria-label={`Ir para foto ${idx + 1}`}
+            className={`h-2.5 w-2.5 rounded-full transition-colors ${
+              idx === current ? "bg-gold" : "bg-gold/30 hover:bg-gold/60"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export default Biografia;
+
