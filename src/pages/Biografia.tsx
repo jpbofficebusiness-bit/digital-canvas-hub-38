@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
