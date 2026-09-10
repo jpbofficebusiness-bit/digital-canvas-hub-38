@@ -1,6 +1,15 @@
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
+import carousel1 from "@/assets/bio/bio-carousel-1.jpg.asset.json";
+import carousel2 from "@/assets/bio/bio-carousel-2.jpg.asset.json";
+import carousel3 from "@/assets/bio/bio-carousel-3.jpg.asset.json";
+import carousel4 from "@/assets/bio/bio-carousel-4.jpg.asset.json";
+import carousel5 from "@/assets/bio/bio-carousel-5.jpg.asset.json";
+import carousel6 from "@/assets/bio/bio-carousel-6.jpg.asset.json";
+
 
 const Biografia = () => {
   return (
