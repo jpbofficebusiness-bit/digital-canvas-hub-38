@@ -8,7 +8,7 @@ const CategoryTitle = ({ category }: { category: string }) => {
   if (category === "Série: Sermões Franklin") {
     return (
       <>
-        <span className="font-bold tracking-wider">SÉRIE</span>
+        <span className="font-bold">Série</span>
         <span className="mx-1">:</span>
         <em className="font-bold">Sermões Franklin</em>
       </>
@@ -60,23 +60,13 @@ const ObrasCategoria = () => {
               const inner = (
                 <div className="flex flex-col items-center text-center">
                   {book.img ? (
-                    section.slug === "serie-sermoes-franklin" ? (
-                      <div className="w-48 md:w-56 bg-white rounded-sm shadow-md group-hover:shadow-xl transition-shadow p-3 flex items-center justify-center">
-                        <img
-                          src={book.img}
-                          alt={book.title}
-                          className="w-full h-auto object-contain"
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-40 md:w-48 aspect-[2/3] overflow-hidden rounded-sm shadow-md group-hover:shadow-xl transition-shadow">
-                        <img
-                          src={book.img}
-                          alt={book.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    )
+                    <div className="w-40 md:w-48 aspect-[2/3] overflow-hidden rounded-sm shadow-md group-hover:shadow-xl transition-shadow">
+                      <img
+                        src={book.img}
+                        alt={book.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   ) : (
                     <div className="w-40 md:w-48 aspect-[2/3] bg-muted rounded-sm flex items-center justify-center">
                       <span className="font-body text-xs text-muted-foreground uppercase tracking-widest">

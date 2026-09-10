@@ -27,6 +27,9 @@ export type Section = {
   books: Book[];
 };
 
+const sermaoSubtitle =
+  "O presente sermão pertence a 1° Série De Sermões pregados por Franklin Rafael, dando início a primorosa coletânea dos Sermões Franklin.";
+
 export const sections: Section[] = [
   {
     slug: "teologia",
@@ -84,69 +87,77 @@ export const sections: Section[] = [
   {
     slug: "serie-sermoes-franklin",
     category: "Série: Sermões Franklin",
-    description:
-      "Série de sermões pregados e escritos por Franklin Rafael.",
+    description: "Série de sermões pregados e escritos por Franklin Rafael.",
     books: [
       {
         slug: "hereges-e-heresias",
         title: "Hereges e Heresias",
+        subtitle: sermaoSubtitle,
         img: hereges.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
       {
         slug: "piratas",
         title: "Piratas",
-        subtitle: "Como Deus julgou um grupo de piratas",
+        subtitle: sermaoSubtitle,
         img: piratas.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
       {
         slug: "a-igreja",
         title: "A Igreja",
+        subtitle: sermaoSubtitle,
         img: igreja.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
       {
         slug: "misterios",
         title: "Mistérios",
+        subtitle: sermaoSubtitle,
         img: misterios.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
       {
         slug: "arrependimento-a-prova",
         title: "Arrependimento À Prova",
+        subtitle: sermaoSubtitle,
         img: arrependimento.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
       {
         slug: "torre-forte",
         title: "Torre Forte",
+        subtitle: sermaoSubtitle,
         img: torreForte.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
       {
         slug: "a-noiva-pactual",
         title: "A Noiva Pactual",
+        subtitle: sermaoSubtitle,
         img: noivaPactual.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
       {
         slug: "clamores-do-inferno",
         title: "Clamores do Inferno",
+        subtitle: sermaoSubtitle,
         img: clamores.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
       {
         slug: "avivamento-no-tumulo",
         title: "Avivamento No Túmulo",
+        subtitle: sermaoSubtitle,
         img: avivamento.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
       {
         slug: "os-4-chifres-e-os-4-ferreiros",
         title: "Os 4 Chifres E Os 4 Ferreiros",
+        subtitle: sermaoSubtitle,
         img: ferreiros.url,
-        sinopse: "Sermão da Série: Sermões Franklin.",
+        sinopse: sermaoSubtitle,
       },
     ],
   },

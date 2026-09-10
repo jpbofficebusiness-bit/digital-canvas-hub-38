@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
@@ -148,10 +148,22 @@ const carouselImages = [
 
 const BioPhotoCarousel = () => {
   const [current, setCurrent] = useState(0);
+  const directionRef = useRef(1);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((i) => (i === carouselImages.length - 1 ? 0 : i + 1));
+      setCurrent((i) => {
+        const next = i + directionRef.current;
+        if (next >= carouselImages.length) {
+          directionRef.current = -1;
+          return i - 1;
+        }
+        if (next < 0) {
+          directionRef.current = 1;
+          return i + 1;
+        }
+        return next;
+      });
     }, 4000);
     return () => clearInterval(timer);
   }, []);

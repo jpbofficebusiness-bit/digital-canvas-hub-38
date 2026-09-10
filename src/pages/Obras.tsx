@@ -8,7 +8,7 @@ const CategoryTitle = ({ category }: { category: string }) => {
   if (category === "Série: Sermões Franklin") {
     return (
       <>
-        <span className="font-bold tracking-wider">SÉRIE</span>
+        <span className="font-bold">Série</span>
         <span className="mx-1">:</span>
         <em className="font-bold">Sermões Franklin</em>
       </>
