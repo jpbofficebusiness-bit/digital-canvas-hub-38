@@ -82,6 +82,11 @@ const ObrasCategoria = () => {
                       {book.subtitle}
                     </p>
                   )}
+                  {section.slug === "serie-sermoes-franklin" && book.sinopse && (
+                    <p className="font-body italic text-sm text-muted-foreground mt-1">
+                      {book.sinopse}
+                    </p>
+                  )}
                 </div>
               );
 
