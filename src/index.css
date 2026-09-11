@@ -156,3 +156,8 @@
     color: hsl(var(--burgundy-light));
   }
 }
+
+/* Evita faixa branca abaixo do rodapé no mobile */
+html, body {
+  background-color: hsl(0 0% 12%);
+}
