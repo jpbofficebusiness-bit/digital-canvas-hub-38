@@ -44,7 +44,7 @@ const NewsSection = () => {
                 key={news.id}
                 className="border-b border-border pb-8 last:border-b-0"
               >
-                <h3 className="font-heading text-xl md:text-2xl font-medium text-foreground mb-3">
+                <h3 className="font-heading text-xl md:text-2xl font-medium text-foreground mb-3 normal-case">
                   {news.title}
                 </h3>
                 <p className="font-body text-muted-foreground leading-relaxed">
