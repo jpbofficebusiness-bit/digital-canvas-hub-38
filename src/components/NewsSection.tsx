@@ -3,7 +3,7 @@ import franklinSketch from "@/assets/franklin-rafael-sketch.png.asset.json";
 const newsItems = [
   {
     id: 1,
-    title: "08 de abril de 2026",
+    title: "08 de Abril de 2026",
     excerpt:
       "Pouco tempo atrás, Franklin expressou sua alegria por estar se especializando em Teologia Reformada, pelo Instituto Reformado de São Paulo, com o Dr. Augustus Nicodemos, Leandro Lima, Hermisten Maia e Felipe Fontes, professores com os quais têm mantido contato, conhecidos como os maiores pastores renomados da tradição reformada do cristianismo no país e no exterior. Segundo as suas palavras, era um sonho que ele tinha desde a sua adolescência.",
   },
