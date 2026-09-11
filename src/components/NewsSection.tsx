@@ -3,9 +3,9 @@ import franklinSketch from "@/assets/franklin-rafael-sketch.png.asset.json";
 const newsItems = [
   {
     id: 1,
-    title: "21 de Fevereiro de 2026",
+    title: "08 de Abril de 2026",
     excerpt:
-      'Nesse ano de 2026, Franklin Rafael comemora 10 anos que tem exercido sua vocação de cátedra como um professor incansável. Sobre isso, ele comentou: "Minhas forças continuam as mesmas, tão intensas quanto o primeiro dia em que entrei em uma escola para ensinar."',
+      "Pouco tempo atrás, Franklin expressou sua alegria por estar se especializando em Teologia Reformada, pelo Instituto Reformado de São Paulo, com o Dr. Augustus Nicodemos, Leandro Lima, Hermisten Maia e Felipe Fontes, professores com os quais têm mantido contato, conhecidos como os maiores pastores renomados da tradição reformada do cristianismo no país e no exterior. Segundo as suas palavras, era um sonho que ele tinha desde a sua adolescência.",
   },
   {
     id: 2,
@@ -15,9 +15,9 @@ const newsItems = [
   },
   {
     id: 3,
-    title: "08 de Abril de 2026",
+    title: "21 de Fevereiro de 2026",
     excerpt:
-      "Pouco tempo atrás, Franklin expressou sua alegria por estar se especializando em Teologia Reformada, pelo Instituto Reformado de São Paulo, com o Dr. Augustus Nicodemos, Leandro Lima, Hermisten Maia e Felipe Fontes, professores com os quais têm mantido contato, conhecidos como os maiores pastores renomados da tradição reformada do cristianismo no país e no exterior. Segundo as suas palavras, era um sonho que ele tinha desde a sua adolescência.",
+      'Nesse ano de 2026, Franklin Rafael comemora 10 anos que tem exercido sua vocação de cátedra como um professor incansável. Sobre isso, ele comentou: "Minhas forças continuam as mesmas, tão intensas quanto o primeiro dia em que entrei em uma escola para ensinar."',
   },
 ];
 
@@ -44,7 +44,7 @@ const NewsSection = () => {
                 key={news.id}
                 className="border-b border-border pb-8 last:border-b-0"
               >
-                <h3 className="font-heading text-xl md:text-2xl font-medium text-foreground mb-3 uppercase">
+                <h3 className="font-heading text-xl md:text-2xl font-medium text-foreground mb-3">
                   {news.title}
                 </h3>
                 <p className="font-body text-muted-foreground leading-relaxed">

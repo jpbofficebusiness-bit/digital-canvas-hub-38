@@ -3,9 +3,8 @@ import Footer from "@/components/Footer";
 
 
 const porVirItems = [
-  { title: "Hereges e Heresias", series: "Série: Sermões Franklin" },
-  { title: "Piratas", series: "Série: Sermões Franklin" },
-  { title: "A Igreja", series: "Série: Sermões Franklin" },
+  { title: "Os 28 Burros E O Caos Da Burrice", series: "" },
+  { title: "A Lenda de Árzur", series: "" },
 ];
 
 const PorVir = () => {

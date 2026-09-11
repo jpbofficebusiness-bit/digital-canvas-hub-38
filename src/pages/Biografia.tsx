@@ -8,6 +8,11 @@ import carousel3 from "@/assets/bio/bio-carousel-3.jpg.asset.json";
 import carousel4 from "@/assets/bio/bio-carousel-4.jpg.asset.json";
 import carousel5 from "@/assets/bio/bio-carousel-5.jpg.asset.json";
 import carousel6 from "@/assets/bio/bio-carousel-6.jpg.asset.json";
+import carousel7 from "@/assets/bio/bio-carousel-7.png.asset.json";
+import carousel8 from "@/assets/bio/bio-carousel-8.png.asset.json";
+import carousel9 from "@/assets/bio/bio-carousel-9.png.asset.json";
+import carousel10 from "@/assets/bio/bio-carousel-10.png.asset.json";
+import carousel11 from "@/assets/bio/bio-carousel-11.png.asset.json";
 
 
 const Biografia = () => {
@@ -138,12 +143,17 @@ const Biografia = () => {
 };
 
 const carouselImages = [
-  { src: carousel1.url, alt: "Franklin Rafael - Foto 1" },
-  { src: carousel2.url, alt: "Franklin Rafael - Foto 2" },
-  { src: carousel3.url, alt: "Franklin Rafael - Foto 3" },
-  { src: carousel4.url, alt: "Franklin Rafael - Foto 4" },
-  { src: carousel5.url, alt: "Franklin Rafael - Foto 5" },
-  { src: carousel6.url, alt: "Franklin Rafael - Foto 6" },
+  { src: carousel7.url, alt: "Franklin Rafael - Foto 1" },
+  { src: carousel8.url, alt: "Franklin Rafael - Foto 2" },
+  { src: carousel9.url, alt: "Franklin Rafael - Foto 3" },
+  { src: carousel1.url, alt: "Franklin Rafael - Foto 4" },
+  { src: carousel2.url, alt: "Franklin Rafael - Foto 5" },
+  { src: carousel3.url, alt: "Franklin Rafael - Foto 6" },
+  { src: carousel4.url, alt: "Franklin Rafael - Foto 7" },
+  { src: carousel5.url, alt: "Franklin Rafael - Foto 8" },
+  { src: carousel6.url, alt: "Franklin Rafael - Foto 9" },
+  { src: carousel10.url, alt: "Franklin Rafael - Foto 10" },
+  { src: carousel11.url, alt: "Franklin Rafael - Foto 11" },
 ];
 
 const BioPhotoCarousel = () => {
