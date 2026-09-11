@@ -9,13 +9,13 @@ const newsItems = [
   },
   {
     id: 2,
-    title: "23 de março de 2026",
+    title: "23 de Março de 2026",
     excerpt:
       'Franklin Rafael recebeu a "Medalha Ascensão" pelo Ranking da Editora Uiclap, um prémio que classifica os escritores pela relevância de vendas relacionadas às suas obras literárias.',
   },
   {
     id: 3,
-    title: "21 de fevereiro de 2026",
+    title: "21 de Fevereiro de 2026",
     excerpt:
       'Nesse ano de 2026, Franklin Rafael comemora 10 anos que tem exercido sua vocação de cátedra como um professor incansável. Sobre isso, ele comentou: "Minhas forças continuam as mesmas, tão intensas quanto o primeiro dia em que entrei em uma escola para ensinar."',
   },
