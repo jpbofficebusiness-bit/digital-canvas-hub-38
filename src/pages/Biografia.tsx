@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
@@ -160,40 +161,62 @@ const BioPhotoCarousel = () => {
   const [current, setCurrent] = useState(0);
   const directionRef = useRef(1);
 
+  const step = (delta: number) => {
+    setCurrent((i) => {
+      const next = i + delta;
+      if (next >= carouselImages.length) {
+        directionRef.current = -1;
+        return i - 1;
+      }
+      if (next < 0) {
+        directionRef.current = 1;
+        return i + 1;
+      }
+      directionRef.current = delta > 0 ? 1 : -1;
+      return next;
+    });
+  };
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((i) => {
-        const next = i + directionRef.current;
-        if (next >= carouselImages.length) {
-          directionRef.current = -1;
-          return i - 1;
-        }
-        if (next < 0) {
-          directionRef.current = 1;
-          return i + 1;
-        }
-        return next;
-      });
-    }, 4000);
+    const timer = setInterval(() => step(directionRef.current), 15000);
     return () => clearInterval(timer);
-  }, []);
+  }, [current]);
 
   return (
-    <div className="overflow-hidden">
-      <div
-        className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
-        {carouselImages.map((img, idx) => (
-          <div key={idx} className="min-w-full">
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-auto max-h-[60vh] object-contain bg-black"
-            />
-          </div>
-        ))}
+    <div className="relative">
+      <div className="overflow-hidden">
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {carouselImages.map((img, idx) => (
+            <div key={idx} className="min-w-full">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-auto max-h-[60vh] object-contain bg-black"
+              />
+            </div>
+          ))}
+        </div>
       </div>
+
+      <button
+        type="button"
+        onClick={() => step(-1)}
+        aria-label="Foto anterior"
+        className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 border border-gold/50 text-gold p-2 hover:bg-black/80 transition-colors"
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </button>
+      <button
+        type="button"
+        onClick={() => step(1)}
+        aria-label="Próxima foto"
+        className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 border border-gold/50 text-gold p-2 hover:bg-black/80 transition-colors"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
     </div>
   );
 };
