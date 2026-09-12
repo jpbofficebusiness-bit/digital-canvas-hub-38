@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { Menu, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import SearchDialog from "@/components/SearchDialog";
 import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
 import swordRealistic from "@/assets/sword-realistic.png";
 
@@ -24,6 +25,7 @@ const desktopNavLinks = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
 
   // Lock body scroll when menu open
@@ -87,6 +89,15 @@ const Header = () => {
                 </Link>
               )
             ))}
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label="Pesquisar"
+              className="h-10 w-10"
+              onClick={() => setIsSearchOpen(true)}
+            >
+              <Search className="!h-6 !w-6" />
+            </Button>
           </nav>
 
           {/* Mobile Menu Buttons */}
@@ -181,6 +192,7 @@ const Header = () => {
         </div>,
         document.body
       )}
+      <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
     </header>
   );
 };
