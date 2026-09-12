@@ -91,7 +91,13 @@ const Header = () => {
 
           {/* Mobile Menu Buttons */}
           <div className="flex lg:hidden items-center justify-end gap-2">
-            <Button variant="ghost" size="icon" aria-label="Pesquisar" className="h-11 w-11">
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label="Pesquisar"
+              className="h-11 w-11"
+              onClick={() => setIsSearchOpen(true)}
+            >
               <Search className="!h-7 !w-7" />
             </Button>
             <Button

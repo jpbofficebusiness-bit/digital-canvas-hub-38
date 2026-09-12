@@ -1,9 +1,24 @@
+import { Youtube, Instagram } from "lucide-react";
+
 const footerLinks = [
   { label: "O Autor", href: "#autor" },
   { label: "Notícias", href: "#noticias" },
   { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
   { label: "Política de Privacidade", href: "#privacidade" },
+];
+
+const socialLinks = [
+  {
+    label: "Canal no YouTube — Franklin Rafael Oficial",
+    href: "https://www.youtube.com/@franklinrafaeloficial",
+    Icon: Youtube,
+  },
+  {
+    label: "Instagram — Franklin Rafael",
+    href: "https://www.instagram.com/franklinrafael.v.s?stkn=MWFzeXY1ZXJxbWlsZQ%3D%3D",
+    Icon: Instagram,
+  },
 ];
 
 const Footer = () => {
@@ -34,6 +49,23 @@ const Footer = () => {
             </a>
           ))}
         </nav>
+
+        {/* Social */}
+        <div className="flex justify-center gap-6 mb-8">
+          {socialLinks.map(({ label, href, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              title={label}
+              className="text-gold/80 hover:text-gold transition-colors duration-200"
+            >
+              <Icon className="h-6 w-6" />
+            </a>
+          ))}
+        </div>
 
         {/* Divider */}
         <div className="border-t border-gold/20 pt-8">

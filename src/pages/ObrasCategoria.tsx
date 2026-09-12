@@ -82,9 +82,9 @@ const ObrasCategoria = () => {
                       {book.subtitle}
                     </p>
                   )}
-                  {section.slug === "serie-sermoes-franklin" && book.sinopse && (
+                  {section.slug === "serie-sermoes-franklin" && (
                     <p className="font-body italic text-sm text-muted-foreground mt-1">
-                      {book.sinopse}
+                      Série: Sermões Franklin
                     </p>
                   )}
                 </div>
