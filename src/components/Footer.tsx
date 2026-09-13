@@ -1,11 +1,11 @@
 import { Youtube, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const footerLinks = [
-  { label: "O Autor", href: "#autor" },
-  { label: "Notícias", href: "#noticias" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contato", href: "#contato" },
-  { label: "Política de Privacidade", href: "#privacidade" },
+  { label: "O Autor", href: "/sobre-franklin-rafael" },
+  { label: "Notícias", href: "/#noticias" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 const socialLinks = [
@@ -13,11 +13,13 @@ const socialLinks = [
     label: "Canal no YouTube — Franklin Rafael Oficial",
     href: "https://www.youtube.com/@franklinrafaeloficial",
     Icon: Youtube,
+    className: "text-youtube hover:text-youtube/80",
   },
   {
     label: "Instagram — Franklin Rafael",
     href: "https://www.instagram.com/franklinrafael.v.s?stkn=MWFzeXY1ZXJxbWlsZQ%3D%3D",
     Icon: Instagram,
+    className: "text-instagram hover:text-instagram/80",
   },
 ];
 
@@ -40,19 +42,19 @@ const Footer = () => {
         {/* Links */}
         <nav className="flex flex-wrap justify-center gap-6 mb-8">
           {footerLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to={link.href}
               className="font-body text-sm text-gold/80 hover:text-gold transition-colors duration-200"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* Social */}
         <div className="flex justify-center gap-6 mb-8">
-          {socialLinks.map(({ label, href, Icon }) => (
+          {socialLinks.map(({ label, href, Icon, className }) => (
             <a
               key={label}
               href={href}
@@ -60,7 +62,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label={label}
               title={label}
-              className="text-gold/80 hover:text-gold transition-colors duration-200"
+              className={`${className} transition-colors duration-200`}
             >
               <Icon className="h-6 w-6" />
             </a>

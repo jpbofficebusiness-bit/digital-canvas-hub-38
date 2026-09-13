@@ -65,6 +65,7 @@ const staticEntries: SearchEntry[] = [
     group: "Autor",
     keywords: [
       "linha do tempo", "timeline", "cronologia", "anos", "datas", "historico",
+      "idade", "idades", "nascimento", "nasceu", "quando nasceu", "quantos anos",
     ],
   },
   {
@@ -124,7 +125,7 @@ const staticEntries: SearchEntry[] = [
     group: "Links",
     keywords: [
       "youtube", "canal", "video", "videos", "pregacao", "pregacoes",
-      "assistir", "live",
+      "sermao", "sermoes", "assistir", "live",
     ],
   },
 ];
@@ -169,16 +170,64 @@ const indexed = searchEntries.map((entry) => ({
     [entry.title, entry.subtitle ?? "", ...entry.keywords].join(" ")
   ),
   title: normalize(entry.title),
+  words: normalize([entry.title, entry.subtitle ?? "", ...entry.keywords].join(" "))
+    .split(" ")
+    .filter(Boolean),
 }));
+
+const singularize = (word: string) => {
+  if (word.endsWith("oes") && word.length > 5) return `${word.slice(0, -3)}ao`;
+  if (word.endsWith("aes") && word.length > 5) return `${word.slice(0, -3)}ao`;
+  if (word.endsWith("is") && word.length > 4) return `${word.slice(0, -2)}l`;
+  if (word.endsWith("es") && word.length > 5) return word.slice(0, -2);
+  if (word.endsWith("s") && word.length > 4) return word.slice(0, -1);
+  return word;
+};
+
+const editDistance = (left: string, right: string) => {
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= left.length; i += 1) {
+    const current = [i];
+    for (let j = 1; j <= right.length; j += 1) {
+      current[j] = Math.min(
+        (current[j - 1] ?? 0) + 1,
+        (previous[j] ?? 0) + 1,
+        (previous[j - 1] ?? 0) + (left[i - 1] === right[j - 1] ? 0 : 1),
+      );
+    }
+    previous.splice(0, previous.length, ...current);
+  }
+  return previous[right.length] ?? right.length;
+};
+
+const relatedTerms: Record<string, string[]> = {
+  idade: ["linha tempo biografica cronologia nascimento anos"],
+  serm: ["sermao sermoes pregacao pregacoes serie sermoes franklin"],
+  foto: ["fotografia fotos galeria imagem imagens biografia"],
+  estudo: ["formacao academica faculdade graduacao universidade"],
+  compra: ["comprar venda amazon uiclap livros obras"],
+};
+
+const expandQuery = (query: string) => {
+  const words = query.split(" ").filter(Boolean);
+  const additions = words.flatMap((word) => {
+    const root = singularize(word);
+    const related = Object.entries(relatedTerms)
+      .filter(([key]) => root.startsWith(key) || key.startsWith(root))
+      .flatMap(([, values]) => values);
+    return [root, ...related];
+  });
+  return [...new Set([...words, ...additions.flatMap((value) => value.split(" "))])];
+};
 
 export const searchSite = (rawQuery: string): SearchEntry[] => {
   const query = normalize(rawQuery);
   if (!query) return [];
 
-  const terms = query.split(" ").filter(Boolean);
+  const terms = expandQuery(query);
 
   return indexed
-    .map(({ entry, haystack, title }) => {
+    .map(({ entry, haystack, title, words }) => {
       let score = 0;
       if (title === query) score += 100;
       if (title.startsWith(query)) score += 50;
@@ -189,9 +238,19 @@ export const searchSite = (rawQuery: string): SearchEntry[] => {
         if (term.length < 3) continue;
         if (title.includes(term)) score += 10;
         if (haystack.includes(term)) score += 5;
+        const singularTerm = singularize(term);
+        if (words.some((word) => singularize(word) === singularTerm)) score += 12;
         // partial match (radical of the word)
         const radical = term.slice(0, Math.max(4, term.length - 2));
         if (radical.length >= 4 && haystack.includes(radical)) score += 3;
+
+        if (
+          term.length >= 5 &&
+          words.some((word) => {
+            const distance = editDistance(term, word);
+            return distance <= (term.length >= 8 ? 2 : 1);
+          })
+        ) score += 4;
       }
 
       return { entry, score };

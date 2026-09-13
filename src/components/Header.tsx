@@ -13,7 +13,7 @@ const mobileMenuLinks = [
   { label: "Por Vir", href: "/por-vir", isAnchor: false, icon: Clock },
   { label: "(FAQ) Perguntas Frequentes", href: "/faq", isAnchor: false, icon: HelpCircle },
   { label: "Obra-Prima", href: "/obra-prima", isAnchor: false, icon: Star },
-  { label: "Canal no YouTube — Franklin Rafael Oficial", href: "https://www.youtube.com/@franklinrafaeloficial", isExternal: true, icon: Youtube },
+  { label: "Canal No YouTube", secondaryLabel: "Franklin Rafael Oficial", href: "https://www.youtube.com/@franklinrafaeloficial", isExternal: true, icon: Youtube },
 ];
 
 const desktopNavLinks = [
@@ -158,7 +158,10 @@ const Header = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <Icon className="h-5 w-5" />
-                      {link.label}
+                      <span className="flex flex-col leading-snug">
+                        <span>{link.label}</span>
+                        {link.secondaryLabel && <span>{link.secondaryLabel}</span>}
+                      </span>
                     </a>
                   );
                 }
