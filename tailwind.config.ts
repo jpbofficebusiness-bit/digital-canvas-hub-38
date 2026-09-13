@@ -30,6 +30,8 @@ export default {
         forest: "hsl(var(--forest))",
         teal: "hsl(var(--teal))",
         gold: "hsl(var(--gold))",
+        youtube: "hsl(var(--youtube))",
+        instagram: "hsl(var(--instagram))",
         cream: "hsl(var(--cream))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
