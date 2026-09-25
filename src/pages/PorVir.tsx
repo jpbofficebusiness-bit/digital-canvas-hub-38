@@ -2,8 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 
-const porVirItems = [
-  { title: "Os 28 Burros E O Caos Da Burrice", series: "" },
+const porVirItems: { title: string; titleLine2?: string; series: string }[] = [
+  { title: "Os 28 Burros", titleLine2: "E o Caos da Burrice", series: "" },
   { title: "A Lenda de Árzur", series: "" },
 ];
 
@@ -35,6 +35,12 @@ const PorVir = () => {
                 </div>
                 <h2 className="font-heading text-xl md:text-2xl text-foreground mb-1">
                   {item.title}
+                  {item.titleLine2 && (
+                    <>
+                      <br />
+                      {item.titleLine2}
+                    </>
+                  )}
                 </h2>
                 <p className="font-body text-sm text-muted-foreground">
                   {item.series}

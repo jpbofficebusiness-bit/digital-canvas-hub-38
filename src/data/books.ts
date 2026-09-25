@@ -35,7 +35,7 @@ export const sections: Section[] = [
     slug: "teologia",
     category: "Teologia",
     description:
-      "Obras de teologia bíblica, apologética e espiritualidade cristã, escritas com rigor doutrinário e linguagem acessível.",
+      "Obras de teologia bíblica, apologética e espiritualidade cristã, escritas com lealdade biblista e linguagem acessível.",
     books: [
       {
         slug: "donzela-crista",
@@ -73,7 +73,7 @@ export const sections: Section[] = [
     slug: "filosofia-e-educacao",
     category: "Filosofia e Educação",
     description:
-      "Reflexões sobre pensamento crítico, cultura e o papel da educação clássica na formação do ser humano livre.",
+      "Obras de cunho filosófico, educacional e reformado, resgatando a educação clássica cristã para a formação de seres humanos livres.",
     books: [
       {
         slug: "os-28-burros",
@@ -208,7 +208,7 @@ export const sections: Section[] = [
     slug: "alta-fantasia",
     category: "Alta Fantasia",
     description:
-      "Literatura épica ambientada em mundos imaginários, permeada de filosofia, teologia e personagens de caráter inegável.",
+      "Literatura épica ambientada em mundos imaginários, permeada de filosofia, teologia e personagens de caráter notável.",
     books: [
       {
         slug: "alcateia-infernal",

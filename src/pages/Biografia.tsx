@@ -35,9 +35,6 @@ const Biografia = () => {
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-3">
               BIOGRAFIA
             </h1>
-            <p className="font-body text-muted-foreground">
-              A trajetória, religião e influências de Franklin Rafael.
-            </p>
           </header>
 
           <article className="space-y-10">
