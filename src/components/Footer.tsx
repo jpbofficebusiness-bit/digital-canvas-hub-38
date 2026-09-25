@@ -13,13 +13,13 @@ const socialLinks = [
     label: "Canal no YouTube — Franklin Rafael Oficial",
     href: "https://www.youtube.com/@franklinrafaeloficial",
     Icon: Youtube,
-    className: "text-youtube hover:text-youtube/80",
+    className: "text-gold hover:text-gold/80",
   },
   {
     label: "Instagram — Franklin Rafael",
     href: "https://www.instagram.com/franklinrafael.v.s?stkn=MWFzeXY1ZXJxbWlsZQ%3D%3D",
     Icon: Instagram,
-    className: "text-instagram hover:text-instagram/80",
+    className: "text-gold hover:text-gold/80",
   },
 ];
 
@@ -64,7 +64,7 @@ const Footer = () => {
               title={label}
               className={`${className} transition-colors duration-200`}
             >
-              <Icon className="h-6 w-6" />
+              <Icon className="h-5 w-5" />
             </a>
           ))}
         </div>
