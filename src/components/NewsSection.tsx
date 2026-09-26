@@ -23,7 +23,7 @@ const newsItems = [
 
 const NewsSection = () => {
   return (
-    <section id="noticias" className="py-16 md:py-24 bg-background">
+    <section id="noticias" className="py-16 md:py-24 bg-background scroll-mt-16 md:scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-10">
           <img

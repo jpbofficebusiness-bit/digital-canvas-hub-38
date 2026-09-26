@@ -73,7 +73,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section id="contato" className="py-16 md:py-24 bg-foreground text-background">
+    <section id="contato" className="py-16 md:py-24 bg-foreground text-background scroll-mt-16 md:scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center">
           <Mail className="h-12 w-12 mx-auto mb-6 text-gold" />
