@@ -4,7 +4,7 @@ import { Menu, X, Search, BookOpen, User, Clock, HelpCircle, Star, Youtube } fro
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import SearchDialog from "@/components/SearchDialog";
-import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
+import bioHero from "@/assets/franklin-rafael-bio-hero.jpg";
 import swordRealistic from "@/assets/sword-realistic.png";
 
 const mobileMenuLinks = [
@@ -53,7 +53,7 @@ const Header = () => {
           <div className="flex justify-start">
             <Link to="/" aria-label="Página inicial">
               <img
-                src={bioHero.url}
+                src={bioHero}
                 alt="Franklin Rafael"
                 className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover border-2 border-gold shadow-md"
               />

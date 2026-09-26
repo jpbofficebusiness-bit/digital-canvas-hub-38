@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
+import bioHero from "@/assets/franklin-rafael-bio-hero.jpg";
 import galeria01 from "@/assets/bio-galeria/galeria-01-primeira.jpeg";
 import galeria02 from "@/assets/bio-galeria/galeria-02-segunda.jpeg";
 import galeria03 from "@/assets/bio-galeria/galeria-03-terceira.jpeg";
@@ -29,7 +29,7 @@ const Biografia = () => {
           <header className="text-center mb-12">
             <div className="mx-auto mb-6 w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gold shadow-2xl">
               <img
-                src={bioHero.url}
+                src={bioHero}
                 alt="Franklin Rafael"
                 className="w-full h-full object-cover"
               />

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import donzelaHero from "@/assets/hero-donzela-crista.png.asset.json";
-import alcateiaHero from "@/assets/hero-alcateia-infernal.png.asset.json";
-import sequestroHero from "@/assets/hero-sequestro-cruz.png.asset.json";
-import homemAcesoHero from "@/assets/hero-homem-aceso.png.asset.json";
+import donzelaHero from "@/assets/hero-donzela-crista.png";
+import alcateiaHero from "@/assets/hero-alcateia-infernal.png";
+import sequestroHero from "@/assets/hero-sequestro-cruz.png";
+import homemAcesoHero from "@/assets/hero-homem-aceso.png";
 
 type SlideType = {
   id: number;
@@ -24,28 +24,28 @@ const slides: SlideType[] = [
   {
     id: 1,
     title: "DONZELA CRISTÃ",
-    image: donzelaHero.url,
+    image: donzelaHero,
     to: "/obras/teologia/donzela-crista",
     cta: defaultCta,
   },
   {
     id: 2,
     title: "ALCATEIA INFERNAL",
-    image: alcateiaHero.url,
+    image: alcateiaHero,
     to: "/obras/alta-fantasia/alcateia-infernal",
     cta: defaultCta,
   },
   {
     id: 3,
     title: "O SEQUESTRO DA CRUZ",
-    image: sequestroHero.url,
+    image: sequestroHero,
     to: "/obras/teologia/o-sequestro-da-cruz",
     cta: defaultCta,
   },
   {
     id: 4,
     title: "O HOMEM ACESO",
-    image: homemAcesoHero.url,
+    image: homemAcesoHero,
     to: "/obras/teologia/o-homem-aceso",
     cta: defaultCta,
   },

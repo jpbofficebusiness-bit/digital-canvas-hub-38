@@ -1,13 +1,13 @@
-import hereges from "@/assets/sermoes/hereges-e-heresias.asset.json";
-import piratas from "@/assets/sermoes/piratas.asset.json";
-import igreja from "@/assets/sermoes/a-igreja.asset.json";
-import misterios from "@/assets/sermoes/misterios.asset.json";
-import arrependimento from "@/assets/sermoes/arrependimento-a-prova.asset.json";
-import torreForte from "@/assets/sermoes/torre-forte.asset.json";
-import noivaPactual from "@/assets/sermoes/a-noiva-pactual.asset.json";
-import clamores from "@/assets/sermoes/clamores-do-inferno.asset.json";
-import avivamento from "@/assets/sermoes/avivamento-no-tumulo.asset.json";
-import ferreiros from "@/assets/sermoes/4-chifres-4-ferreiros.asset.json";
+import hereges from "@/assets/sermoes/hereges-e-heresias.png";
+import piratas from "@/assets/sermoes/piratas.png";
+import igreja from "@/assets/sermoes/a-igreja.png";
+import misterios from "@/assets/sermoes/misterios.png";
+import arrependimento from "@/assets/sermoes/arrependimento-a-prova.png";
+import torreForte from "@/assets/sermoes/torre-forte.png";
+import noivaPactual from "@/assets/sermoes/a-noiva-pactual.png";
+import clamores from "@/assets/sermoes/clamores-do-inferno.png";
+import avivamento from "@/assets/sermoes/avivamento-no-tumulo.png";
+import ferreiros from "@/assets/sermoes/4-chifres-4-ferreiros.png";
 
 export type Book = {
   slug: string;
@@ -92,61 +92,61 @@ export const sections: Section[] = [
       {
         slug: "hereges-e-heresias",
         title: "Hereges e Heresias",
-        img: hereges.url,
+        img: hereges,
         sinopse: sermaoSubtitle,
       },
       {
         slug: "piratas",
         title: "Piratas",
-        img: piratas.url,
+        img: piratas,
         sinopse: sermaoSubtitle,
       },
       {
         slug: "a-igreja",
         title: "A Igreja",
-        img: igreja.url,
+        img: igreja,
         sinopse: sermaoSubtitle,
       },
       {
         slug: "misterios",
         title: "Mistérios",
-        img: misterios.url,
+        img: misterios,
         sinopse: sermaoSubtitle,
       },
       {
         slug: "arrependimento-a-prova",
         title: "Arrependimento À Prova",
-        img: arrependimento.url,
+        img: arrependimento,
         sinopse: sermaoSubtitle,
       },
       {
         slug: "torre-forte",
         title: "Torre Forte",
-        img: torreForte.url,
+        img: torreForte,
         sinopse: sermaoSubtitle,
       },
       {
         slug: "a-noiva-pactual",
         title: "A Noiva Pactual",
-        img: noivaPactual.url,
+        img: noivaPactual,
         sinopse: sermaoSubtitle,
       },
       {
         slug: "clamores-do-inferno",
         title: "Clamores do Inferno",
-        img: clamores.url,
+        img: clamores,
         sinopse: sermaoSubtitle,
       },
       {
         slug: "avivamento-no-tumulo",
         title: "Avivamento No Túmulo",
-        img: avivamento.url,
+        img: avivamento,
         sinopse: sermaoSubtitle,
       },
       {
         slug: "os-4-chifres-e-os-4-ferreiros",
         title: "Os 4 Chifres E Os 4 Ferreiros",
-        img: ferreiros.url,
+        img: ferreiros,
         sinopse: sermaoSubtitle,
       },
     ],
