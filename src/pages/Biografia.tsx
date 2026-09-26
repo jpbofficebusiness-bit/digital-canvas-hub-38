@@ -3,17 +3,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import bioHero from "@/assets/franklin-rafael-bio-hero.jpg.asset.json";
-import carousel1 from "@/assets/bio/bio-carousel-1.jpg.asset.json";
-import carousel2 from "@/assets/bio/bio-carousel-2.jpg.asset.json";
-import carousel3 from "@/assets/bio/bio-carousel-3.jpg.asset.json";
-import carousel4 from "@/assets/bio/bio-carousel-4.jpg.asset.json";
-import carousel5 from "@/assets/bio/bio-carousel-5.jpg.asset.json";
-import carousel6 from "@/assets/bio/bio-carousel-6.jpg.asset.json";
-import carousel7 from "@/assets/bio/bio-carousel-7.png.asset.json";
-import carousel8 from "@/assets/bio/bio-carousel-8.png.asset.json";
-import carousel9 from "@/assets/bio/bio-carousel-9.png.asset.json";
-import carousel10 from "@/assets/bio/bio-carousel-10.png.asset.json";
-import carousel11 from "@/assets/bio/bio-carousel-11.png.asset.json";
+import galeria01 from "@/assets/bio-galeria/galeria-01-primeira.jpeg";
+import galeria02 from "@/assets/bio-galeria/galeria-02-segunda.jpeg";
+import galeria03 from "@/assets/bio-galeria/galeria-03-terceira.jpeg";
+import galeria04 from "@/assets/bio-galeria/galeria-04-quarta.jpeg";
+import galeria05 from "@/assets/bio-galeria/galeria-05-quinta.jpeg";
+import galeria06 from "@/assets/bio-galeria/galeria-06-sexta.jpeg";
+import galeria07 from "@/assets/bio-galeria/galeria-07-setima.jpeg";
+import galeria08 from "@/assets/bio-galeria/galeria-08-oitava.jpeg";
+import galeria09 from "@/assets/bio-galeria/galeria-09-nona.jpeg";
+import galeria10 from "@/assets/bio-galeria/galeria-10-decima.jpeg";
+import galeria11 from "@/assets/bio-galeria/galeria-11-decima-primeira.jpeg";
+import galeria12 from "@/assets/bio-galeria/galeria-12-decima-segunda.jpeg";
+import galeria13 from "@/assets/bio-galeria/galeria-13-decima-terceira.jpeg";
 
 
 const Biografia = () => {
@@ -141,17 +143,19 @@ const Biografia = () => {
 };
 
 const carouselImages = [
-  { src: carousel7.url, alt: "Franklin Rafael - Foto 1" },
-  { src: carousel8.url, alt: "Franklin Rafael - Foto 2" },
-  { src: carousel9.url, alt: "Franklin Rafael - Foto 3" },
-  { src: carousel1.url, alt: "Franklin Rafael - Foto 4" },
-  { src: carousel2.url, alt: "Franklin Rafael - Foto 5" },
-  { src: carousel3.url, alt: "Franklin Rafael - Foto 6" },
-  { src: carousel4.url, alt: "Franklin Rafael - Foto 7" },
-  { src: carousel5.url, alt: "Franklin Rafael - Foto 8" },
-  { src: carousel6.url, alt: "Franklin Rafael - Foto 9" },
-  { src: carousel10.url, alt: "Franklin Rafael - Foto 10" },
-  { src: carousel11.url, alt: "Franklin Rafael - Foto 11" },
+  { src: galeria01, alt: "Franklin Rafael - Foto 1" },
+  { src: galeria02, alt: "Franklin Rafael - Foto 2" },
+  { src: galeria03, alt: "Franklin Rafael - Foto 3" },
+  { src: galeria04, alt: "Franklin Rafael - Foto 4" },
+  { src: galeria05, alt: "Franklin Rafael - Foto 5" },
+  { src: galeria06, alt: "Franklin Rafael - Foto 6" },
+  { src: galeria07, alt: "Franklin Rafael - Foto 7" },
+  { src: galeria08, alt: "Franklin Rafael - Foto 8" },
+  { src: galeria09, alt: "Franklin Rafael - Foto 9" },
+  { src: galeria10, alt: "Franklin Rafael - Foto 10" },
+  { src: galeria11, alt: "Franklin Rafael - Foto 11" },
+  { src: galeria12, alt: "Franklin Rafael - Foto 12" },
+  { src: galeria13, alt: "Franklin Rafael - Foto 13" },
 ];
 
 const BioPhotoCarousel = () => {
