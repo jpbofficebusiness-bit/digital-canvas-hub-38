@@ -1,7 +1,25 @@
 import { useEffect } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
 
-const positions = new Map<string, number>();
+const STORAGE_KEY = "fr-scroll-positions";
+
+const readPositions = (): Record<string, number> => {
+  try {
+    return JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "{}");
+  } catch {
+    return {};
+  }
+};
+
+const savePosition = (path: string, y: number) => {
+  const all = readPositions();
+  all[path] = y;
+  try {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+  } catch {
+    /* storage full or unavailable */
+  }
+};
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -13,21 +31,21 @@ const ScrollToTop = () => {
     }
   }, []);
 
-  // Track scroll position per history entry so POP can restore it
+  // Continuously track scroll position per path
   useEffect(() => {
-    const key = location.key;
-    const save = () => positions.set(key, window.scrollY);
+    const path = location.pathname;
+    const save = () => savePosition(path, window.scrollY);
     window.addEventListener("scroll", save, { passive: true });
     return () => {
       save();
       window.removeEventListener("scroll", save);
     };
-  }, [location.key]);
+  }, [location.pathname]);
 
   useEffect(() => {
     if (navType === "POP") {
-      const y = positions.get(location.key);
-      if (y != null) {
+      const y = readPositions()[location.pathname];
+      if (y != null && y > 0) {
         // Retry a few times: content/images may still be laying out
         const restore = () => window.scrollTo(0, y);
         requestAnimationFrame(restore);
@@ -43,7 +61,7 @@ const ScrollToTop = () => {
       }
     }
     window.scrollTo(0, 0);
-  }, [location.key, location.hash, navType]);
+  }, [location.pathname, location.hash, navType]);
 
   return null;
 };
