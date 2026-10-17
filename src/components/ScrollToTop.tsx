@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
 
 const STORAGE_KEY = "fr-scroll-positions";
@@ -24,6 +24,7 @@ const savePosition = (path: string, y: number) => {
 const ScrollToTop = () => {
   const location = useLocation();
   const navType = useNavigationType();
+  const navTimeRef = useRef(0);
 
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
@@ -31,13 +32,20 @@ const ScrollToTop = () => {
     }
   }, []);
 
-  // Continuously track scroll position per path
-  useEffect(() => {
+  // Track scroll position per path. useLayoutEffect so the cleanup runs
+  // synchronously during the navigation commit, before the browser clamps
+  // scroll back to 0 when the old page unmounts.
+  useLayoutEffect(() => {
     const path = location.pathname;
-    const save = () => savePosition(path, window.scrollY);
+    navTimeRef.current = Date.now();
+    const save = () => {
+      // Ignore the automatic reset to 0 right after a navigation
+      if (window.scrollY === 0 && Date.now() - navTimeRef.current < 500) return;
+      savePosition(path, window.scrollY);
+    };
     window.addEventListener("scroll", save, { passive: true });
     return () => {
-      save();
+      savePosition(path, window.scrollY);
       window.removeEventListener("scroll", save);
     };
   }, [location.pathname]);
