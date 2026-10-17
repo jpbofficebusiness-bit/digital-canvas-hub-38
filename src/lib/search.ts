@@ -45,7 +45,28 @@ const staticEntries: SearchEntry[] = [
     group: "Autor",
     keywords: [
       "biografia", "bio", "vida", "trajetoria", "formacao", "academica",
-      "religiao", "influencias", "galeria", "fotos", "historia de vida",
+      "religiao", "influencias", "historia de vida",
+    ],
+  },
+  {
+    title: "Galeria de Fotos",
+    subtitle: "Fotos de Franklin Rafael",
+    path: "/o-autor/biografia#galeria",
+    group: "Autor",
+    keywords: [
+      "foto", "fotos", "fotografia", "fotografias", "galeria", "imagem",
+      "imagens", "retrato", "retratos",
+    ],
+  },
+  {
+    title: "Série: Sermões Franklin",
+    subtitle: "Série de sermões pregados e escritos por Franklin Rafael",
+    path: "/obras/serie-sermoes-franklin",
+    group: "Obras",
+    keywords: [
+      "sermao", "sermoes", "pregacao", "pregacoes", "pregar", "pregado",
+      "pregados", "pregador", "pregoeiro", "mensagem", "mensagens",
+      "serie sermoes franklin", "palavra", "culto", "cultos",
     ],
   },
   {
