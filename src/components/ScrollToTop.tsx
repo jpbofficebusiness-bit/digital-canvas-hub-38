@@ -1,19 +1,46 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigationType } from "react-router-dom";
+
+const positions = new Map<string, number>();
 
 const ScrollToTop = () => {
-  const { pathname, hash } = useLocation();
+  const location = useLocation();
+  const navType = useNavigationType();
 
   useEffect(() => {
-    if (hash) {
-      const el = document.getElementById(hash.replace("#", ""));
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  // Track scroll position per history entry so POP can restore it
+  useEffect(() => {
+    const key = location.key;
+    const save = () => positions.set(key, window.scrollY);
+    window.addEventListener("scroll", save, { passive: true });
+    return () => {
+      save();
+      window.removeEventListener("scroll", save);
+    };
+  }, [location.key]);
+
+  useEffect(() => {
+    if (navType === "POP") {
+      const y = positions.get(location.key);
+      if (y != null) {
+        requestAnimationFrame(() => window.scrollTo(0, y));
+        return;
+      }
+    }
+    if (location.hash) {
+      const el = document.getElementById(location.hash.replace("#", ""));
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
         return;
       }
     }
     window.scrollTo(0, 0);
-  }, [pathname, hash]);
+  }, [location.key, location.hash, navType]);
 
   return null;
 };

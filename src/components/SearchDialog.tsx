@@ -31,11 +31,12 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
       window.open(entry.path, "_blank", "noopener,noreferrer");
       return;
     }
-    if (entry.path.startsWith("/#")) {
-      navigate("/");
+    if (entry.path.includes("#")) {
+      const [path, hash] = entry.path.split("#");
+      navigate(path || "/");
       setTimeout(() => {
         document
-          .querySelector(entry.path.slice(1))
+          .getElementById(hash)
           ?.scrollIntoView({ behavior: "smooth" });
       }, 300);
       return;
