@@ -28,8 +28,11 @@ const ScrollToTop = () => {
     if (navType === "POP") {
       const y = positions.get(location.key);
       if (y != null) {
-        requestAnimationFrame(() => window.scrollTo(0, y));
-        return;
+        // Retry a few times: content/images may still be laying out
+        const restore = () => window.scrollTo(0, y);
+        requestAnimationFrame(restore);
+        const timers = [100, 300, 600].map((ms) => setTimeout(restore, ms));
+        return () => timers.forEach(clearTimeout);
       }
     }
     if (location.hash) {
