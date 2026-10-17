@@ -32,22 +32,18 @@ const ScrollToTop = () => {
     }
   }, []);
 
-  // Track scroll position per path. useLayoutEffect so the cleanup runs
-  // synchronously during the navigation commit, before the browser clamps
-  // scroll back to 0 when the old page unmounts.
+  // Track scroll position per path via scroll events only. The automatic
+  // reset to 0 right after a navigation is ignored so it never overwrites
+  // the real saved position.
   useLayoutEffect(() => {
     const path = location.pathname;
     navTimeRef.current = Date.now();
     const save = () => {
-      // Ignore the automatic reset to 0 right after a navigation
-      if (window.scrollY === 0 && Date.now() - navTimeRef.current < 500) return;
+      if (window.scrollY === 0 && Date.now() - navTimeRef.current < 800) return;
       savePosition(path, window.scrollY);
     };
     window.addEventListener("scroll", save, { passive: true });
-    return () => {
-      savePosition(path, window.scrollY);
-      window.removeEventListener("scroll", save);
-    };
+    return () => window.removeEventListener("scroll", save);
   }, [location.pathname]);
 
   useEffect(() => {
