@@ -128,7 +128,7 @@ const Biografia = () => {
         </div>
       </main>
 
-      <section className="bg-black py-12 md:py-16">
+      <section id="galeria" className="bg-black py-12 md:py-16 scroll-mt-24">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-gold text-center mb-8 tracking-wider">
             GALERIA DE FOTOS
@@ -159,38 +159,38 @@ const carouselImages = [
 ];
 
 const BioPhotoCarousel = () => {
-  const [current, setCurrent] = useState(0);
-  const directionRef = useRef(1);
+  // pos ranges from -1 (clone of last) to length (clone of first) for seamless looping
+  const [pos, setPos] = useState(0);
+  const [animate, setAnimate] = useState(true);
 
   const step = (delta: number) => {
-    setCurrent((i) => {
-      const next = i + delta;
-      if (next >= carouselImages.length) {
-        directionRef.current = -1;
-        return i - 1;
-      }
-      if (next < 0) {
-        directionRef.current = 1;
-        return i + 1;
-      }
-      directionRef.current = delta > 0 ? 1 : -1;
-      return next;
-    });
+    setAnimate(true);
+    setPos((p) => p + delta);
   };
 
-  useEffect(() => {
-    const timer = setInterval(() => step(directionRef.current), 15000);
-    return () => clearInterval(timer);
-  }, [current]);
+  const handleTransitionEnd = () => {
+    const len = carouselImages.length;
+    if (pos >= len || pos < 0) {
+      setAnimate(false);
+      setPos(((pos % len) + len) % len);
+    }
+  };
+
+  const slides = [
+    carouselImages[carouselImages.length - 1],
+    ...carouselImages,
+    carouselImages[0],
+  ];
 
   return (
     <div className="relative">
       <div className="overflow-hidden">
         <div
-          className="flex transition-transform duration-700 ease-in-out"
-          style={{ transform: `translateX(-${current * 100}%)` }}
+          className={`flex ${animate ? "transition-transform duration-700 ease-in-out" : ""}`}
+          style={{ transform: `translateX(-${(pos + 1) * 100}%)` }}
+          onTransitionEnd={handleTransitionEnd}
         >
-          {carouselImages.map((img, idx) => (
+          {slides.map((img, idx) => (
             <div key={idx} className="min-w-full">
               <img
                 src={img.src}

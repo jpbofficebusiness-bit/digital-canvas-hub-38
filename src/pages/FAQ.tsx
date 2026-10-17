@@ -336,8 +336,8 @@ const Block = ({ title, items }: { title: string; items: QA[] }) => (
           <AccordionTrigger className="text-left font-heading text-base md:text-lg text-foreground hover:no-underline">
             {item.q}
           </AccordionTrigger>
-          <AccordionContent>
-            <div className="font-body text-muted-foreground leading-relaxed space-y-3 pt-2">
+          <AccordionContent className="overflow-hidden">
+            <div className="font-body text-muted-foreground leading-relaxed space-y-3 pt-2 w-full min-w-0 max-w-full break-words overflow-hidden">
               <p className="font-body text-xs uppercase tracking-widest text-gold">
                 Resposta:
               </p>
