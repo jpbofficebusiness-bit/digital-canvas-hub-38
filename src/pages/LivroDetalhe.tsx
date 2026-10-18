@@ -71,7 +71,7 @@ const LivroDetalhe = () => {
               </div>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex min-w-0 flex-col">
               <span className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground mb-2">
                 {section.category}
               </span>

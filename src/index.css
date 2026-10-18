@@ -111,6 +111,16 @@
     font-family: var(--font-body);
   }
 
+  h1, h2, h3, h4, h5, h6, p, li, a {
+    overflow-wrap: anywhere;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-slide-in-right {
+      animation: none;
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     text-transform: uppercase;

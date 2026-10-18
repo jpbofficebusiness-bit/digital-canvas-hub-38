@@ -58,14 +58,20 @@ const ScrollToTop = () => {
       }
     }
     if (location.hash) {
-      const el = document.getElementById(location.hash.replace("#", ""));
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
+      // Keep the destination in the URL and realign after fonts and images settle.
+      const scrollToAnchor = () => {
+        document.getElementById(decodeURIComponent(location.hash.slice(1)))
+          ?.scrollIntoView({ behavior: "instant", block: "start" });
+      };
+      const frame = requestAnimationFrame(scrollToAnchor);
+      const timers = [100, 300, 600, 1000].map((ms) => setTimeout(scrollToAnchor, ms));
+      return () => {
+        cancelAnimationFrame(frame);
+        timers.forEach(clearTimeout);
+      };
     }
     window.scrollTo(0, 0);
-  }, [location.pathname, location.hash, navType]);
+  }, [location.pathname, location.hash, location.key, navType]);
 
   return null;
 };

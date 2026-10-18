@@ -31,17 +31,7 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
       window.open(entry.path, "_blank", "noopener,noreferrer");
       return;
     }
-    if (entry.path.includes("#")) {
-      const [path, hash] = entry.path.split("#");
-      navigate(path || "/");
-      setTimeout(() => {
-        document
-          .getElementById(hash)
-          ?.scrollIntoView({ behavior: "smooth" });
-      }, 300);
-      return;
-    }
-    navigate(entry.path);
+    navigate(entry.path, { state: { scrollToHash: entry.path.includes("#") } });
   };
 
   if (!open) return null;
@@ -57,7 +47,7 @@ const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
           }}
           className="relative flex items-center gap-2"
         >
-          <div className="relative flex-1">
+          <div className="relative min-w-0 flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
             <Input
               ref={inputRef}
