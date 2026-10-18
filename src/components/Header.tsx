@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-3 items-center h-16 md:h-20">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center h-16 md:h-20">
           {/* Author portrait */}
           <div className="flex justify-start">
             <Link to="/" aria-label="Página inicial">
@@ -69,7 +69,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center justify-end gap-8">
+          <nav className="hidden xl:flex items-center justify-end gap-6">
             {desktopNavLinks.map((link) => (
               link.isAnchor ? (
                 <a
@@ -101,7 +101,7 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Buttons */}
-          <div className="flex lg:hidden items-center justify-end gap-2">
+          <div className="flex xl:hidden items-center justify-end gap-0 sm:gap-2">
             <Button
               variant="ghost"
               size="icon"
@@ -127,7 +127,7 @@ const Header = () => {
       {/* Fullscreen Mobile Navigation - rendered via portal so it escapes header's stacking context */}
       {isMenuOpen && typeof document !== "undefined" && createPortal(
         <div
-          className="lg:hidden fixed inset-0 bg-background z-[100] overflow-hidden pt-20 animate-slide-in-right"
+          className="xl:hidden fixed inset-0 bg-background z-[100] overflow-x-hidden overflow-y-auto overscroll-contain pt-20 pb-[env(safe-area-inset-bottom)] animate-slide-in-right"
         >
           <div className="absolute inset-0 bg-background" aria-hidden="true" />
           <img
@@ -136,13 +136,15 @@ const Header = () => {
             aria-hidden="true"
             className="pointer-events-none absolute left-1/2 top-1/2 h-[115%] w-auto -translate-x-1/2 -translate-y-1/2 rotate-[25deg] opacity-15 select-none"
           />
-          <button
+          <Button
+            variant="ghost"
+            size="icon"
             onClick={() => setIsMenuOpen(false)}
             aria-label="Fechar menu"
             className="absolute top-4 right-4 z-10 p-2 rounded-md text-foreground hover:bg-accent/50"
           >
             <X className="h-6 w-6" />
-          </button>
+          </Button>
           <nav className="relative z-10 container mx-auto px-4 py-6">
             <div className="flex flex-col gap-1">
               {mobileMenuLinks.map((link) => {

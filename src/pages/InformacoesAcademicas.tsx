@@ -83,7 +83,7 @@ const InformacoesAcademicas = () => {
                     <h3 className="font-heading text-lg font-semibold text-gold mb-4 text-center">
                       Trivium
                     </h3>
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                       {trivium.map((item) => (
                         <div 
                           key={item}
@@ -147,7 +147,7 @@ const InformacoesAcademicas = () => {
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <Button 
-                  className="gap-2 bg-gold hover:bg-gold/90 text-foreground"
+                  className="h-auto min-h-10 max-w-full gap-2 whitespace-normal text-center bg-gold hover:bg-gold/90 text-foreground"
                   asChild
                 >
                   <a href="https://www.youtube.com/@franklinrafaeloficial" target="_blank" rel="noopener noreferrer">
