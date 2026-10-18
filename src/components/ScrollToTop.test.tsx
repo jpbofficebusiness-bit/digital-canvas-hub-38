@@ -5,6 +5,23 @@ import ScrollToTop from "./ScrollToTop";
 
 afterEach(() => { cleanup(); vi.useRealTimers(); vi.restoreAllMocks(); sessionStorage.clear(); });
 
+it("opens FAQ at the top instead of its previously saved middle position", () => {
+  vi.useFakeTimers();
+  sessionStorage.setItem("fr-scroll-positions", JSON.stringify({ "/faq": 1200 }));
+  const scroll = vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+  let openFaq = () => {};
+  const Navigation = () => {
+    const navigate = useNavigate();
+    openFaq = () => navigate("/faq");
+    return <ScrollToTop />;
+  };
+  render(<MemoryRouter initialEntries={["/"]}><Navigation /></MemoryRouter>);
+  scroll.mockClear();
+  act(() => { openFaq(); });
+  act(() => { vi.advanceTimersByTime(100); });
+  expect(scroll).toHaveBeenLastCalledWith({ top: 0, left: 0, behavior: "instant" });
+});
+
 it("aligns #galeria on entry and when selected again on the biography page", () => {
   vi.useFakeTimers();
   const scroll = vi.fn();

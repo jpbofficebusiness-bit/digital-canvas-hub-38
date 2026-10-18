@@ -70,7 +70,10 @@ const ScrollToTop = () => {
         timers.forEach(clearTimeout);
       };
     }
-    window.scrollTo(0, 0);
+    const scrollToTop = () => window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    scrollToTop();
+    const frame = requestAnimationFrame(scrollToTop);
+    return () => cancelAnimationFrame(frame);
   }, [location.pathname, location.hash, location.key, navType]);
 
   return null;
