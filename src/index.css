@@ -139,6 +139,11 @@
 }
 
 @layer utilities {
+  /* Release the animated containing block so fixed headers stay on screen. */
+  .animate-slide-in-right {
+    animation-fill-mode: none;
+  }
+
   .font-heading {
     font-family: var(--font-heading);
   }
