@@ -173,6 +173,18 @@
   }
 }
 
+/* FAQ uses immediate expansion: native anchoring and animated height can
+   move the viewport differently on touch browsers when another answer closes. */
+.faq-page,
+.faq-page * {
+  overflow-anchor: none;
+}
+
+.faq-page [role="region"] {
+  animation: none;
+  transition: none;
+}
+
 /* Evita faixa branca abaixo do rodapé no mobile */
 html, body {
   background-color: hsl(0 0% 12%);
