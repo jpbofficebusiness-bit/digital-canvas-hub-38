@@ -243,7 +243,7 @@ const leitura: QA[] = [
           Mesmo assim, se minha biblioteca estivesse pegando fogo, e eu pudesse salvar
           apenas dez livros, seriam esses:
         </p>
-        <ol className="list-decimal pl-5 space-y-2">
+        <ol className="list-decimal pl-8 space-y-2">
           <li>A Bíblia</li>
           <li>
             O Progresso do Peregrino — Ainda assim, me queimaria tentando salvar todas as
@@ -333,7 +333,15 @@ const Block = ({ title, items }: { title: string; items: QA[] }) => (
     <Accordion type="single" collapsible className="w-full">
       {items.map((item, i) => (
         <AccordionItem key={i} value={`${title}-${i}`}>
-          <AccordionTrigger className="text-left font-heading text-base md:text-lg text-foreground hover:no-underline">
+          <AccordionTrigger
+            className="text-left font-heading text-base md:text-lg text-foreground hover:no-underline"
+            onPointerDown={(event) => {
+              if (!event.isPrimary || event.button !== 0) return;
+              // Focus without the browser moving the viewport (including touch).
+              event.preventDefault();
+              event.currentTarget.focus({ preventScroll: true });
+            }}
+          >
             {item.q}
           </AccordionTrigger>
           <AccordionContent className="overflow-hidden">
@@ -352,7 +360,7 @@ const Block = ({ title, items }: { title: string; items: QA[] }) => (
 
 const FAQ = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="faq-page min-h-screen flex flex-col bg-background">
       <Header />
       <div className="h-16 md:h-20" />
 
