@@ -6,3 +6,4 @@
 - [x] Use the portrait above BIOGRAFIA as the site favicon.
 - [x] Prevent automatic scrolling when opening FAQ answers.
 - [x] Keep the full number 10 visible in question 14's book list.
+- [ ] Keep the clicked FAQ question pinned on screen when switching answers (no jump to the end of the next answer).
