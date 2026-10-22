@@ -13,6 +13,7 @@ const Index = () => {
       <div className="h-16 md:h-20" />
       
       <main>
+        <h1 className="sr-only">Franklin Rafael - Site Oficial</h1>
         <HeroCarousel />
         <NewsSection />
         <Newsletter />
