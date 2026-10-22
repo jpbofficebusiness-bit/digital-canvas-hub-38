@@ -326,7 +326,20 @@ const pregacao: QA[] = [
   },
 ];
 
-const Block = ({ title, items }: { title: string; items: QA[] }) => (
+const Block = ({ title, items }: { title: string; items: QA[] }) => {
+  // When one answer closes and another opens, the page height changes and the
+  // browser scrolls to compensate. Keep the clicked question pinned to the
+  // same spot on screen so the sequence never jumps.
+  const pinnedRef = useRef<{ el: HTMLElement; top: number } | null>(null);
+
+  const stabilize = () => {
+    const pinned = pinnedRef.current;
+    if (!pinned) return;
+    const delta = pinned.el.getBoundingClientRect().top - pinned.top;
+    if (Math.abs(delta) > 1) window.scrollBy(0, delta);
+  };
+
+  return (
   <section className="mb-12">
     <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-6 border-b border-border pb-3">
       {title}
@@ -341,6 +354,15 @@ const Block = ({ title, items }: { title: string; items: QA[] }) => (
               // Focus without the browser moving the viewport (including touch).
               event.preventDefault();
               event.currentTarget.focus({ preventScroll: true });
+              pinnedRef.current = {
+                el: event.currentTarget,
+                top: event.currentTarget.getBoundingClientRect().top,
+              };
+            }}
+            onClick={() => {
+              // Re-pin after Radix toggles and the layout settles.
+              requestAnimationFrame(stabilize);
+              [50, 150, 300].forEach((ms) => setTimeout(stabilize, ms));
             }}
           >
             {item.q}
