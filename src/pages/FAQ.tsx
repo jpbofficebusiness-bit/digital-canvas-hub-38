@@ -379,7 +379,8 @@ const Block = ({ title, items }: { title: string; items: QA[] }) => {
       ))}
     </Accordion>
   </section>
-);
+  );
+};
 
 const FAQ = () => {
   return (
