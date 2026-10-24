@@ -1,4 +1,5 @@
 # Current tasks
+- [ ] Audit live and source SEO for the exact name Franklin Rafael, implement requested metadata and structured data, validate public sitemap routes and report deployment limitations.
 - [x] Make photos/images search open the biography gallery directly.
 - [x] Check and correct page layouts across mobile, tablet, and desktop sizes.
 - [x] Verify gallery navigation and browser-back position restoration.
