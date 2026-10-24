@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
-const readProjectFile = (path: string) => readFileSync(new URL(`../../${path}`, import.meta.url), "utf8");
+const readProjectFile = (path: string) => readFileSync(`${process.cwd()}/${path}`, "utf8");
 
 describe("Official SEO domain", () => {
   it("declares exactly one homepage canonical on the official www address", () => {
