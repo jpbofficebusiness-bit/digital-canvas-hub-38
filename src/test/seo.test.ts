@@ -4,6 +4,25 @@ import { describe, expect, it } from "vitest";
 const readProjectFile = (path: string) => readFileSync(`${process.cwd()}/${path}`, "utf8");
 
 describe("Official SEO domain", () => {
+  it("declares the requested official homepage title", () => {
+    const html = new DOMParser().parseFromString(readProjectFile("index.html"), "text/html");
+    expect(html.querySelectorAll("title")).toHaveLength(1);
+    expect(html.title).toBe("Franklin Rafael | Site Oficial");
+  });
+
+  it("identifies the website and its owner using only the official name and URL", () => {
+    const html = new DOMParser().parseFromString(readProjectFile("index.html"), "text/html");
+    const data = JSON.parse(html.querySelector('script[type="application/ld+json"]')?.textContent ?? "{}");
+    const website = data["@graph"].find((entry: { "@type": string }) => entry["@type"] === "WebSite");
+    expect(website.name).toBe("Franklin Rafael");
+    expect(website.url).toBe("https://www.franklinrafael.com/");
+    const person = data["@graph"].find((entry: { "@type": string }) => entry["@type"] === "Person");
+    expect(person).toEqual({
+      "@type": "Person", "@id": "https://www.franklinrafael.com/#person",
+      name: "Franklin Rafael", url: "https://www.franklinrafael.com/",
+    });
+  });
+
   it("declares exactly one homepage canonical on the official www address", () => {
     const html = new DOMParser().parseFromString(readProjectFile("index.html"), "text/html");
     const canonicals = html.querySelectorAll('link[rel="canonical"]');
