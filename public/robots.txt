@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://franklinrafael.com/sitemap.xml
+Sitemap: https://www.franklinrafael.com/sitemap.xml
