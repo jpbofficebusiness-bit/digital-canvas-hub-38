@@ -7,3 +7,7 @@
 - [x] Prevent automatic scrolling when opening FAQ answers.
 - [x] Keep the full number 10 visible in question 14's book list.
 - [x] Keep the clicked FAQ question pinned on screen when switching answers (no jump to the end of the next answer).
+- [x] Verify the live www domain and HTTPS redirect without changing DNS or domain settings.
+- [x] Align canonical metadata, sitemap and robots discovery with the official www domain.
+- [x] Validate SEO files and document remaining Vercel deployment checks.
+- [ ] Deploy the corrected files on Vercel and fix direct public-route 404 responses there; blocked on access to the external Vercel deployment.
