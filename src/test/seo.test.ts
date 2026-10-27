@@ -47,4 +47,19 @@ describe("Official SEO domain", () => {
     expect(robots).not.toMatch(/^Disallow:\s*\//m);
     expect(robots).toMatch(/^Sitemap: https:\/\/www\.franklinrafael\.com\/sitemap\.xml$/m);
   });
+
+  it("preserves static files and serves every sitemap page through the Vercel application fallback", () => {
+    const config = JSON.parse(readProjectFile("vercel.json"));
+    expect(config.routes[0]).toEqual({ handle: "filesystem" });
+    expect(config.routes[1].dest).toBe("/index.html");
+    const fallback = new RegExp(config.routes[1].src);
+    const xml = new DOMParser().parseFromString(readProjectFile("public/sitemap.xml"), "application/xml");
+    for (const node of Array.from(xml.querySelectorAll("loc"))) {
+      const path = new URL(node.textContent ?? "").pathname;
+      if (path !== "/") expect(fallback.test(path), path).toBe(true);
+    }
+    for (const path of ["/sitemap.xml", "/robots.txt", "/favicon-96.png", "/assets/missing.js"]) {
+      expect(fallback.test(path), path).toBe(false);
+    }
+  });
 });

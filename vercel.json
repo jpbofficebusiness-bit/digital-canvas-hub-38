@@ -1,0 +1,9 @@
+{
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "^/(?:sobre-franklin-rafael|o-autor/(?:biografia|citacoes|linha-do-tempo)|informacoes-academicas|obras(?:/[^/.]+){0,2}|por-vir|obra-prima|faq)/?$",
+      "dest": "/index.html"
+    }
+  ]
+}
