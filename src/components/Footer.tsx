@@ -31,12 +31,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Logo */}
         <div className="text-center mb-8">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="font-heading text-2xl font-semibold tracking-wide inline-block text-gold"
           >
             FRANKLIN RAFAEL
-          </a>
+          </Link>
         </div>
 
         {/* Links */}
