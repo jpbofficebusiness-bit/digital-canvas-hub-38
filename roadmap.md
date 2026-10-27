@@ -1,6 +1,6 @@
 # Current tasks
-- [ ] Enlarge the existing portrait to fill the entire favicon without changing the page portrait.
-- [ ] Audit live and source SEO for the exact name Franklin Rafael, implement requested metadata and structured data, validate public sitemap routes and report deployment limitations.
+- [x] Enlarge the existing portrait to fill the entire favicon without changing the page portrait.
+- [x] Audit live and source SEO for the exact name Franklin Rafael, implement requested metadata and structured data, validate public sitemap routes and report deployment limitations.
 - [x] Make photos/images search open the biography gallery directly.
 - [x] Check and correct page layouts across mobile, tablet, and desktop sizes.
 - [x] Verify gallery navigation and browser-back position restoration.
@@ -12,4 +12,4 @@
 - [x] Verify the live www domain and HTTPS redirect without changing DNS or domain settings.
 - [x] Align canonical metadata, sitemap and robots discovery with the official www domain.
 - [x] Validate SEO files and document remaining Vercel deployment checks.
-- [ ] Deploy the corrected files on Vercel and fix direct public-route 404 responses there; blocked on access to the external Vercel deployment.
+- [ ] Deploy the corrected files on Vercel and verify filesystem-first public-page routing; vercel.json is prepared, but deployment and live 404 resolution remain blocked on access to the external Vercel deployment.
