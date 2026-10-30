@@ -61,5 +61,35 @@ describe("Official SEO domain", () => {
     for (const path of ["/sitemap.xml", "/robots.txt", "/favicon-96.png", "/assets/missing.js"]) {
       expect(fallback.test(path), path).toBe(false);
     }
+});
+
+describe("Site icon", () => {
+  const pngSize = (path: string) => {
+    const buffer = readFileSync(`${process.cwd()}/${path}`);
+    expect(buffer.subarray(1, 4).toString()).toBe("PNG");
+    return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+  };
+
+  it("serves only icons large enough for Google search results", () => {
+    const html = new DOMParser().parseFromString(readProjectFile("index.html"), "text/html");
+    const icons = Array.from(html.querySelectorAll('link[rel="icon"]'), (node) => node.getAttribute("href") ?? "");
+    expect(icons.length).toBeGreaterThan(0);
+    for (const href of icons) {
+      const { width, height } = pngSize(`public${href}`);
+      expect(width, href).toBe(height);
+      expect(width % 48, `${href} must be a multiple of 48px`).toBe(0);
+      expect(width, href).toBeGreaterThanOrEqual(96);
+    }
   });
+
+  it("provides a square apple-touch-icon and a root favicon.ico", () => {
+    const html = new DOMParser().parseFromString(readProjectFile("index.html"), "text/html");
+    const apple = html.querySelector('link[rel="apple-touch-icon"]')?.getAttribute("href") ?? "";
+    expect(apple).toBe("/apple-touch-icon.png");
+    const { width, height } = pngSize(`public${apple}`);
+    expect([width, height]).toEqual([180, 180]);
+    expect(readFileSync(`${process.cwd()}/public/favicon.ico`).subarray(1, 4).toString()).toBe("ICO");
+  });
+});
+
 });
