@@ -88,7 +88,10 @@ describe("Site icon", () => {
     expect(apple).toBe("/apple-touch-icon.png");
     const { width, height } = pngSize(`public${apple}`);
     expect([width, height]).toEqual([180, 180]);
-    expect(readFileSync(`${process.cwd()}/public/favicon.ico`).subarray(1, 4).toString()).toBe("ICO");
+    const ico = readFileSync(`${process.cwd()}/public/favicon.ico`);
+    expect(ico.subarray(0, 4).toString("hex")).toBe("00000100");
+    expect(ico.readUInt16LE(4)).toBeGreaterThanOrEqual(3);
+
   });
 });
 
