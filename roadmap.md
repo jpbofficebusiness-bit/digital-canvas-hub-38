@@ -1,5 +1,7 @@
 # Current tasks
 - [x] Enlarge the existing portrait to fill the entire favicon without changing the page portrait.
+- [x] Make the search-result icon read larger: tight head crop on a solid burgundy background, served at 96/192/180/64 plus favicon.ico.
+
 - [x] Audit live and source SEO for the exact name Franklin Rafael, implement requested metadata and structured data, validate public sitemap routes and report deployment limitations.
 - [x] Make photos/images search open the biography gallery directly.
 - [x] Check and correct page layouts across mobile, tablet, and desktop sizes.
